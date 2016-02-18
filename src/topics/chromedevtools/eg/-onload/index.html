@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DOM load event</title>
+  <link rel="stylesheet" href="css/base.css" />
+  <script src="script/jq.js"></script>
+  <script src="script/ext.js"></script>
+  <script>console.log("# parse: inline script within head");</script>
+</head>
+<body>
+<h1>Test Page for DomContentLoaded vs onLoad</h1>
+<p>check the console (ctrl + shift + j) for output</p>
+<img src="asset/abs.jpg" style="visibility:hidden"/>
+<script>
+console.log("# parse: ajax call 1");
+$.get('script/json.txt',function(data){
+console.log("ajax data loaded 1");
+})
+console.log("# parse: ajax call 2");
+$.get('script/json2.txt',function(data){
+console.log("ajax data loaded 2");
+})
+</script>
+<script src="script/app.js"></script>
+<script>console.log("# parse: inline script within body");</script>
+<img src="asset/chr.jpg" style="visibility:hidden"/>
+<link rel="stylesheet" href="css/app.css" />
+<script src="script/huge_file.js"></script>
+</body>
+</html>

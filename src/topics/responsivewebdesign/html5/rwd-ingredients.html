@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="case study on how-to of responsive web design" />
+<meta name="keywords" content="html5, css3, design, responsive " />
+<meta name="author" content="santhosh" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>RWD Ingredients</title>
+<!-- InstanceEndEditable -->
+<!-- open css -->
+<link rel="stylesheet" href="../css/reset.css" />
+<link rel="stylesheet" href="../css/default.css" />
+<link rel="stylesheet" href="../css/page.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/largevp.css" />
+<link rel="stylesheet" href="../css/narrowvp.css" media="screen and (min-width: 0px) and (max-width: 600px)" />
+<link rel="stylesheet" href="../css/midvp.css" media="screen and (min-width: 601px) and (max-width: 800px)" />
+<!--[if lt IE 9]><link rel="stylesheet" href="../css/ie.css" /><![endif]-->
+<!--[if lt IE 7]><link rel="stylesheet" href="../css/ie6.css" /><![endif]-->
+<!-- InstanceBeginEditable name="doccss" -->
+<style type="text/css">
+</style>
+<!-- InstanceEndEditable -->
+<!-- close css -->
+<!-- open script -->
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../script/modernizr.js"></script>
+<script type="text/javascript" src="../script/init.js"></script>
+<!-- InstanceBeginEditable name="docscript" -->
+<script type="text/javascript">
+    $(document).ready(function(){
+    });
+</script>
+<!-- InstanceEndEditable -->
+<!-- close script -->
+</head>
+<!-- InstanceBeginEditable name="docbody" -->
+<body id="pg-rwd-ingredients">
+
+    <!-- open page-wrapper -->
+    <div id="page-wrapper">
+        <!-- open page-header -->
+        <header id="page-header">
+            <section class="page-head">
+                <h1>RWD Ingredients</h1>
+            </section>
+        </header>
+        <!-- close page-header -->
+        <!-- open content-wrapper -->
+        <section id="content-wrapper">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="concept-of-rwd.html">Concepts of RWD</a>
+                <a href="rwd-ingredients.html" class="active">RWD Ingredients</a>
+                <a href="responsive-design-how-to.html">RWD - How To</a>
+                <a href="rwd-challenges.html">RWD Challenges</a>
+                <a href="css3-features-to-look-forward.html">CSS3 Features</a>
+                <a href="rwd-online-tools.html">RWD Online Tools</a>
+                <a href="is-rwd-the-way-forward.html">Is RWD the Way forward?</a>
+                <a href="further-reading.html">Further Reading</a>
+                <a href="tuts-refs.html">Tuts / Refs</a>
+            </nav>
+            <ul class="list-of-contents">
+                <li><a href="#fluid_layout_section">Fluid Layout</a></li>
+                <li><a href="#fluid_media_section">Fluid Media</a></li>
+                <li><a href="#media_queries_section">Media Queries</a></li>
+            </ul>
+            <section id="fluid_layout_section">
+            	<header>
+                	<h2>Fluid Layout</h2>
+                </header>
+                <article>
+                    <p>
+                        When it comes to desktop layout, we rely on constraints; especially &#39;screen resolution&#39;, which needs to be set to a specific width for our layout.
+                    </p>
+                    <p>
+                        With variety of desktop screen&#39;s out there, we tend to focus on the majority of the population with a common screen resolution, which till now was 1024 x 768.
+                        <br />
+                        ref: <a href="http://gs.statcounter.com/#resolution-ww-monthly-201012-201202">http://gs.statcounter.com/#resolution-ww-monthly-201012-201202</a>
+                    </p>
+                    <p>
+                       However, current statistics reveal that 1366 x 768 has overtaken 1024 x 768 as the most popular screen resolution and this too will change in the near future. 
+                       <br />ref: <a href="http://gs.statcounter.com/#resolution-ww-monthly-201103-201203">http://gs.statcounter.com/#resolution-ww-monthly-201103-201203</a>
+                    </p>
+                    <p>
+                        Till now we have focused on designing websites using a fixed layout width of 960px.
+This implied that, desktop users with lower resolution would have to deal with horizontal scrollbar and users with higher resolution would be presented with a relatively smaller looking website.
+                    </p>
+                    <p>
+                        Designing for a fixed width screen resolution wouldn&#39;t be an ideal solution, as we could see large widescreen displays being introduced at one end of the spectrum and we have the narrow screen devices (mobile devices) at the other extreme end. In between the two extremes, we have smart phones and tablets.
+                    </p>
+                    <p>
+                        The way forward would be to design layout(s) in proportion to the available screen size. This is best accomplished by using percentage (%) as a unit of measurement for width. By designing the layouts in percentages, we can have our containers/layout stretch in proportion to the available screens size. Every aspect of our layout - the rows and columns, and the modules draped over them -can be ex-pressed as proportions of their containing element, rather than using unchanging, inflexible pixels.
+                    </p>
+                    <p>
+                        This involves a little bit of the following math,
+                    </p>
+                    <p>
+                        target / context = result
+                    </p>
+                    <ul>
+                        <li>target = parent container;</li>
+                        <li>context = child container;</li>
+                    </ul>
+                    <p>
+                        Fluid layout requires fluid width, fluid margins and fluid padding; so we set width, padding and margin in percentages
+                    </p>
+                    <figure>
+	                    <img src="../images/psd.jpg" alt="fluid layout example" />
+                        <figCaption>Fluid Layout Illustration</figCaption>
+                    </figure>
+
+                    <p>
+                        If we consider the above PSD, the mockup code is as follows,
+                    </p>
+                    <p>
+                    	<span class="codeheading">HTML Markup</span>
+<code>
+<span class="tag">&lt;div id=</span><span class="attrval">&quot;page-wrapper&quot;</span><span class="tag">&gt;</span>
+     <span class="tag">&lt;div id=</span><span class="attrval">&quot;page-header&quot;</span><span class="tag">&gt;</span>
+         <span class="tag">&lt;header&gt;</span>
+            sitename
+         <span class="tag">&lt;/header&gt;</span>
+     <span class="tag">&lt;/div&gt;</span>
+     <span class="tag">&lt;div id=</span><span class="attrval">&quot;page-content&quot;</span> <span class="tag">class=</span><span class="attrval">&quot;clrfix&quot;</span><span class="tag">&gt;</span>
+         <span class="tag">&lt;section class=</span><span class="attrval">&quot;blogpost&quot;</span><span class="tag">&gt;</span>
+             blogpost
+         <span class="tag">&lt;/section&gt;</span>
+         <span class="tag">&lt;aside class=&quot;</span><span class="attrval">secondary&quot;</span><span class="tag">&gt;</span>
+             aside content
+         <span class="tag">&lt;/aside&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+    <span class="tag">&lt;div id=&quot;</span><span class="attrval">page-footer&quot;</span><span class="tag">&gt;</span>
+        <span class="tag">&lt;footer&gt;</span>
+             copyright info
+        <span class="tag">&lt;/footer&gt;</span>
+    <span class="tag">&lt;/div&gt;</span>
+<span class="tag">&lt;/div&gt;</span>
+</code>
+</p>
+<p>
+                        <span class="codeheading">CSS</span>
+<code>    
+<span class="tag">#page-wrapper{
+    width:</span> <span class="attrval">100%; /* 1020px/1020px */</span>
+<span class="tag">}</span>
+<span class="tag">#page-header,
+#page-footer{
+    width:</span> <span class="attrval">100%; /* 1020px/1020px */</span>
+<span class="tag">}</span>
+<span class="tag">header,
+footer{
+    width:</span> <span class="attrval">94%; /* 960px/1020px */</span>
+<span class="tag">}</span>
+<span class="tag">#page-content{
+    width:</span> <span class="attrval">94%; /* 960px/1020px */</span>
+<span class="tag">}</span> 
+<span class="tag">.blogpost{
+    width:</span> <span class="attrval">62.5%; /* 600px/960px */</span>
+<span class="tag">}</span>
+<span class="tag">.secondary{
+    width:</span> <span class="attrval">37.5%; /* 360px/960px */</span>
+<span class="tag">}</span>
+                        	
+</code>
+                    </p>
+                    <h3>Setting Width:</h3>
+                    <p>
+                        <mark>target / context = result</mark>
+                    </p>
+                    <p>
+                        When setting flexible width, the target is the current element, while context refers to its parent container.
+                    </p>
+                    <p>
+                        So, calculating width for header,
+                    </p>
+                    <p>
+                        header [width: 960px;] is target<br />
+                        #page-header [width: 1020px;] becomes context,
+                    </p>
+                    <p>
+                        Hence, width = 960px / 1020px = 94.11%;
+                    </p>
+                    <p>
+                        Similarly considering, .blogpost container,
+                    </p>
+                    <p>
+                        .blogpost [width: 330px;] is target<br />
+                        #page-content [width: 960px;] becomes context
+                    </p>
+                    <p>
+                        Hence, width = 330px / 960px = 37.5%;
+                    </p>
+                    <p>
+                        Note that context keeps changing as it represents the parent of the current target element.
+                    </p>
+                    <h3>Setting Margins & Paddings:</h3>
+                    <p>
+                        We could use a combination of em&#39;s and percentage&#39;s to set margins and paddings.
+                    </p>
+                    <p>
+                        em unit is based on  font size, while percentage is based on width of the parent element. 
+                    </p>
+                    <p>
+                        If percentages are used, the following applies,
+                    </p>
+                    <p>
+                        1. When setting flexible margins on an element, the context is the width of the element&#39;s parent container.<br />
+                        2. When setting flexible padding on an element, the context is the width of the element itself.
+                    </p>
+                    <p style="text-decoration: underline">
+                        For a parent container of width 960px, containing a child element, whose margin needs to be set at 15px;
+                    </p>
+                    <p>
+                    	With reference to percentage(s)<br />
+                        - margin for the child element would be set to 15px / 960px = 1.5625%; /* context is the width of the parent element */
+                    </p>
+                    <p>
+                        In case of em, <br />
+                        - margin for the child = 15px / 13px = 1.15em /* context is font-size of parent element */
+                    </p>
+                    <p style="text-decoration: underline">
+                        If the child element had a width of 400px, <br />
+                    </p>
+                    <p>
+                    	With reference to percentage(s)<br />
+                        - padding for the child element would be set to 10px / 400px = 2.5%; /* context is the width of the element itself */
+                    </p>
+                    <p>
+                        In case of em, <br />
+                        - padding for the child  = 10px / 13px = 0.769em /* context is font-size of parent element  */
+                    </p>
+                    <p>
+                        The difference between percentage and em is that, as we resize the browser or zoom-in/zoom-out, values set based on percentage, will reflow accordingly, while values set based on em will appear constant.
+                    </p>
+                </article>
+            </section>
+            <section id="fluid_media_section">
+                <header>
+                    <h2>Fluid Media</h2>
+                </header>
+                <article>
+                    <p>
+                        Fluid media is about making flexible images and flexible videos that could respond to its environment.
+                    </p>
+                    <p>
+                        Looking back at the web design community, we already had fluid layouts. The fluid layouts were good at reflowing text according to the available width. But it had one problem, only the layout and text were flexible; when it came to images, it would often break the layout, when the viewport was either smaller or larger.
+                    </p>
+                    <p>
+                        Responsive Web Design is the next-step to fluid layouts; We now have the power to resize images and videos, making the most of the web page components to be truly responsive.
+                    </p>
+                    <p>
+                        The key to making images and videos flexible is the CSS max-width property.
+                    </p>
+                    <span class="codeheading">CSS Max-Width</span>
+<code>    
+<span class="tag">img{
+    max-width:</span> <span class="attrval">100%; </span>
+<span class="tag">}</span>
+</code>
+                     <p>
+                         With the above CSS in place, the img element will render at whatever size it wants, as long as it&#39;s narrower than its containing element. But if it happens to be wider than its container, then the max-width: 100% directive forces the image&#39;s width to match the width of its container.
+                     </p>
+                     <p>
+                         Modern browsers have evolved to the point where they resize the images proportionally, as the flexible container resizes itself, shrinking or enlarging the image, with the image&#39;s aspect ratio remains intact
+                     </p>
+                     <p>
+                         When it comes to browser support for max-width, Internet Explorer 6 and below don&#39;t support the max-width property, while IE7 and higher, do have support for this property.
+                     </p>
+                     <p>
+                         So, a simple approach would be to set width: 100% to IE6 Specific styles, while the rest of the browsers get the max-width property.
+                     </p>
+                     <span class="codeheading">IE - Setting Img Width</span>
+<code>    
+<span class="tag">img{
+    width:</span> <span class="attrval">100%; </span>
+<span class="tag">}</span>
+</code>
+                    <p>
+                        The downside to this approach is that, it forces the images to always match the width of their con-taining elements. As a result, smaller images would be forced to scale to 100% of the parent container.
+                    </p>
+                    <p>
+                        To overcome this, we could have a CSS class applied to target only the required images as,
+                    </p>
+                    <span class="codeheading">IE - Setting Img Width Using Class</span>
+<code>    
+<span class="tag">img.large{
+    width:</span> <span class="attrval">100%; </span>
+<span class="tag">}</span>
+</code>                   
+                    <h3>
+                        Windows & Image Resizing:
+                    </h3> 
+                    <p>
+                        Windows doesn&#39;t scale images that well. In fact, when resized via CSS, images quickly develop artifacts on Windows, dramatically impacting their quality. However, this effect is limited to IE6,7 and Firefox 2.
+                    </p>
+                    <p>
+                        AlphaImageLoader, one of Microsoft&#39;s proprietary CSS filters dramatically improves the rendering quality of images in IE.
+                    </p>
+                    <p>
+                        By including the imgSizer.js script based on AlphaImageLoader, we can address the rendering quality issue in IE6 & 7.
+                        <br />
+                        Direct Download: <a href="http://unstoppablerobotninja.com/demos/resize/imgSizer.js">http://unstoppablerobotninja.com/demos/resize/imgSizer.js</a>
+                        <br />
+                        ref: <a href="http://unstoppablerobotninja.com/entry/fluid-images">http://unstoppablerobotninja.com/entry/fluid-images</a>
+                    </p>
+                    <p>
+                        However, there is performance tradeoff when using AlphaImageLoader and it could negatively impact the performance of the website. So, it would be necessary to evaluate whether or not the improved rendering is worth the performance tradeoff.
+                        <br />
+                        ref: <a href="http://www.yuiblog.com/blog/2008/12/08/imageopt-5/">http://www.yuiblog.com/blog/2008/12/08/imageopt-5/</a>
+                    </p>
+                    <p>
+                        Images rendered using img tag can be made flexible by using CSS max-width; however, images rendered as background needs be addressed in a different approach.
+                    </p>
+                    <h3>Faux Column:</h3>
+                    <p>
+                        Faux Column technique employs background-image to create the illusion of equal height columns; however, it is restricted to fixed width layout.
+                    </p>
+                    <p>
+                        By using the little math, target  context = result, we can achieve flexible faux column layout.
+                    </p>
+                    <p>
+                    First, we find out the transition point in our background image, the exact pixel at which our background image transitions from one color to another.
+                    </p>
+                    <p>
+                        Say, we have a 960px [context] layout, and exactly at 576px [target], the background-image transition to a different color.
+Now, we apply the math, 
+                        <br />
+                        576px / 960px = 60%
+                    </p>
+                    <p>
+                        We can now move to Photoshop, create a blank canvas of say 3000 pixels wide and 20 pixels in height. We require a large canvas, to accommodate large screens.
+                    </p>
+                    <p>
+                       we convert 60% to pixels, which is 3000 x (60/100) = 1800px; and have the corresponding background-color applied, at this transistion point.
+                    </p>
+                    <p>
+                       The result of using this approach is that, we end up with a faux column background image that resizes accordingly.
+                    </p>
+                    <h3>Background-Images:</h3>
+                    <p>
+                        When it comes to background-images, we can identify which part of the background-image stresses the importance, and ensure that portion of the background-image is visible at all times, using background-position property. CSS3's background-size property can also be used to achieve this.
+                        <br />
+                        Experiments with Wide Images: <a href="http://clagnut.com/sandbox/imagetest/">http://clagnut.com/sandbox/imagetest/</a>
+                    </p>
+                </article>
+            </section>
+            <section id="media_queries_section">
+                <h2>Media Queries</h2>
+                <article>
+                    <p>
+                        Using fluid layouts, fluid media, we have ensured the layout doesn&#39;t break when the page is scaled-up or scaled-down.
+                    </p>
+                    <p>
+                        However, there is a threshold limit at which scaling too high to scaling too low, would break up the design. In other words, as we move beyond the resolution for which it was originally designed, the layout becomes a liability to our content. Its proportions constrict the content at smaller resolutions, and isolate it in a sea of whitespace at higher ones.
+                    </p>
+                    <p>
+                        This isn&#39;t a problem unique to flexible layouts. No design, fixed or fluid, scales well beyond the context for which it was originally designed.
+                    </p>
+                    <p>
+                        Media Queries introduced by W3C, helps in creating design that is not only flexible, but that can adapt to changes in screen resolution and viewport dimensions.
+                    </p>
+                    <p>
+                        We can use media queries to optimize the display of our content to best meet the needs of the device, creating alternate layouts tailored to different resolution ranges. By conditionally loading style rules that target these ranges, media queries allow us to create pages that are more sensitive to the needs of the devices that render them.
+                    </p>
+                    <p>
+                        Media Query has two components:
+                    </p>
+                    <ol>
+                        <li>
+                            - Each query begins with a media <mark>type</mark> (screen), drawn from the CSS2.1 specification&#39;s list of approved media types (<a href="http://www.w3.org/TR/CSS21/media.html#media-types">http://www.w3.org/TR/CSS21/media.html#media-types</a>).
+                        </li>
+                        <li>
+                            - Immediately after comes the <mark>query</mark> itself, wrapped in parentheses: (min-width: 1024px).<br />
+                             And our query can, in turn, be split into two components:<br />
+                             the name of a feature (min-width) and a corresponding value (1024px).
+                        </li>
+                    </ol>
+                    <span class="codeheading">Media Query - Example</span>
+<code>    
+<span class="tag">@media </span><span class="attrval">screen</span> <span class="tag"> and (min-width:<span class="attrval">1024px</span>) {
+    body: {
+        font-size:</span><span class="attrval">100%;</span>
+    }
+<span class="tag">}</span>
+</code> 
+                    <p>
+                        Think of a media query like a test for the browser. When a browser reads the stylesheet, the screen and (min-width: 1024px) query asks two questions: first, if it belongs to the screen media type; and if it does, if the browser&#39;s viewport is at least 1024 pixels wide. If the browser meets both of those criteria, then the styles enclosed within the query are rendered; if not, the browser disregards the styles.
+                    </p>
+                    <p>
+                        Media queries can also be placed on link elements by inserting them into the media attribute:
+                    </p>
+                    <span class="codeheading">Media Query - Using Link Tag</span>
+<code>    
+<span class="tag">&lt;link rel="</span><span class="attrval">stylesheet</span><span class="tag">" href="</span><span class="attrval">wide.css</span><span class="tag">" media="</span><span class="attrval">screen</span><span class="tag"> and (min-width:</span> <span class="attrval">1024px</span><span class="tag">)" /></span>
+</code> 
+                    <p>
+                        Or we can attach them to @import statements:
+                    </p>
+                    <span class="codeheading">Media Query - Using Import Statement</span>
+<code>    
+<span class="tag">@import url("</span><span class="attrval">wide.css</span><span class="tag">") </span><span class="attrval">screen</span><span class="tag"> and (min-width: </span><span class="attrval">1024px</span><span class="tag">)" /></span>
+</code>
+                    <h3>Display Area Vs. Rendering Area</h3>  
+                    <p>
+                        In the spec&#39;s language, every device has a &#39;display area&#39; and &#39;rendering surface.&#39; 
+                    </p>
+                    <ul>
+                        <li>Browser&#39;s viewport is the display area;</li>
+                        <li>Entire display is the rendering surface.</li>
+                    </ul>
+                    <p>
+                        So on a desktop, the display area would be the browser window; the rendering surface would be the desktop screen.
+                    </p>
+                    <h3>Features that can be queried:</h3>
+                    <table id="mediq-query-features">
+                        <thead>
+                            <tr>
+                                <td>FEATURE NAME</td>
+                                <td>DEFINITION</td>
+                                <td>HAS min- AND max- PREFIXES</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>width</td>
+                                <td>The width of the display area.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>height</td>
+                                <td>The height of the display area.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>device-width</td>
+                                <td>The width of the device&#39;s rendering surface.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>device-height</td>
+                                <td>The height of the device&#39;s rendering surface.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>orientation</td>
+                                <td>Accepts portrait or landscape values.</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>aspect-ratio</td>
+                                <td>Ratio of the display area&#39;s width over its height. For example: on a desktop, you&#39;d be able to query if the browser window is at a 16:9 aspect ratio.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>device-aspect-ratio</td>
+                                <td>Ratio of the device&#39;s rendering surface width over its height. For example: on a desktop, you&#39;d be able to query if the screen is at a 16:9 aspect ratio.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>color</td>
+                                <td>The number of bits per color component of the device. For example, an 8-bit color device would successfully pass a query of (color: 8). Non-color devices should return a value of 0.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>color-index</td>
+                                <td>The number of entries in the color lookup table of the output device. For example, @media screen and (min-color-index: 256).</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>monochrome</td>
+                                <td>Similar to color, the monochrome feature lets us test the number of bits per pixel in a monochrome device.</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>resolution</td>
+                                <td>Tests the density of the pixels in the device, such as screen and (resolution: 72dpi) or screen and (max-resolution: 300dpi).</td>
+                                <td>yes</td>
+                            </tr>
+                            <tr>
+                                <td>scan</td>
+                                <td>For tv-based browsing, measures whether the scanning process is either progressive or scan.</td>
+                                <td>no</td>
+                            </tr>
+                            <tr>
+                                <td>grid</td>
+                                <td>Tests whether the device is a grid-based display, like feature phones with one fixed-width font. Can be expressed simply as (grid).</td>
+                                <td>no</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h3>Media query to target various devices</h3>
+                    <span class="codeheading">Smartphones (portrait and landscape)</span>
+<code>    
+<span class="tag">@media </span><span class="attrval">only screen</span> <span class="tag"> and (min-device-width:</span><span class="attrval">320px</span>) and (max-device-width : <span class="attrval">480px</span><span class="tag">){</span>
+    /* Styles */
+<span class="tag">}</span>
+</code>
+                    <span class="codeheading">Smartphones (landscape)</span>
+<code>    
+<span class="tag">@media </span><span class="attrval">only screen</span> <span class="tag"> and (min-width :</span><span class="attrval">321px</span><span class="tag">){</span>
+    /* Styles */
+<span class="tag">}</span>
+</code>
+                    <span class="codeheading">Smartphones (portrait)</span>
+<code>    
+<span class="tag">@media </span><span class="attrval">only screen</span> <span class="tag"> and (max-width :</span><span class="attrval">320px</span><span class="tag">){</span>
+    /* Styles */
+<span class="tag">}</span>
+</code>       
+                    <span class="codeheading">iPads (portrait and landscape)</span>
+<code>    
+<span class="tag">@media </span><span class="attrval">only screen</span> <span class="tag"> and (min-device-width:</span><span class="attrval">768px</span>) and (max-device-width : <span class="attrval">1024px</span><span class="tag">){</span>
+    /* Styles */
+<span class="tag">}</span>
+</code>  
+                    <span class="codeheading">iPads (landscape)</span>
+<code>    
+<span class="tag">@media </span><span class="attrval">only screen</span> <span class="tag"> and (min-device-width:</span><span class="attrval">768px</span>) and (max-device-width : <span class="attrval">1024px</span>) and (orientation :<span class="attrval">landscape</span><span class="tag">){</span>
+    /* Styles */
+<span class="tag">}</span>
+</code>   
+                    <span class="codeheading">iPads (portrait)</span>
+<code>    
+<span class="tag">@media </span><span class="attrval">only screen</span> <span class="tag"> and (min-device-width:</span><span class="attrval">768px</span>) and (max-device-width : <span class="attrval">1024px</span>) and (orientation :<span class="attrval">portrait</span><span class="tag">){</span>
+    /* Styles */
+<span class="tag">}</span>
+</code>
+                    <span class="codeheading">Desktops and laptops</span>
+<code>    
+<span class="tag">@media </span><span class="attrval">only screen</span> <span class="tag"> and (min-width </span>:<span class="attrval">1224px</span><span class="tag">){</span>
+    /* Styles */
+<span class="tag">}</span>
+</code>
+                    <span class="codeheading">Large screens</span>
+<code>    
+<span class="tag">@media </span><span class="attrval">only screen</span> <span class="tag"> and (min-width :</span><span class="attrval">1824px</span><span class="tag">){</span>
+    /* Styles */
+<span class="tag">}</span>
+</code>   
+                    <span class="codeheading">iPhone 4 and high pixel ratio devices </span>
+<code>    
+<span class="tag">@media </span><span class="attrval">only screen</span> <span class="tag"> and (-webkit-min-device-pixel-ratio:</span><span class="attrval">1.5</span>), <span class="attrval">only screen</span> <span class="tag"> and (min-device-pixel-ratio :</span><span class="attrval">1.5</span><span class="tag">){</span>
+    /* Styles */
+<span class="tag">}</span>
+</code>                                           
+                    <br />
+                    ref:<a href="http://www.stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/">http://www.stuffandnonsense.co.uk/blog/about/hardboiled_css3_media_queries/</a>
+                </article>
+            </section>
+        </section>
+        <!-- close content-wrapper -->
+        <!-- open page-footer -->
+        <footer id="page-footer">
+            <section class="page-foot">
+                <img src="../images/ci.jpg" alt="CI-Interactive" />
+            </section>
+        </footer>
+        <!-- close page-footer -->
+    </div>
+    <!-- close page-wrapper -->
+
+</body>
+<!-- InstanceEndEditable -->
+<!-- InstanceEnd --></html>

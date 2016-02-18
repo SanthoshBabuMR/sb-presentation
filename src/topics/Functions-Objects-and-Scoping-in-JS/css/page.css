@@ -1,0 +1,159 @@
+/* reset begin */
+*,
+*:after,
+*:before {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: verdana;
+	font-size: 24px;
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+.clrflt:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+html {
+	height: 100%;
+}
+body {
+	background: #1d1d1d;
+	position: relative;
+	height: 100%;
+	width: 100%;
+}
+ul,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+ul ol {
+	padding-left: 40px;
+}
+
+a {
+	text-decoration: none;
+	color: #ff0000;
+}
+pre,code {
+	font-family: monospace;
+}
+img {
+	max-width: 100%;
+}
+figure {
+	float: right;
+	width: 200px;
+}
+figcaption {
+	font-size: 18px;
+	color: #cccccc;
+}
+/* reset end */
+
+/* generic begin */
+.show {
+	display: block;
+}
+.hide {
+	display: none;
+}
+ul {
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-left-color: #626557;
+	padding-left: 10px;
+}
+li {
+	padding: 0 0 10px 0;
+}
+.topics li li {
+	font-size: 21px;
+}
+/* generic end */
+
+/* page-count widget begin */
+.page-head {
+	background: #303030;
+	color: #80bd01;
+	padding: 5px 20px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: right;
+	font-size: 18px;
+	z-index: 100;
+}
+.total {
+	width: 650px;
+	margin: 0 auto;
+	text-align: center;
+}
+.page {
+	border-radius: 50%;
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	text-align: center;
+}
+.page.current {
+	background: #000000;
+	border: 1px solid #1C521A;
+}
+.current:after {
+	
+}
+/* page-count widget end */
+
+/* slide widget begin */
+.wrap {
+	padding: 20px;
+	width: 700px;
+	padding: 60px 0;
+	margin: 0 auto;
+}
+.slide {
+	width: 100%;
+	position: absolute;
+	height: 100%;
+}
+.title {
+	font-size: 30px;
+	color: #80bd01;
+	margin-bottom: 15px;
+	text-align: left;
+}
+.slide:nth-of-type(1) .title{
+	text-align: left;
+}
+.content {
+	color: #cccccc;
+}
+/* slide widget end */
+
+/* ctrls begin */
+.ctrls {
+	position: absolute;
+	background: #303030;
+	color: #80bd01;
+	padding: 5px 20px;
+	width: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 200;
+}
+.p {
+	float: left;
+	cursor: pointer;
+}
+.n {
+	float: right;
+	cursor: pointer;
+}
+/* ctrls end */

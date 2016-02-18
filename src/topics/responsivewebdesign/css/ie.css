@@ -1,0 +1,56 @@
+/* IE8 style goes here */
+
+/*-----
+GENERIC
+-------*/
+h1{
+	font-size: 24px;
+	line-height: 27px;
+}
+h2{
+	font-size: 18px;
+	line-height: 21px;	
+}
+h3{
+	font-size: 14px;
+	line-height: 17px;	
+}
+ul ul{
+	margin: 5px 0;
+	list-style: disc;
+}
+ul ul ul{
+	list-style: circle;
+}
+/*----------
+PAGE-WRAPPER
+------------*/
+#page-wrapper{
+	font: 13px/16px Arial, Helvetica, sans-serif; /* font-size:13/10; line-height:16/10 */
+}
+
+/*---------
+PAGE-HEADER
+-----------*/
+#page-header{
+	min-height: 60px;
+}
+.page-head h1{
+	margin-top: 15px;
+	color: #630;
+}
+.page-head a{
+	color: #FFFFFF;
+	background: none;
+}
+/*---------
+PAGE-FOOTER
+-----------*/
+#page-footer{
+	min-height: 60px;
+}
+
+/*-------------
+CONTENT-WRAPPER
+---------------*/
+

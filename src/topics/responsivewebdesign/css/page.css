@@ -1,0 +1,45 @@
+/* page specific css goes here */
+
+/*-----
+GENERIC
+-------*/
+
+/*------
+#pg-home
+--------*/
+#pg-home h2:before{
+	content: '';
+}
+#pg-home ul li{
+	list-style: decimal;
+}
+#pg-home ul ul li{
+	list-style: disc;
+}
+#pg-home ul ul li a,
+#pg-home ul ul li a:link,
+#pg-home ul ul li a:visited{
+	color: #000;
+}
+#pg-home ul ul li a:focus,
+#pg-home ul ul li a:hover{
+	background: none;
+	text-decoration: underline;
+}
+
+/*----------------
+#pg-concept-of-rwd
+------------------*/
+#rwd-architecture td{ text-align: center; }
+#screen-usage-trend td{ text-align: center; }
+
+/*------
+#pg-tuts
+--------*/
+#pg-tuts ul{
+	padding: 0;
+	margin: 0.769230em 0 0 0;
+}
+#pg-tuts ul li:nth-child(2n){
+	padding-bottom: 15px;
+}

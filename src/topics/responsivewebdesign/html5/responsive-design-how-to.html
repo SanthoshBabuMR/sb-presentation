@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="case study on how-to of responsive web design" />
+<meta name="keywords" content="html5, css3, design, responsive " />
+<meta name="author" content="santhosh" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>Responsive Design - How To</title>
+<!-- InstanceEndEditable -->
+<!-- open css -->
+<link rel="stylesheet" href="../css/reset.css" />
+<link rel="stylesheet" href="../css/default.css" />
+<link rel="stylesheet" href="../css/page.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/largevp.css" />
+<link rel="stylesheet" href="../css/narrowvp.css" media="screen and (min-width: 0px) and (max-width: 600px)" />
+<link rel="stylesheet" href="../css/midvp.css" media="screen and (min-width: 601px) and (max-width: 800px)" />
+<!--[if lt IE 9]><link rel="stylesheet" href="../css/ie.css" /><![endif]-->
+<!--[if lt IE 7]><link rel="stylesheet" href="../css/ie6.css" /><![endif]-->
+<!-- InstanceBeginEditable name="doccss" -->
+<style type="text/css">
+</style>
+<!-- InstanceEndEditable -->
+<!-- close css -->
+<!-- open script -->
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../script/modernizr.js"></script>
+<script type="text/javascript" src="../script/init.js"></script>
+<!-- InstanceBeginEditable name="docscript" -->
+<script type="text/javascript">
+    $(document).ready(function(){
+    });
+</script>
+<!-- InstanceEndEditable -->
+<!-- close script -->
+</head>
+<!-- InstanceBeginEditable name="docbody" -->
+<body id="pg-rd-howto">
+
+    <!-- open page-wrapper -->
+    <div id="page-wrapper">
+        <!-- open page-header -->
+        <header id="page-header">
+            <section class="page-head">
+                <h1>Responsive Design - How To</h1>
+            </section>
+        </header>
+        <!-- close page-header -->
+        <!-- open content-wrapper -->
+        <section id="content-wrapper">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="concept-of-rwd.html">Concepts of RWD</a>
+                <a href="rwd-ingredients.html">RWD Ingredients</a>
+                <a href="responsive-design-how-to.html" class="active">RWD - How To</a>
+                <a href="rwd-challenges.html">RWD Challenges</a>
+                <a href="css3-features-to-look-forward.html">CSS3 Features</a>
+                <a href="rwd-online-tools.html">RWD Online Tools</a>
+                <a href="is-rwd-the-way-forward.html">Is RWD the Way forward?</a>
+                <a href="further-reading.html">Further Reading</a>
+                <a href="tuts-refs.html">Tuts / Refs</a>
+            </nav>
+            <ul class="list-of-contents">
+                <li><a href="#pro_enhance_section">Graceful degradation Vs. Progressive Enhancement</a></li>
+                <li><a href="#break_points_section">Identify Break Points</a></li>
+                <li><a href="#wireframes_section">Create wireframes</a></li>
+                <li><a href="#browsing_landscape_section">Identify the browsing landscape to be supported</a></li>
+                <li><a href="#framework_section">Framework</a></li>
+                <li><a href="#viewport_ios_section">Viewport for iOS</a></li>
+                <li><a href="#typography_section">Typography</a></li>
+                <li><a href="#images_section">Images</a></li>
+                <li><a href="#video_section">Audio/Video</a></li>
+                <li><a href="#media_query_listeners_section">Media query listeners</a></li>
+            </ul>
+            <section id="pro_enhance_section">
+                <h2>Graceful degradation Vs. Progressive Enhancement</h2>
+                <article>
+                    <p>
+                        Graceful degradation is the practice of building web functionality so that it provides a certain level of user experience in more modern browsers, but it will also degrade gracefully to a lower level of user in experience in older browsers. This lower level is not as nice to use for your site visitors, but it does still provide them with the basic functionality that they came to your site to use; things do not break for them.<br />
+Progressive enhancement is similar, but it does things the other way round. You start by establishing a basic level of user experience that all browsers will be able to provide when rendering your web site, but you also build in more advanced functionality that will automatically be available to browsers that can use it.
+                    </p>
+                    <p>
+                        In other words, Graceful degradation is the journey from complexity to simplicity, whereas Progressive Enhancement is the journey from simplicity to complexity. Progressive enhancement is considered a better methodology than Graceful degradation because it tends to cover a greater range of potential issues as a baseline. 
+                    </p>
+                    <p>
+                        With responsive web design, we cover a wide range of devices, so we need to start out with a solid and simple design structure. Moreover, With CSS3 features available in most modern browsers, we are now capable of having rounded-corners, gradients, multiple backgrounds, text-shadow, box-shadow using CSS. 
+                    </p>
+                    <p>
+                        A better approach to dealing CSS3 is that, we could start out with a basic layout for CSS3 non-supporting browsers providing them with minimal UI Styling. As we move towards targeting CSS3 enabled browsers, we could have all kinds of CSS3 features in action.
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://www.w3.org/wiki/Graceful_degredation_versus_progressive_enhancement">http://www.w3.org/wiki/Graceful_degredation_versus_progressive_enhancement</a></li>
+                        <li><a href="http://icant.co.uk/articles/pragmatic-progressive-enhancement/">http://icant.co.uk/articles/pragmatic-progressive-enhancement/</a></li>
+                        <li><a href="http://coding.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/">http://coding.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/</a></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="break_points_section">
+                <h2>Identify Break Points</h2>
+                <article>
+                    <p>
+                        Identifying the breakpoints, helps us to know the number of layouts we will be working with.
+                    </p>
+                    <p>
+                        As they are an ever-increasing number of devices with different screen resolutions to take into account with a responsive design, we identify the breakpoints by classifying the devices based on their width.
+                    </p>
+                    <p>
+                        This ensures our pages are independent of the type of device that accesses it.
+                    </p>
+                    <p>
+                        Here is the list of most common screen widths,
+                    </p>
+                    <table id="common-screen-width">
+                        <caption>Common Screen Width Usage</caption>
+                        <thead>
+                            <tr>
+                                <td>
+                                    Screen Width
+                                </td>
+                                <td>
+                                    Identified Devices
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    320 pixels
+                                </td>
+                                <td>
+                                    For small screen devices, like phones, held in portrait mode.
+                                </td>                               
+                            </tr>
+                            <tr>
+                                <td>
+                                    480 pixels
+                                </td>
+                                <td>
+                                    For small screen devices, like phones, held in landscape mode.
+                                </td>                               
+                            </tr>
+                            <tr>
+                                <td>
+                                    600 pixels
+                                </td>
+                                <td>
+                                    Smaller tablets, like the Amazon Kindle (600800) and Barnes & Noble Nook (6001024), held in portrait mode.
+                                </td>                               
+                            </tr>
+                            <tr>
+                                <td>
+                                    768 pixels
+                                </td>
+                                <td>
+                                    Ten-inch tablets like the iPad (7681024) held in portrait mode.
+                                </td>                               
+                            </tr>
+                            <tr>
+                                <td>
+                                    960 pixels - 1360 pixels
+                                </td>
+                                <td>
+                                    Desktops
+                                </td>                               
+                            </tr>
+                            <tr>
+                                <td>
+                                    1024 pixels
+                                </td>
+                                <td>
+                                    Tablets like the iPad (1024768) held in landscape mode, as well as certain laptop, netbook, and desktop displays.
+                                </td>                               
+                            </tr>
+                            <tr>
+                                <td>
+                                    > 1360 pixels
+                                </td>
+                                <td>
+                                    For widescreen displays, primarily laptop and desktop browsers.
+                                </td>                               
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>
+                        Break Points can now be set as follows
+                    </p>
+                    <table>
+                        <caption>Break Points</caption>
+                        <thead>
+                            <tr>
+                                <td>Viewport Type</td>
+                                <td>Viewport Width</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Narrow Screen</td>
+                                <td>0 - 540px [Iphone (P & L), Android (P & L)]</td>
+                            </tr>
+                            <tr>
+                                <td>Small Screen</td>
+                                <td>540px - 760px [Smaller Tablets]</td>
+                            </tr>
+                            <tr>
+                                <td>Mid Screen</td>
+                                <td>760px - 960px [High Resolution Tablets & Ipad (P & L)]</td>
+                            </tr>
+                            <tr>
+                                <td>Large Screen</td>
+                                <td>960px - 1360px [Desktop]</td>
+                            </tr>
+                            <tr>
+                                <td>Wide Screen</td>
+                                <td>> 1360px</td>
+                            </tr>
+                        </tbody>
+                    </table>    
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://en.wikipedia.org/wiki/Display_resolution">http://en.wikipedia.org/wiki/Display_resolution</a></li>
+                        <li><a href="http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density">http://en.wikipedia.org/wiki/List_of_displays_by_pixel_density</a></li>
+                        <li><a href="http://www.metaltoad.com/blog/simple-device-diagram-responsive-design-planning">http://www.metaltoad.com/blog/simple-device-diagram-responsive-design-planning</a></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="wireframes_section">
+                <h2>Create wireframes</h2>
+                <article>
+                    <p>
+                        Once we are done with breakpoints, we can now create basic wireframes of how the design will look at the respective break points. We don&#39;t intend to create a rock solid wireframe design, but rather a simple wireframe structure that focuses primarily on layout and component position in the web page.
+                    </p>
+                    <p>
+                        Following are some of the important design decisions this phase focuses on,
+                    </p>
+                    <ul>
+                        <li>
+                            Type of layout at each break point i.e. 2 column/3 column/single column layout
+                        </li>
+                        <li>
+                            How to present the Global Navigation
+                        </li>
+                        <li>
+                            How do we handle interactivity added using JS across different layouts?
+                            <ol>
+                                <li>
+                                    Although a responsive site will only change the CSS depending on the width; if there are complicated elements that rely heavily on JavaScript, they may not translate well on a smaller device and it could be worth hiding these.
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            Designing form layouts, webpage components for different screen widths.
+                        </li>
+                        <li>
+                            As only one markup is served across different devices, there should be no duplicate content or components.
+                        </li>
+                    </ul>
+                    <p>
+                        Once again, the key to a responsive design is progressive enhancement, where we start designing for a low-end devices and enhance as we move towards to high-end devices.
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://www.uxbooth.com/blog/how-to-design-a-mobile-responsive-website/">http://www.uxbooth.com/blog/how-to-design-a-mobile-responsive-website/</a></li>
+                        <li><a href="http://responsiveprocess.com/">http://responsiveprocess.com/</a></li>
+                        <li><a href="http://css-tricks.com/convert-menu-to-dropdown/">http://css-tricks.com/convert-menu-to-dropdown/</a></li>
+                        <li><a href="http://www.lukew.com/ff/entry.asp?1514">http://www.lukew.com/ff/entry.asp?1514</a></li>
+                        <li><a href="http://www.thismanslife.co.uk/projects/lab/responsivewireframes/">http://www.thismanslife.co.uk/projects/lab/responsivewireframes/</a></li>                      
+                    </ul>
+                </article>
+            </section>
+            <section id="browsing_landscape_section">
+                <h2>Identify the browsing landscape to be supported</h2>
+                <article>
+                    <p>
+                        List out the browsers that will support our responsive design.
+                    </p>
+                    <p>
+                        Desktop:
+                        <br />
+                        IE, FIREFOX, CHROME, SAFARI, OPERA
+                    </p>
+                    <p>
+                        Mobile:
+                        <br />
+                        IOS SAFARI, OPERA MINI, OPERA MOBILE, ANDRIOD BROWSER.          
+                    </p>
+                    <p>
+                        Since media-queries are extensively used to make design adapt at different breakpoints, we need to make design decisions on how &#39;media queries non-supporting browsers&#39; handle our design.
+                    </p>
+                    <p>
+                        Lucky for us, the majority of browsers [mobile & desktop] in usage today, supports media-queries, except for IE6-8.
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://caniuse.com/#feat=css-mediaqueries">http://caniuse.com/#feat=css-mediaqueries</a></li>
+                        <li><a href="http://www.w3counter.com/globalstats.php">http://www.w3counter.com/globalstats.php</a></li>
+                        <li><a href="http://www.quirksmode.org/blog/archives/2011/01/2010_mobile_bro.html">http://www.quirksmode.org/blog/archives/2011/01/2010_mobile_bro.html</a></li>
+                        <li><a href="http://www.quirksmode.org/mobile/">http://www.quirksmode.org/mobile/</a></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="framework_section">
+                <h2>Framework</h2>
+                <article>
+                    <p>
+                        Responsive Framework helps to quickly design prototype and get it working.
+                    </p>
+                    <p>
+                        These frameworks divide the layout into a system of grids consisting of columns & gutters. We will have to set corresponding class names as required by the framework, to get our system of grids working.
+                    </p>
+                    <p>
+                        Choosing a framework makes our layout process simplified; if we find that, frameworks are not suiting our requirements, then we can build our own framework.
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://www.thegridsystem.org/">http://www.thegridsystem.org/</a></li>
+                        <li><a href="http://coding.smashingmagazine.com/2011/08/23/the-semantic-grid-system-page-layout-for-tomorrow/">http://coding.smashingmagazine.com/2011/08/23/the-semantic-grid-system-page-layout-for-tomorrow/</a></li>
+                    </ul>
+                    <p>
+                        Below are some of the responsive frameworks to be considered,
+                    </p>
+                    <h3>Bootstrap: <a href="http://twitter.github.com/bootstrap/">http://twitter.github.com/bootstrap/</a></h3>
+                    <p>
+                        Built by Twitter and now open-sourced, Bootstrap is a framework and series of components for quickly getting a site online, and as of version two all of its core parts work responsively.
+                    </p>
+                    <ul class="disc">
+                        <li>Supports fixed and fluid layouts [responsive]</li>
+                        <li>Supports all major browsers, except IE6</li>
+                        <li>Reusable components - navigation, labels, alerts, progress bar</li>
+                        <li>Contains Jquery plugins for modals, dropdowns, tooltips, carousel etc.</li>
+                        <li>Progressively enhanced based on HTML5, CSS3</li>
+                        <li>Built using LESS</li>
+                        <li>Clear and concise documentation</li>
+                    </ul>
+                    <h3>320 and up: <a href="http://stuffandnonsense.co.uk/projects/320andup/">http://stuffandnonsense.co.uk/projects/320andup/</a></h3>
+                    <p>
+                        320 and Up works on the &#39;tiny screen first&#39; principle, whereby designs are created for mobile screens first, and then expanded for tablets, desktops, and large screens. It works well as an extension to HTML5 Boilerplate and as a standalone kit.
+                    </p>
+                    <ul class="disc">
+                        <li>CSS3 Media Query increments: 480, 600, 768, 992 and 1382px</li>
+                        <li>Design &#39;atmosphere&#39; (colour, texture and typography) separated from layout</li>
+                        <li>Bootstrap styles for buttons, forms and tables</li>
+                        <li>Font-based icons from Font Awesome</li>
+                        <li>Modernizr, Selectivizr, responsive type tester and design tester</li>
+                        <li>LESS mixins and variables</li>
+                    </ul>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://www.stuffandnonsense.co.uk/blog/about/this_is_the_new_320_and_up">http://www.stuffandnonsense.co.uk/blog/about/this_is_the_new_320_and_up</a></li>
+                    </ul>
+                    <h3>Skeleton: <a href="http://www.getskeleton.com/">http://www.getskeleton.com/</a></h3>
+                    <p>
+                        Skeleton is a small collection of CSS and JavaScript files that can help you rapidly develop websites that look beautiful at any size, be it a 17-inch laptop or an iPhone. Skeleton is a grid that is responsive right down to mobile. It is well organized and well structured and provides most basic styles as a foundation.
+                    </p>
+                    <ul class="disc">
+                        <li>Variation of 960 gs</li>
+                        <li>Simple build in UI Elements - buttons, tabs, forms</li>
+                        <li>Not an UI Framework; simply provides base style as foundation to build upon.</li>
+                        <li>Works with latest browsers. No support for IE6.</li>
+                    </ul>
+                    <h3>Foundation: <a href="http://foundation.zurb.com/">http://foundation.zurb.com/</a></h3>
+                    <p>
+                        Foundation is a 12-column, future-friendly responsive grid framework that includes dozens of styles and elements to help you quickly put together clickable prototypes that can then be adapted and styled into polished production code.
+                    </p>
+                    <ul class="disc">
+                        <li>Includes Eric Meyer&#39;s  Reset CSS</li>
+                        <li>Built-in UI Styles  alerts, labels, tooltips, panel, tabs, pagination, breadcrumbs, microformats</li>
+                        <li>Orbit - lightweight slider for images & content.</li>
+                        <li>Reveal  lightweight  Modal plugin</li>
+                        <li>Supports latest browsers. No support for IE6</li>
+                    </ul>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://coding.smashingmagazine.com/2011/10/25/rapid-prototyping-for-any-device-with-foundation/">http://coding.smashingmagazine.com/2011/10/25/rapid-prototyping-for-any-device-with-foundation/</a></li>
+                    </ul>
+                    <h3>Semantic Grid System: <a href="http://semantic.gs/">http://semantic.gs/</a></h3>
+                    <p>
+                        Pre-processed CSS extensions like Sass and LESS are becoming more and more popular, and Semantic Grid System uses them to maximum effect in this grid system which claims to use no unnecessary classes or elements.
+                    </p>
+                    <ul class="disc">
+                        <li>Powered by LESS mixins</li>
+                        <li>Supports all major browsers including IE6</li>
+                        <li>No need to include any grid-x classes to achieve the grid layout. LESS Mixins is used for this task.</li>
+                    </ul>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://speckyboy.com/2011/11/17/15-responsive-css-frameworks-worth-considering/">http://speckyboy.com/2011/11/17/15-responsive-css-frameworks-worth-considering/</a></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="viewport_ios_section">
+                <h2>Viewport for iOS</h2>
+                <article>
+                    <p>
+                        Mobile Safari presents desktop-sized sites on small screens by rendering to a virtual browser screen that is 980px wide, and letting you pan and zoom that page. Viewport tags let you tell Mobile Safari that your site displays properly narrower than 980px, and set other preferences for scaling your page.
+                    </p>
+                    <span class="codeheading">Setting viewport width to the width of the device</span>
+<code>    
+<span class="tag">&lt;meta name=&quot;</span><span class="attrval">viewport</span><span class="tag">&quot; content=&quot;</span><span class="attrval">width=device-width</span><span class="tag">&quot;&gt;</span>
+</code>  
+                    <span class="codeheading">Setting the initial scale to 1.0</span>
+<code>    
+<span class="tag">&lt;meta name=&quot;</span><span class="attrval">viewport</span><span class="tag">&quot; content=&quot;</span><span class="attrval">initial-scale=1.0</span><span class="tag">&quot;&gt;</span>
+</code>
+                    <span class="codeheading">Setting the initial scale and to turn off user scaling</span>
+<code>    
+<span class="tag">&lt;meta name=&quot;</span><span class="attrval">viewport</span><span class="tag">&quot; content=&quot;</span><span class="attrval">initial-scale=2.3, user-scalable=no</span><span class="tag">&quot;&gt;</span>
+</code>
+                    <span class="codeheading">Putting it together, Setting width to device-width and disable user scaling,</span>
+<code>    
+<span class="tag">&lt;meta name=&quot;</span><span class="attrval">viewport</span><span class="tag">&quot; content=&quot;</span><span class="attrval">width=device-width, initial-scale=1, maximum-scale=1</span><span class="tag">&quot;&gt;</span>
+</code>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html">http://developer.apple.com/library/ios/#DOCUMENTATION/AppleApplications/Reference/SafariWebContent/UsingtheViewport/UsingtheViewport.html</a></li>
+                        <li><a href="http://www.allenpike.com/2010/choosing-a-viewport-for-ipad-sites/">http://www.allenpike.com/2010/choosing-a-viewport-for-ipad-sites/</a></li>
+                    </ul>                    
+                </article>
+            </section>
+            <section id="typography_section">
+                <h2>Typography - EM Vs. pixel</h2>
+                <article>
+                    <p>
+                        Pixels are fixed-size units that are used in screen media. One pixel is equal to one dot on the computer screen (the smallest division of your screen&#39;s resolution). With sizing fonts in pixels, we are literally telling browsers to render the letters exactly that number of pixels in height. Pixels don&#39;t work well with accessibility and have usability concerns. In IE 6 and below, font-sizes set in pixels cannot be resized by the user.
+                    </p>
+                    <p>
+                        em refers to font size of the element; ems allows designs to be resolution independent. 1em is equal to the current font-size of the element. If we haven&#39;t set font size anywhere on the page, then it would be the browser default, which is probably 16px. So by default 1em = 16px. If we were to set a font-size of 20px on your body, then 1em = 20px.
+                    </p>
+                    <p>
+                        Using EM:
+                        <br /> 
+                        When working with EM, we set the base-font to the body tag in px / em / %.
+                    </p>
+                    <p>
+                    	body { font-size: 16px; } /* default font-size of browser */
+                        <br />
+                        body { font-size:100%; } /* 16px/16px; font-size of browser default&#39;s to 16px */
+                    </p>
+                    <p>
+                        now, if we want our elements, say div to be at 18px, then we target it as,
+                    </p>
+                    <p>
+                        div { font-size: 0.875em } /* 18px/16px = 1.125em*/
+                    </p>
+                    <p>
+                        As with fluid layout, the simple math calculation is used here,
+                    </p>
+                    <p>
+                        target / context = result 
+                    </p>
+                    <p>
+                        target = font-size required for the element;
+                        <br />
+                        contenxt = font-size of the containing parent element;
+                    </p>
+                    <p>
+                        However, em-based font sizing leads to compounding effect.
+                    </p>
+                    <p>
+                        With the above code, if we had child div inside another parent div,
+                    </p>
+                    <p>
+                        The effective font-size of child div would be, [1.125em * 1.125em], which would be 20px; if we had another div within the child div, then the font-size of this div would be [1.125em * 1.125em * 1.125em], which would be 23px;
+                    </p>
+                    <p>
+                       To avoid the compounding effect, we need to be specific in targeting the elements and use target  context = result math as required.
+                    </p>
+                    <p>
+                        ref:
+                        <ul class="ref">
+                            <li>
+                                <a href="http://www.alistapart.com/articles/howtosizetextincss/">http://www.alistapart.com/articles/howtosizetextincss/</a>
+                            </li>
+                        </ul>
+                    </p>
+                    <h3>CSS3 @font-face</h3>
+                    <p>
+                        @font-face is a CSS rule which allows to show a font on a Web page even if that font is not installed on the users&#39; computer. Using this, we can get around the problem of web-safe fonts as well as prevent creating additional dependencies in other methods such as Cuf&oacute;n, sIFR, etc.
+                    </p>
+                    <span class="codeheading">@font-face</span>
+<code>    
+<span class="tag">@font-face {
+    font-family: </span><span class="attrval">&lt;a-remote-font-name&gt;</span><span class="tag">;
+    src: </span><span class="attrval">&lt;source&gt; [,&lt;source&gt;]*</span><span class="tag">;
+    [font-weight: </span><span class="attrval">&lt;weight&gt;]</span><span class="tag">;
+    [font-style: </span><span class="attrval">&lt;style&gt;]</span><span class="tag">;</span>
+}
+</code>  
+                    <span class="codeheading">Example - @font-face usage</span>
+<code>
+<span class="tag">@font-face {
+	font-family:</span> <span class="attrval">&#39;MyWebFont&#39;</span><span class="tag">;
+	src:</span> <span class="attrval">url(&#39;MyWebFont.eot&#39;)</span><span class="tag">;</span> /* IE9 Compat Modes */
+	<span class="tag">src:</span> <span class="attrval">url(&#39;MyWebFont.eot?&#39;) format(&#39;embedded-opentype&#39;)</span><span class="tag">,</span> /* IE6-IE8 */
+	     <span class="attrval">url(&#39;MyWebFont.woff&#39;) format(&#39;woff&#39;)</span><span class="tag">,</span> /* Modern Browsers */
+	     <span class="attrval">url(&#39;MyWebFont.ttf&#39;)  format(&#39;truetype&#39;)</span><span class="tag">,</span> /* Safari, Android, iOS */
+	     <span class="attrval">url(&#39;MyWebFont.svg#svgFontName&#39;) format(&#39;svg&#39;)</span><span class="tag">;</span> /* Legacy iOS */
+	<span class="tag">}</span>
+</code>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax">http://www.fontspring.com/blog/the-new-bulletproof-font-face-syntax</a></li>
+                        <li><a href="http://pxtoem.com/">http://pxtoem.com/</a></li>
+                        <li><a href="http://css-tricks.com/css-font-size/">http://css-tricks.com/css-font-size/</a></li>
+                        <li><a href="http://kyleschaeffer.com/best-practices/css-font-size-em-vs-px-vs-pt-vs/">http://kyleschaeffer.com/best-practices/css-font-size-em-vs-px-vs-pt-vs/</a></li>
+                        <li><a href="http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography">http://www.markboulton.co.uk/journal/comments/five-simple-steps-to-better-typography</a></li>                        
+                    </ul>
+                    <h3>Web Font Formats</h3>
+                    <p>
+                       - EOT, TTF, WOFF, SVG
+                    </p>
+                    <h4>EOT [Embedded OpenType]:</h4>
+                    <p>
+                        Embedded OpenType is a proprietary standard supported exclusively by Internet Explorer.
+                        <br />
+                        The font files are made small in size by use of subsetting (only including the needed characters), and by data compression.
+                    </p>
+                    <h4>TTF [TrueType Font]:</h4>
+                    <p>
+                        TrueType is an outline font standard originally developed by Apple Computer. TrueType has become the most common format for fonts on both the Mac OS and Microsoft Windows operating systems.
+                    </p>
+                    <p>
+                        The primary strength of TrueType was originally that it offered font developers a high degree of control over precisely how their fonts are displayed, right down to particular pixels, at various font sizes.
+                    </p>
+                    <h4>WOFF [Web Open Font Format]:</h4>
+                    <p>
+                        The WOFF is a font format for use in web pages. WOFF is in the process of being standardized as a recommendation by the W3C which published WOFF as a working draft back in July 2010.
+                        <br />
+                        WOFF is a wrapper that contains TrueType and OpenType fonts, and its not really a new format of its own.
+                    </p>
+                    <h4>SVG [Scalable Vector Graphics]:</h4>
+                    <p>
+                         SVG fonts are text files that contain the glyph outlines represented as standard SVG elements and attributes, as if they were single vector objects in the SVG image.
+                         <br />
+                         SVG is the only format that can be used for the iPhone and iPad prior to iOS 4.2.
+                     </p>
+                     <p>
+                         ref:
+                     </p>
+                     <ul class="ref">
+                         <li><a href="http://www.smashingmagazine.com/2011/03/02/the-font-face-rule-revisited-and-useful-tricks/">http://www.smashingmagazine.com/2011/03/02/the-font-face-rule-revisited-and-useful-tricks/</a></li>
+                         <li><a href="http://webfonts.info/wiki/index.php?title=Category:Webfonts_How-To%E2%80%99s">http://webfonts.info/wiki/index.php?title=Category:Webfonts_How-To%E2%80%99s</a></li>
+                         <li><a href="http://dev.opera.com/articles/view/introducing-woff-web-open-font-format">http://dev.opera.com/articles/view/introducing-woff-web-open-font-format</a></li>
+                     </ul>
+                     <h3>Font-Conversion:</h3>
+                     <p>
+                         Existing fonts can be converted into the WOFF format by the online service Font Squirrel free of charge.
+                         <br />
+                         <a href="http://www.fontsquirrel.com/fontface/generator">http://www.fontsquirrel.com/fontface/generator</a>
+                     </p>
+                     <h3>@font-face browser support:</h3>
+                     <p>
+                         All browser including IE6 and above have support for @font-face. However, different browsers support specific type of font-format.
+                     </p>
+					 <table>
+                         <caption>Font Type - Browser Support</caption>
+                         <thead>
+                             <tr>
+                                 <td>
+                                     Font Type
+                                 </td>
+                                 <td>
+                                     Browser Support
+                                 </td>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             <tr>
+                                 <td>
+                                     EOT
+                                 </td>
+                                 <td>
+                                     IE6+
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                     TTF
+                                 </td>
+                                 <td>
+                                     Firefox, Chrome, Safari, Opera, iOS Safari 4.2+, Opera Mobile
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                     WOFF
+                                 </td>
+                                 <td>
+                                     IE9+, Firefox, Chrome, Safari, Opera, iOS Safari 5
+                                 </td>
+                             </tr>
+                             <tr>
+                                 <td>
+                                     SVG
+                                 </td>
+                                 <td>
+                                     IE9+, Firefox, Chrome, Safari, Opera, iOS Safari 3.2+, Opera Mobile
+                                 </td>
+                             </tr>
+                         </tbody>
+                     </table>
+                     <p>
+                         ref:
+                     </p>
+                     <ul class="ref">
+                         <li><a href="http://www.caniuse.com/#feat=fontface">http://www.caniuse.com/#feat=fontface</a></li>
+                         <li><a href="http://randsco.com/index.php/2009/07/04/p680">http://randsco.com/index.php/2009/07/04/p680</a></li>
+                         <li><a href="http://msdn.microsoft.com/en-us/library/ms530757%28VS.85%29.aspx">http://msdn.microsoft.com/en-us/library/ms530757%28VS.85%29.aspx</a></li>
+                         <li><a href="http://www.theleagueofmoveabletype.com/">http://www.theleagueofmoveabletype.com/</a></li>
+                         <li><a href="http://sixrevisions.com/css/font-face-guide/">http://sixrevisions.com/css/font-face-guide/</a></li>
+                         <li><a href="http://www.fontsquirrel.com/">http://www.fontsquirrel.com/</a></li>
+                         <li><a href="http://www.google.com/webfonts">http://www.google.com/webfonts</a></li>
+                         <li><a href="http://www.fontex.org/">http://www.fontex.org/</a></li>
+                         <li><a href="http://blog.themeforest.net/tutorials/how-to-achieve-cross-browser-font-face-support/">http://blog.themeforest.net/tutorials/how-to-achieve-cross-browser-font-face-support/</a></li>
+                         <li><a href="http://beta.typecastapp.com/">http://beta.typecastapp.com/</a></li>  
+                         <li><a href="http://fortawesome.github.com/Font-Awesome/">http://fortawesome.github.com/Font-Awesome/</a>
+                     </ul>
+                 </article>
+            </section>
+            <section id="images_section">
+                <h2>Images</h2>
+                <article>
+                    <p>
+                        Images can be made responsive by using CSS max-width; but this applies only to img tag.
+                    </p>
+                    <p>
+                        Background-images, on the other hand are made responsive, by making available the portion/section of the image, that stresses the importance using background-position
+                    </p>
+                    <p>
+                        We also have jqeury plugin that can make background-images added to a page responsive; However, it works only on the body tag.
+                        <br />
+                        <a href="http://srobbin.com/jquery-plugins/backstretch/">http://srobbin.com/jquery-plugins/backstretch/</a>
+                    </p>
+                    <p>
+                        Here is another jquery plugin, which allows to add background-image to any container, making it responsive;
+                        <br />
+                        <a href="https://github.com/danmillar/jquery-anystretch">https://github.com/danmillar/jquery-anystretch</a>
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://www.svendtofte.com/code/max_width_in_ie/">http://www.svendtofte.com/code/max_width_in_ie/</a></li>
+                        <li><a href="http://clagnut.com/sandbox/imagetest/">http://clagnut.com/sandbox/imagetest/</a></li>
+                        <li><a href="http://www.bram.us/2012/03/01/jquery-anystretch/">http://www.bram.us/2012/03/01/jquery-anystretch/</a></li>
+                        <li><a href="http://elliotjaystocks.com/blog/better-background-images-for-responsive-web-design/">http://elliotjaystocks.com/blog/better-background-images-for-responsive-web-design/</a></li>
+                    </ul>
+                </article>
+            </section>      
+            <section id="video_section">
+                <h2>Video</h2>
+                <article>
+                    <p>
+                        Video(s) can be made responsive similar to images using CSS max-width; But, this applies only to video embedded using html5 video/audio tag, but it doesnt work with embed code using iframe or object tag
+                    </p>
+                    <p>
+                        So, we have a CSS solution and jquery solution to get around this.
+                    </p>
+                    <p>
+                        The css solution requires a wrapper container around the iframe containing the video; we now adjust the iframe as well as wrapper container using CSS to make it elastic.
+                        <br />
+                        <a href="http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/">http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/</a>
+                    </p>
+                    <p>
+                        CSS solution doesnt address the aspect ratio issue with video; as an alternative we could use javascript.
+                    </p>
+                    <p>
+                        jquery plugin aims at capturing the aspect ratio of the iframes containing the video on page load, and saves it. Now when the browser is resized, all the videos are resized to fill the available width and maintain their aspect ratio. The javascript solution is limited to youtube, vimeo videos as they are contained within iframes;
+                        <br />
+                        <a href="http://daverupert.com/2011/09/responsive-video-embeds-with-fitvids/">http://daverupert.com/2011/09/responsive-video-embeds-with-fitvids/</a>
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/">http://www.alistapart.com/articles/creating-intrinsic-ratios-for-video/</a></li>
+                        <li><a href="http://webdesignerwall.com/tutorials/css-elastic-videos">http://webdesignerwall.com/tutorials/css-elastic-videos</a></li>
+                        <li><a href="http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php">http://css-tricks.com/NetMag/FluidWidthVideo/Article-FluidWidthVideo.php</a></li>
+                        <li><a href="http://daverupert.com/2011/09/responsive-video-embeds-with-fitvids/">http://daverupert.com/2011/09/responsive-video-embeds-with-fitvids/</a></li>
+                    </ul>
+                </article>
+            </section>     
+            <section id="media_query_listeners_section">
+                <h2>Media query listeners</h2>
+                <article>
+                    <p>
+                        A javascript API for responding to media query changes.
+                    </p>
+                    <p>
+                        Media query listeners help us to evaluate a media query at run time using JavaScript, and subscribing listeners to changes in the media query&#39;s evaluation. Support for Media query listeners is very limited.
+                    </p>
+                    <p>
+                        Instead of having to poll for changes or load several versions of a resource, we can use the API, for example, to download images only of a particular size when a media query match is triggered.
+                    </p>
+                    <p>
+                     It involves creating a MediaQueryList object using MatchMedia function of Window Object. -	The MatchMedia function takes one or more queries as arguments.
+                    </p>
+                    <span class="codeheading">Example: Media query listeners</span>
+<code>    
+<span class="tag">mql = window.matchMedia("(</span><span class="attrval">max-width: 320px</span><span class="tag">)")</span>
+mql -> MediaQueryList Object
+</code>     
+                   <p>
+                      The result of the above function would be the MediaQueryList Object;
+                   </p>
+                   <p>
+                       MediaQueryList object has 2 properties  matches and media and 2 methods  addListener() and removeListener() 
+                   </p>
+                   <p>
+                       mql.matches - returns "true" if the list of media queries matches the state of the current window;
+                   </p>
+                   <p>
+                       mql.media - returns the serialized version of the media query list, which was used to create the MediaQueryList object.
+                   </p>
+                   <p>
+                       mql.addListener() - this function is called whenever the evaluation of the media query changes.
+                   </p>
+                   <p>
+                       mql.removeListener() - removes the given callback function for the corresponding mql object
+                   </p>
+                   <p>
+                        Polyfill for Matchmedia
+                        <br />
+                        <a href="https://github.com/paulirish/matchMedia.js/">https://github.com/paulirish/matchMedia.js/</a>
+                   </p>
+                   <p>
+                       ref:
+                   </p>
+                   <ul class="ref">
+                       <li><a href="http://www.opera.com/docs/specs/presto29/css/cssom/">http://www.opera.com/docs/specs/presto29/css/cssom/</a></li>
+                       <li><a href="https://developer.mozilla.org/en/CSS/Using_media_queries_from_code">https://developer.mozilla.org/en/CSS/Using_media_queries_from_code</a></li>
+                       <li><a href="http://msdn.microsoft.com/library/ie/hh673551.aspx">http://msdn.microsoft.com/library/ie/hh673551.aspx</a></li>
+                       <li><a href="http://www.paulrhayes.com/2011-11/use-css-transitions-to-link-media-queries-and-javascript/">http://www.paulrhayes.com/2011-11/use-css-transitions-to-link-media-queries-and-javascript/</a></li>
+                       <li><a href="http://ie.microsoft.com/testdrive/HTML5/CSS3MediaQueries/Default.html">http://ie.microsoft.com/testdrive/HTML5/CSS3MediaQueries/Default.html</a></li>
+                       <li><a href="http://www.caniuse.com/matchmedia">http://www.caniuse.com/matchmedia</a></li>
+                   </ul>                
+                </article>
+            </section> 
+        </section>
+        <!-- close content-wrapper -->
+        <!-- open page-footer -->
+        <footer id="page-footer">
+            <section class="page-foot">
+                <img src="../images/ci.jpg" alt="CI-Interactive" />
+            </section>        
+        </footer>
+        <!-- close page-footer -->
+    </div>
+    <!-- close page-wrapper -->
+
+</body>
+<!-- InstanceEndEditable -->
+<!-- InstanceEnd --></html>

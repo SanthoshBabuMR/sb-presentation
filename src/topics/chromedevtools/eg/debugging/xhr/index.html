@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XHR Debugging</title>
+  <style>
+  body {
+	font: 13px/1.5 arial;
+  }
+  h1 {
+	font: 26px/1.5 tahoma;
+  }
+  .clearLocalStorage {
+	position:absolute;
+	right: 150px;
+	top: 35px;
+	cursor: default	;
+  }
+  </style>
+</head>
+<body>
+<a href="../../" class="backlink">back to examples</a>
+
+	<h1>XHR Debugging</h1>
+	
+	<form name="districtfinder" method="#" action="#" id="districtfinder"> 
+		<label for="state">Pick a state</label>
+		<select id="state">
+		</select>
+	</form>
+
+	<output id="districts" class="clear">
+	</output>
+	
+	<span class="clearLocalStorage">Clear localStorage</span>
+	
+<script src="../js/jquery-1.10.1.min.js"></script>
+<script src="../js/xhr.js"></script>
+</body>
+</html>

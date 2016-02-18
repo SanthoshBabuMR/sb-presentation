@@ -1,0 +1,158 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Margin vs Padding</title>
+<style>
+	body{
+		padding: 10px;
+	}
+	div.navigation{
+		border: 1px dotted;
+		padding: 10px;		
+		/*display: none;*/
+	}
+	div.bgi{
+		border: 1px dotted;
+		/*display: none;*/
+	}
+	.clear{
+		clear: both;
+	}
+	body{
+		width: 90%;
+		margin: 0 auto;	
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		font-weight: bold;
+	}
+	.logo{
+		background : url('HTML5_logo.png');
+		width: 
+	}
+	
+	ul.nav{
+		margin: 0px;
+		padding: 0px;
+		list-style: none;
+		border:1px solid;
+		overflow: hidden;
+		width: auto;
+	}
+	ul.nav li{
+		float: left;		
+	}
+	ul.nav li a{
+		display: block;
+		background: gray;
+		color: #FFF;
+		/*padding: 10px;
+		margin: 10px;*/
+	}
+	div.bgi .backgroundimg{
+		background: url('bg_results_summary.png') no-repeat;
+		height: 118px;
+		width: 366px;		
+		float: left;
+	}
+	div.bgi .backgroundimg h3{
+		color: #4D4D4D;
+	}
+	div.bgi .backgroundimg p{
+		font-size: 13px;
+		font-weight: normal;
+	}
+	div.bgi .backgroundimg p img{
+		float: left;
+		height: 70px;
+		border:1px dotted #999;
+		margin: -10px 5px 0 0px;
+	}	
+	span.submit{
+		border: 1px solid gray;
+		width: 80px;
+		background-color: #4d4d4d;
+		color: #EFEFEF;
+		text-decoration: underline;
+		cursor: pointer;
+		padding: 2px;
+	}
+</style>
+<script src="jquery-1.6.2.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+	
+</script>
+</head>
+
+<body>
+<h1>Margin vs padding</h1>
+<!--
+<div class="navigation">
+	<p >
+		Navigation:
+	</p>
+	<ul class="nav">
+		<li>
+			<a href="#">
+				Skin Care
+			</a>
+		</li>	
+		<li>
+			<a href="#">
+				Styling
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				Hair Care
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				Makeup
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				Gifts
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				Favorites
+			</a>
+		</li>
+	</ul>
+</div>
+-->
+<p>&nbsp;</p>
+<div class="bgi">
+	<p>
+		Backgroud-Image:
+	</p>
+	<div class="backgroundimg">
+		<h3>Quenching Conditioner</h3>
+		<p>
+			<img src="quench.jpg" />
+			This hydrating conditioner begins replenishing vital moisture in the shower.
+		</p>
+		<span class="submit">
+			Quick Look
+		</span>
+	</div>
+	<div class="backgroundimg">
+		<h3>cool blonde shampoo</h3>
+		<p>	
+			<img src="shampoo.jpg"/>
+			Keep blonde bombshells to silver foxes cool - this low pH, extra-mild formula avoids oxidation.
+		</p>
+		<span class="submit">
+			Quick Look
+		</span>
+	</div>
+	<div class="clear"></div>
+</div>
+	
+</body>
+</html>

@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Basics of HTML-CSS</title>
+<link type="text/css" rel="stylesheet" href="css/reset.css" />
+<link type="text/css" rel="stylesheet" href="css/html5boilerplate.css" />
+<link type="text/css" rel="stylesheet" href="css/base.css" />
+<link type="text/css" rel="stylesheet" href="css/format.css" />
+<link type="text/css" rel="stylesheet" href="css/slide.css" />
+<link type="text/css" rel="stylesheet" href="css/widget.css" />
+<!--[if IE 6]>
+<link type="text/css" rel="stylesheet" href="css/ie6.css" />
+<![endif]-->
+<script type="text/javascript" src="js/modernizr-2.0.6.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/styler.js"></script>
+<script type="text/javascript" src="js/slider.js"></script>
+<link href='http://fonts.googleapis.com/css?family=Pontano+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Dancing+Script' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Share:700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Cabin+Condensed:600' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lustria' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Voces' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Signika+Negative:400,700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fredericka+the+Great|Ruluko' rel='stylesheet' type='text/css'>
+
+<!--
+<link href='http://fonts.googleapis.com/css?family=Gentium+Basic:700' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Arapey:400,400italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fresca|Federo' rel='stylesheet' type='text/css'>
+-->
+<script type="text/javascript">
+
+</script>
+</head>
+
+<body>
+    <header>
+    	<div class="hint">Click to Begin or Hit NumPad Zero</div>
+    	<hgroup>
+          <h1><span>Basics of HTML-CSS</span></h1>
+    	  <h2><span>DOCTYPE</span><span>Box Model</span><span>Positioning</span><span>CSS Specificity</span><span>IE Bugs</span><span>Best Practice</span></h2>
+		</hgroup>
+        <div class="author">
+         - Santhosh
+        </div>
+    </header>
+    <aside class="left">
+    	<div class="sidebar">
+            <div class="linker">
+                <span>
+                </span>
+            </div>
+            <!--<div class="linkersupport">
+            </div>-->
+            <div class="sbcontainer">
+                <article class="flag1">
+                    DOCTYPE
+                </article>
+                <article class="flag2">
+                    Box Model
+                </article>
+                <article class="flag3">
+                    Positioning
+                </article>
+            </div>
+		</div>
+</aside>	
+    <aside class="right">
+    	<div class="sidebar">
+            <div class="linker">
+                <span>
+                </span>
+            </div>
+            <!--<div class="linkersupport">
+            </div>-->
+            <div class="sbcontainer">
+                <article class="flag4">
+                    CSS Specificity
+                </article>
+                <article class="flag5">
+                    IE Bugs & CSS
+                </article>
+                <article class="flag6">
+                    Best Practice
+                </article>
+            </div>
+		</div>
+</aside>
+	<section class="swrapper">
+    <!-- slides section-->
+        <section class="slidecontainer">
+        	<section class="slides">
+            	<article class="slide-me mainslide">
+               	  <div class="info">
+                    	<!--<div class="up">
+                        	up
+                        </div>-->
+	              	<div class="down">
+                        	down
+                      </div>
+                       <h2 class="subheading">HTML Structure</h2>
+                   	  <section id="htmlstructure">
+                       	  <div class="displaywidget">
+                           	  <h4>HTML Page Structure</h4>
+                              <div class="contains">
+                               	  <ul class="structure">
+                                    <li>
+                                        &lt;DOCTYPE html PUBLIC "-//W3C//DTD <mark class="marker">XHTML 1.0 Transitional</mark>//EN" 
+                                    </li>
+                                    <li>    	
+                                        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&gt;
+                                    </li>
+                                    <li>    	
+                                        &lt;html&gt;
+                                    </li>
+                                    <li>
+                                        &lt;head&gt;
+                                        <ul>
+                                            <li>
+                                                &lt;meta info&gt;
+                                            </li>
+                                            <li>
+                                                &lt;title&gt; 
+                                            </li>
+                                            <li>
+                                                &lt;!--  page title --&gt;
+                                            </li>
+                                            <li>
+                                                &lt;/title&gt; 
+                                            </li>
+                                            <li>
+                                                &lt;css styles&gt;
+                                            </li>
+                                            <li>
+                                                &lt;scripts&gt;
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                         &lt;/head&gt;
+                                    </li>
+                                    <li>
+                                        &lt;body&gt;	
+                                    </li>
+                                    <li>
+                                        &lt;!-- Content --&gt;
+                                    </li>
+                                    <li>
+                                         &lt;/body&gt;
+                                    </li>
+                                    <li>
+                                        &lt;/html&gt;
+                                    </li>
+                                </ul>
+                              </div>
+                          </div>
+	                  	  <div class="displaywidget">
+                           	  <h4>HTML Basic Tags</h4>
+                              <div class="contains">
+                               	  <h5>DOCTYPE</h5>
+                                  <ul>
+                                   	  <li>specifies type of web page - html or xhtml</li>
+                                      <li>specifies version of html/xhtml</li>
+                                      <li>specifies type of html/xhtml
+                                        <!--<br />
+                                        Eg: STRICT, LOOSE, FRAMESET
+                                        -->
+                                      </li>
+                                      <li>must always be the starting tag in a web page</li>
+                                  </ul>
+                                  <h5>html</h5>
+                                  <ul>
+                                   	  <li>specifies what follows is a html document</li>
+                                  </ul>
+                                  <h5>head</h5>
+                                  <ul>
+                                   	  <li>holds information to be processed by the browser
+                                        <br />
+                                        Eg: language, charset, keywords, css, javascript
+                                      </li>
+                                      <li>	
+                                       	  order of tags: meta tag(s) - title tag - css style - script
+                                      </li>
+                                  </ul>
+                                  <h5>body</h5>
+                                  <ul>
+                                   	  <li>delivers information to end users</li>
+                                  </ul>
+                              </div>
+                          </div>
+                      </section>
+					</div>
+            	</article>
+                <article class="slide-me">
+               		<div class="info">
+                    	<div class="up">
+                        	up
+                        </div>
+		              	<div class="down">
+                        	down
+                        </div>
+                        	<h2 class="subheading">DOCTYPE</h2>	
+                   	  <section class="doctype">
+                       
+                        	<div class="displaywidget">
+                            	<h4>DTD - Document Type Definition</h4>
+                                <div class="contains">
+	                                <ul>
+                                	<li>
+                                    	- Contains Definition for HTML Elements
+                                    </li>
+                                    <li>
+                                    	<p class="example"><span class="highlight">Eg:</span> [Definition for Paragraph Element]</p>
+                                    </li>
+                                    <li class="example">
+                                		&lt;!--=== Paragraphs  ===--&gt;
+                               		</li>
+                                    <li class="example">
+                                        &lt;!ELEMENT <mark class="marker">P - O (%inline;)*</mark>  -- paragraph  --&gt;
+                                    </li>
+                                    <li class="example">
+                                        &lt;!ATTLIST P 	
+                                    </li>
+                                    <li style="padding-left:50px;" class="example">
+                                        %attrs;  -- %coreattrs, %i18n, %events–
+                                    </li>
+                                    <li style="padding-left:50px;" class="example">
+                                        %align;  --  align, text alignment -- &gt; 
+                                    </li>
+                                    <li class="example">
+                                    	<p>
+                                    		[<mark class="marker">-</mark> MANDATORY] [<mark class="marker">O</mark> Optional] [<mark class="marker">(%inline)*</mark> Content Model]
+                                         </p>
+                                    </li>																														
+                                </ul>
+                                </div>
+                            </div>
+                            <div class="displaywidget">
+                            	<h4>Types</h4>
+                                <div class="contains">
+									<ul>
+	                                	<li>
+                                        	<h5>1. STRICT</h5>
+                                        </li>
+                                        <li>
+    		                                - contains semantic tags.	
+                                        </li>    
+	                                    <li>
+                                        	<p class="example">
+		                                    	<span class="highlight">Eg:</span>
+        		                                a, addr, h1-h6
+                		                    </p>
+                                        </li>
+                                        <li>
+                                        	<h5>2. LOOSE/TRANSITIONAL</h5>
+                                        </li>
+	                	                <li>
+    	        	                        - mostly commonly used DTD
+                                        </li>
+                                        <li>
+	    		                            - contains presentational and semantic tags.
+                                        </li>
+                                        <li>
+                                        	<p class="example">
+                                                <span class="highlight">Eg:</span>
+                                                b, i, center
+                                            </p>
+                                        </li>
+                                        <li>
+                                        	 <h5>3. FRAMESET</h5>
+                                        </li>
+                                        <li>
+                                        	 - contains presentational, semantic and frameset tags.
+                                        </li>
+                                        <li>
+                                        	<p class="example">
+                                                <span class="highlight">Eg:</span>
+                                                frameset, frame
+                                            </p>
+                                        </li>
+									</ul>
+                            
+								</div>	
+                               </div>
+						</section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    	<div class="up">
+                        	up
+                        </div>
+		              	<div class="down">
+                        	down
+                        </div>
+                        <h2 class="subheading">DOCTYPE</h2>	
+                   	    <section class="doctype2">
+                        	<div class="displaywidget">
+                            	<h4>Need for DTD</h4>
+                                <div class="contains">
+                                    <ul>
+                                        <li>
+                                        	<br />
+                                            1. Web page Validation <a href="http://validator.w3.org/">http://validator.w3.org/</a>
+                                        </li>
+                                        <li>
+                                        	<br />
+                                            2. Consistent Look and Feel across Browsers.
+                                        </li>
+                                    </ul>
+                           		</div>
+                       		</div>
+                            <div class="displaywidget">
+                            	<h4>Browser Modes [DOCTYPE Switch]</h4>
+                                <div class="contains">
+                                    <ul>
+                                        <li>
+                                        	<br />
+                                            1. Standards-Compliant Mode
+                                        </li>
+                                        <li>
+                                        	<br />
+                                        	- rules for rendering elements are based on W3C Spec.
+                                        </li>
+                                        <li>
+                                        	<br />
+                                            2. Quirks Mode
+                                        </li>
+                                    </ul>
+                           		</div>
+                       		</div>
+                        </section>
+                    </div>
+                </article>
+                <article class="slide-me mainslide">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading"><a href="Examples.html#panel1" target="_blank">Box Model</a></h2>
+                    <section class="">
+                        <div class="displaywidget">
+                            <h4>W3C Box Model</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li style="text-align:center">
+                                       <img src="images/w3c_box_model.jpg" title="w3c box model" /> 
+                                    </li>
+                                    <li>
+                                    	<br />
+                                       	<mark class="marker">HTML Element's Width = </mark>
+                                    </li>
+                                    <li>
+                                        	Margin-Left + Border-Left + Padding-Left 
+                                    </li>
+                                    <li style="text-align:center">
+                                            + Width + 
+                                    </li>
+                                    <li>
+                                           Padding-Right + Border-Right + Margin-Right;
+                                    </li>
+                                    <li>
+                                    	<br />
+                                       	<mark class="marker">HTML Element's Height = </mark>
+                                    </li>
+                                    <li>
+                                        	Margin-Top + Border-Top + Padding-Top 
+                                    </li>
+                                    <li style="text-align:center">
+                                            + Height + 
+                                    </li>
+                                    <li>
+                                           Padding-Bottom + Border-Bottom + Margin-Bottom;
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="displaywidget">
+                            <h4>IE Box Model</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li style="text-align:center">
+										<img src="images/w3cvsie6bm.png" title="w3c vs ie6 box model" />
+                                    </li>
+                                    <li>
+                                    	<br />
+                                       	<mark class="marker">[IE] HTML Element's Width = </mark>
+                                    </li>
+                                    <li style="text-align:center">
+                                        	Margin-Left  + Width + Margin-Right
+                                    </li>
+                                    <li>
+                                    	<br />
+                                       	<mark class="marker">[IE] HTML Element's Height = </mark>
+                                    </li>
+                                    <li style="text-align:center">
+                                            Margin-Top  + Height + Margin-Bottom
+                                    </li>
+                                    <li>
+                                    	<br />
+                                    	<mark class="marker">- applies only in the absence or invalid DOCTYPE</mark>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading"><a href="Examples.html#panel2" target="_blank">Block Vs Inline Elements</a></h2>
+                    <section class="blockelements">
+                        <div class="displaywidget expand">
+                            <h4>Block Level Elements</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                        - Used to hold text, inline elements and other block level elements
+                                    </li>
+                                    <li>
+                                    	<p class="example"><span class="highlight">Eg:</span>div, h1-h6, p, table</p>
+                                    </li>
+                                    <li>
+                                    	<br />
+                                        <table style="width:100%; border: none">
+                                        <caption style="text-decoration:underline">Block Level Characterisitcs</caption>
+                                            <tbody>
+                                            <tr>
+                                            	<td style="width:50%;">
+                                                	<ul>
+                                                    	<li><h5>Visual Appearance</h5></li>
+                                                    	<li>- Occupies the available width of the parent container</li>
+                                                        <li>- Block level elements are stacked Vertically</li>
+                                                        <li>- Always begins in a new line</li>
+                                                    </ul>
+                                                </td>
+                                                <td style="width:50%;">
+	                                                <ul>
+                                                    	<li><h5>Properties</h5></li>
+                                                    	<li>
+                                                        	<table border="1" style="width:100%;" class="blockprop">
+                                                            	<tbody>
+                                                                	<tr>
+                                                                    	<td>
+                                                                        	Margin
+                                                                        </td>
+                                                                        <td>
+                                                                        	Top
+                                                                        </td>
+                                                                        <td>
+                                                                        	Right
+                                                                        </td>
+                                                                        <td>
+                                                                        	Bottom
+                                                                        </td>
+                                                                        <td>
+                                                                        	Left
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    	<td>
+                                                                        	Border
+                                                                        </td>
+                                                                        <td>
+                                                                        	Top
+                                                                        </td>
+                                                                        <td>
+                                                                        	Right
+                                                                        </td>
+                                                                        <td>
+                                                                        	Bottom
+                                                                        </td>
+                                                                        <td>
+                                                                        	Left
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    	<td>
+                                                                        	Padding
+                                                                        </td>
+                                                                        <td>
+                                                                        	Top
+                                                                        </td>
+                                                                        <td>
+                                                                        	Right
+                                                                        </td>
+                                                                        <td>
+                                                                        	Bottom
+                                                                        </td>
+                                                                        <td>
+                                                                        	Left
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    	<td>
+                                                                        	
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                        	Width
+                                                                        </td>
+                                                                        <td colspan="2"	>
+                                                                        	Height
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                	<tr>
+                                                                    	<td colspan="5">
+                                                                        	<div class="accept"></div>Value(s) Applicable
+                                                                            <div class="deny"></div>Value(s) Not Applicable
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table> 
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>                
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading"><a href="Examples.html#panel2" target="_blank">Block Vs Inline Elements</a></h2>
+                    <section class="inlinelements">
+                        <div class="displaywidget expand">
+                            <h4>Inline Elements</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                        - Used to hold text and other inline elements.
+                                    </li>
+                                    <li>
+                                    	<p class="example"><span class="highlight">Eg:</span>a, i, em, span, strong</p>
+                                    </li>
+                                    <li>
+                                    	<br />
+                                        <table style="width:100%; border: none">
+                                        <caption style="text-decoration:underline">Inline Characterisitcs</caption>
+                                            <tbody>
+                                            <tr>
+                                            	<td style="width:50%;">
+                                                	<ul>
+                                                    	<li><h5>Visual Appearance</h5></li>
+                                                    	<li>- Occupies the enclosing content's width and height</li>
+                                                        <li>- Inline elements are stacked horizontally</li>
+                                                    </ul>
+                                                </td>
+                                                <td style="width:50%;">
+	                                                <ul>
+                                                    	<li><h5>Properties</h5></li>
+                                                    	<li>
+                                                        	<table border="1" style="width:100%;" class="inlineprop">
+                                                            	<tbody>
+                                                                	<tr>
+                                                                    	<td>
+                                                                        	Margin
+                                                                        </td>
+                                                                        <td class="denied">
+                                                                        	Top
+                                                                        </td>
+                                                                        <td>
+                                                                        	Right
+                                                                        </td>
+                                                                        <td class="denied">
+                                                                        	Bottom
+                                                                        </td>
+                                                                        <td>
+                                                                        	Left
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    	<td>
+                                                                        	Border
+                                                                        </td>
+                                                                        <td>
+                                                                        	Top
+                                                                        </td>
+                                                                        <td>
+                                                                        	Right
+                                                                        </td>
+                                                                        <td>
+                                                                        	Bottom
+                                                                        </td>
+                                                                        <td>
+                                                                        	Left
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    	<td>
+                                                                        	Padding
+                                                                        </td>
+                                                                        <td class="denied">
+                                                                        	Top
+                                                                        </td>
+                                                                        <td>
+                                                                        	Right
+                                                                        </td>
+                                                                        <td class="denied">
+                                                                        	Bottom
+                                                                        </td>
+                                                                        <td>
+                                                                        	Left
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    	<td>
+                                                                        	
+                                                                        </td>
+                                                                        <td colspan="2" class="denied">
+                                                                        	Width
+                                                                        </td>
+                                                                        <td colspan="2" class="denied">
+                                                                        	Height
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                	<tr>
+                                                                    	<td colspan="5">
+                                                                        	<div class="accept"></div>Value(s) Applicable
+                                                                            <div class="deny"></div>Value(s) Not Applicable
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table> 
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading"><a href="Examples.html#panel2" target="_blank">Block Vs Inline Elements</a></h2>
+                    <section class="inlineblockelements">
+                        <div class="displaywidget expand">
+                            <h4>Inline-Block</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                        - Combines, Inline Elements Visual Appearance and Block Elements Properties
+                                    </li>
+                                    <li>
+                                       	<br />
+                                        <table style="width:100%; border: none">
+                                        <caption style="text-decoration:underline">Inline-Block Characterisitcs</caption>
+                                            <tbody>
+                                            <tr>
+                                            	<td style="width:50%;">
+                                                	<ul>
+                                                    	<li><h5>Visual Appearance</h5></li>
+                                                    	<li>- Occupies the enclosing content's width and height</li>
+                                                        <li>- Inline Block elements are stacked horizontally, until explicit width is specified to occupy the available space</li>
+                                                    </ul>
+                                                </td>
+                                                <td style="width:50%;">
+	                                                <ul>
+                                                    	<li><h5>Properties</h5></li>
+                                                    	<li>
+                                                        	<table border="1" style="width:100%;" class="inlineblockprop">
+                                                            	<tbody>
+                                                                	<tr>
+                                                                    	<td>
+                                                                        	Margin
+                                                                        </td>
+                                                                        <td>
+                                                                        	Top
+                                                                        </td>
+                                                                        <td>
+                                                                        	Right
+                                                                        </td>
+                                                                        <td>
+                                                                        	Bottom
+                                                                        </td>
+                                                                        <td>
+                                                                        	Left
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    	<td>
+                                                                        	Border
+                                                                        </td>
+                                                                        <td>
+                                                                        	Top
+                                                                        </td>
+                                                                        <td>
+                                                                        	Right
+                                                                        </td>
+                                                                        <td>
+                                                                        	Bottom
+                                                                        </td>
+                                                                        <td>
+                                                                        	Left
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    	<td>
+                                                                        	Padding
+                                                                        </td>
+                                                                        <td>
+                                                                        	Top
+                                                                        </td>
+                                                                        <td>
+                                                                        	Right
+                                                                        </td>
+                                                                        <td>
+                                                                        	Bottom
+                                                                        </td>
+                                                                        <td>
+                                                                        	Left
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                    	<td>
+                                                                        	
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                        	Width
+                                                                        </td>
+                                                                        <td colspan="2">
+                                                                        	Height
+                                                                        </td>
+                                                                    </tr>
+                                                                </tbody>
+                                                                <tfoot>
+                                                                	<tr>
+                                                                    	<td colspan="5">
+                                                                        	<div class="accept"></div>Value(s) Applicable
+                                                                            <div class="deny"></div>Value(s) Not Applicable
+                                                                        </td>
+                                                                    </tr>
+                                                                </tfoot>
+                                                            </table> 
+                                                        </li>
+                                                    </ul>
+                                                </td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading"><a href="Examples.html#panel3" target="_blank">Margin Vs Padding</a></h2>
+                    <section class="margins">
+                        <div class="displaywidget">
+                            <h4>Margin</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                        - defines space between border and other outer elements.
+                                    </li>
+                                    <li>
+                                    	- synonymous with cellspacing in tables.
+                                    </li>
+                                    <li>
+										- Margin can take negative values.                               
+                                    </li>
+                                    <li>
+                                    	- appears outside the element's  background-color or background-image.
+                                    </li>
+                                    <li>
+                                    <br />
+                                    <h5>Usage:</h5>
+                                    </li>
+                                    <li>
+                                       - To provide space between adjacent elements
+                                    </li>
+                                    <li>
+                                       - To position elements.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="displaywidget">
+                            <h4>Padding</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                        - defines space between border and the element's content.
+                                    </li>
+                                    <li>
+                                    	- synonymous with cellpadding in tables.
+                                    </li>
+                                    <li>
+										- negative values are not applicable to padding.
+                                    </li>
+                                    <li>
+                                   		- appears inclusive of the element's  background-color or background-image.
+                                    </li>
+                                    <li>
+                                    <br />
+                                    <h5>Usage:</h5>
+                                    </li>
+                                    <li>
+                                       - To provide space with in the element's border and the content
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article> 
+                <article class="slide-me mainslide">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading">Positioning</h2>
+                    <section class="positioning">
+                        <div class="displaywidget expand">
+                            <h4>CSS FLOAT | CSS POSITION | CSS ZIndex</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                        <br />
+                                        - HTML Elements flow from Top to Bottom, Left to Right.
+                                    </li>
+                                    <li>
+                                        <br />
+                                        - To Change the normal flow, and to position elements as required, CSS provides FLOAT, POSITION and ZIndex properties.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                        - Float(s) are used for horizontal positioning (i.e) to the extreme left or to the extreme right.
+                                    </li>
+                                    <li>
+                                    	<br /> 
+                                    	- Position(s) are used for horizontal(left, right), vertical(top, bottom) and positioning at a specific location.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                    	- ZIndex is used for positioning along z-axis, commonly referred to as overlapping.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading"><a href="Examples.html#panel4" target="_blank">Positioning</a></h2>
+                    <section class="cssfloat">
+                        <div class="displaywidget">
+                            <h4>CSS Float</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                    	<h5>Float Value</h5>
+                                        left, right, none, inherit
+                                    </li>
+                                    <li>
+                                    	<br />
+										<h5>Usage</h5>
+                                        - Wrapping text around Images<br />
+										- Creating multi column layout<br />
+                                        - Form Layout<br />
+										- Navigation
+    	                            </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="displaywidget">
+                            <h4>CSS Float</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                    	<h5>Impact</h5>
+                                        - Parent Container do not enclose floating children<br />
+                                        - Elements floated,  becomes BLOCK Level <br />
+                                    </li>    
+                                    <li>
+										<h5>Issues</h5>
+                                        - In IE, parent container enclose(s) floating children.<br />
+                                        - Double Margin Bug: When the margin of a floated element goes in the same direction as the float, the margin value gets doubled in IE6. fix: use display:inline to the floated element.
+    	                            </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading"><a href="Examples.html#panel4" target="_blank">Positioning</a></h2>
+                    <section class="cssclear">
+                        <div class="displaywidget">
+                            <h4>Clearing Floats</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                    	<br />
+                                    	- Clearing floats is possible by using CSS Clear or Overflow or Height property.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                    	- To clear float using overflow property, we must provide <code>overflow: hidden;</code> to the Parent Element containing floating children.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                    	- To clear float using height property, we must provide <code>height: xx px;</code> to the Parent Element containing floating children.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="displaywidget">
+                            <h4>CSS Clear</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                    	<br />
+                                    	- When an element is floated, subsequent elements will flow along the floated element.
+                                        <br />
+                                         CSS Clear is used clear the float and retain normal flow.
+                                         <br />
+                                    </li>
+                                    <li>
+                                    	<br />
+                                    	- Used to enable Parent Container to enclose floating children. 
+                                    </li>
+                                    <li>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading"><a href="Examples.html#panel5" target="_blank">Positioning</a></h2>
+                    <section class="cssposition">
+                        <div class="displaywidget">
+                            <h4>CSS Position</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                    	<h5>Value</h5>
+                                        - static, relative, absolute, fixed<br />
+                                        - IE6 doesn’t support fixed positioning.
+                                    </li>    
+                                    <li>
+                                    	<br />
+										<h5>Usage</h5>
+                                        - Positioning element’s relative to Parent Container or Browser Window.<br />
+                                        - Element(s) are positioned using TOP, LEFT, BOTTOM, RIGHT values.
+    	                            </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="displaywidget">
+                            <h4>CSS Position</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                    	<h5>position: static</h5>
+                                        - Default value of position property<br />
+                                        - Elements follow the Document flow.
+                                    </li>    
+                                    <li>
+                                    	<br />
+										<h5>position: relative</h5>
+                                        - mostly used to in combination with position:absolute, to relatively position the absolute element.<br />
+                                        - commonly used position value for zIndex.
+    	                            </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                   <h2 class="subheading"><a href="Examples.html#panel5" target="_blank">Positioning</a></h2>
+                    <section class="cssposition">
+                        <div class="displaywidget">
+                            <h4>CSS Position</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                    	<h5>position: fixed</h5>
+                                        - position(s) elements relative to the browser window
+                                        <p class="example"><span class="highlight">Eg:</span>Fixed Footer at the Browser's Bottom</p>
+                                    </li>    
+                                    <li>
+                                    	<br />
+										<h5>position: absolute</h5>
+                                        - used to position element(s) relative to parent container
+                                        <p class="example"><span class="highlight">Eg:</span> Quick Shop Buttons</p> 
+    	                            </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="displaywidget">
+                            <h4>CSS Position</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                    	<h5>Impact</h5>
+	                                    - Absolute and Fixed elements are BLOCK Level.<br />
+										- Absolute and Fixed elements are removed from document flow, so enclosing parent can not contain these elements.
+                                    </li>    
+                                    <li>
+	                                    - When positioning, it's important to provide minimum 2 values.
+                                        <p class="example"><span class="highlight">Eg:</span>TOP LEFT or TOP RIGHT or BOTTOM LEFT or BOTTOM RIGHT </p> 
+       	                            </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article> 
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading"><a href="Examples.html#panel6" target="_blank">CSS Positioning</a></h2>
+                    <section class="csszindex">
+                        <div class="displaywidget expand">
+                            <h4>ZIndex</h4>
+                            <div class="contains">
+                                <ul>
+                                	<li>
+                                    	<h5>Value</h5>
+                                        - Takes any positive integer 
+                                    </li>
+                                    <li>
+                                    	<br />    
+                                        - zIndex values are provided in multiple's of 1000
+                                    </li>
+                                    <li>
+                                       <br />
+                                       <h5>Usage</h5>
+                                        - To position Elements along the z-axis.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                    	- zIndex works only with positioned elements [absolute, relative , fixed]
+									</li>
+                                    <li>
+                                    	<br />
+                                        - Visually identified through overlapping elements.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                    <h2 class="subheading"><a href="Examples.html#panel6" target="_blank">CSS Positioning</a></h2>
+                    <section class="csszindex2">
+                        <div class="displaywidget expand">
+                            <h4>ZIndex</h4>
+                            <div class="contains">
+                                <ul>
+									<li>
+                                    	 <h5>Working</h5>
+                                    	- position:relative is commonly used along with zIndex for correct rendering.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                    	- When two non-positioned or positioned elements overlap, the latter element would come on top.	
+                                    </li>
+                                    <li>
+                                    	<br />
+                                    	- Positioned elements will always overlap on Non-Positioned elements.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                    	- When two positioned elements[p1, p2] with different zIndex[p1=1000, p2=500] overlap, the element with greater zIndex comes on top.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                    	- In the above case, Element p1 and its Child Elements will always remain on top of Element p2 and its Child Elements [even if children’s of p2 have highest zIndex values]
+                                    </li>	
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article> 
+                <article class="slide-me mainslide">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                   	<h2 class="subheading">CSS Specificity</h2>
+                    <section class="cssspecificity">
+                    <div class="displaywidget">
+                            <h4>CSS Selectors</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                    	<br />
+    									- When 2 or more declarations apply to the same element, then declaration with the most specific selector will be applied.	                                    
+	                                </li>
+                                    <li>
+                                    	<br />
+                                    	- When 2 rules have the same weight, the last rule declared in the stylesheet will be applied.
+                                    </li>
+                                    <li>
+                                    <br />
+                                    
+                                    <h5>Order of Precedence - Highest to Least</h5>
+                                    <table style="border:1px solid #999" border="1">
+                                    	<thead>
+                                        	<tr>
+                                            	<th valign="top">
+													Inline style >> 
+                                                </th>
+                                                <th valign="top">
+                                                	ID >> 
+                                                </th>
+                                                <th valign="top">
+                                                	CLASS >>
+                                                </th>
+                                                <th valign="top">
+                                                	Elements
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        	<tr>
+                                            	<td>
+                                                	1000
+                                                </td>
+                                                <td>
+                                                	100
+                                                </td>
+                                                <td>
+                                                	10
+                                                </td>
+                                                <td>
+                                                	1
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                        </tbody>
+									</table>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="displaywidget">
+                            <h4>CSS Selectors</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                    	<p class="example"><span class="highlight">Eg:</span></p>
+                                        <code>
+                                            &lt;p id=&quot;chapter&quot; class=&quot;subsection&quot;&gt;
+                                            <br />
+                                            	This is some random content for display.
+                                            <br />
+                                            &lt;/p&gt;
+                                         </code>
+                                    </li>
+                                    <li>     
+                                         <br />
+                                         <code>
+                                         	p{ color: red;}<br />
+                                            #chapter{ color: blue; }<br />
+                                            p.subsection{ color: green; }<br />
+                                         </code>
+                                     </li>
+                                     <li>
+                                     	<br />
+                                     	- Here, color attribute of #chapter gets applied.
+                                     </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                   	<h2 class="subheading">CSS Selectors</h2>
+                    <section class="">
+                        <div class="displaywidget expand">
+                            <h4>!importance</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                        <br />
+                                       - Used to Override CSS Specificity
+                                    </li>
+                                    <li>
+                                      - CSS rule with !important takes priority over other matching rules[external css, styles within head section, inline css]
+                                    </li>
+                                    <li>     
+                                    	<table style="width: 88%; margin: 2% 1%;">
+                                        	<tbody>
+                                            	<tr>
+                                                	<td style="width:40%">	
+                                                     <code>
+                                                        &lt;p id=&quot;chapter&quot; class=&quot;subsection&quot;&gt;
+                                                        <br />
+                                                            This is some random content for display.
+                                                        <br />
+                                                        &lt;/p&gt;
+                                                     </code>
+													</td>
+                                                    <td  style="padding-left:8%; width:40%">
+                                                    	<code>	
+	                                                        p{ color: red !important;}<br />
+    	                                                    #chapter{ color: blue; }<br />
+        	                                                p.subsection{ color: green; }<br />
+                                                        </code>    
+													</td>
+												</tr>
+											</tbody>
+										</table>
+                                     </li>
+                                     <li>
+                                     	- Here, color attribute of p tag gets applied, since it takes highest priority.
+                                     </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me mainslide">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                   	<h2 class="subheading">IE Bugs</h2>
+                    <section class="iebugs">
+                        <div class="displaywidget expand">
+                            <h4>Common IE Issues</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                        <br />
+                                        - In IE6, DropDown doesn't consider zIndex values and will always come on top of other elements.
+                                        <br />
+                                        Possible fix would be to hide the dropdown, or replace it with a input box, or use IFrame.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                       - Empty DIV takes space in IE. Use <code>line-height:0px; height: 0px</code> or <code>zoom:1</code>
+                                    </li>
+                                    <li>
+                                    	<br />
+                                       - PNG Images is not supported by IE6. Use HTC fix.
+                                    </li>
+                                     <li>
+                                    	<br />
+                                       - In Form Layouts, ensure to use &lt;div class=&quot;clear&quot;&gt;&lt;/div&gt;, when float needs to cleared.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                      -	When anchor element is made block level, the clickable region is limited only to the text													. Use a transparent Background Image for the anchor to fix it
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                    <div class="down">
+                        down
+                    </div>
+                   	<h2 class="subheading">CSS</h2>
+                    <section class="generalcss">
+                        <div class="displaywidget">
+                            <h4>CSS</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                        <br />
+                                    	- Only Block Level Elements can be centered using, <br /><code>margin: 0 auto; width: xx px;</code>
+                                    </li>
+                                    <li>
+                                    	<br />
+                                        - Inline Level elements can be centered only by applying <code>text-align:center</code> to its parent container.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                       - To achieve min-height across browsers, use the following
+                                       <br />
+                                       <code>min-height:300px; height:auto !important; height:300px;</code>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="displaywidget">
+                            <h4>CSS</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>
+                                        <br />
+                                    	- Vertical centering can be achieved if height and line-height are set to the same value. Used commonly with input elements
+                                    </li>
+                                    <li>
+                                    	<br />
+                                       -  when specifying height of an element to be 100%, ensure the height of its parent is set.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                       -  If a element has its width set to "100%", it shouldn't have any margins, padding, or borders, otherwise it will overflow its parent.
+                                    </li>
+                                    <li>
+                                    	<br />
+                                       -  To hide/show elements, <code>display</code> or <code>visible</code> properites can be used. <br /><code>display: none;</code> hides the element and removes the space, while <code>visibility: hidden;</code> hides the element but retains the space.
+                                      
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+                <article class="slide-me mainslide">
+               		<div class="info">
+                    <div class="up">
+                        up
+                    </div>
+                   	<h2 class="subheading">Best Practice</h2>
+                    <section class="bestpractice">
+                        <div class="displaywidget expand">
+                            <h4>Best Practice</h4>
+                            <div class="contains">
+                                <ul>
+                                    <li>	
+                                    	<br />
+                                       - Use HTML tags for disseminating information and CSS for styling.
+                                    </li>    
+                                    <li>
+                                    	<br />
+                                       - Avoid presentational tags such as b, i, center, font; prefer CSS. 
+                                        <p class="example"><span class="highlight">Eg:</span>use <mark class="marker">'font-weight:bold;'</mark> instead of &lt;b&gt;; use <mark class="marker">'font-style:italic'</mark> instead of &lt;i&gt;;</p>
+                                    </li>
+                                    <li> 
+                                    	<br />   
+                                       - Always start web page's with a valid DOCTYPE.
+                                    </li>
+                                    <li>      
+                                    	<br />  
+                                       - Use lowercase for html tags, attributes, values.
+                                    </li>
+                                    <li>    
+                                    	<br />
+                                       - Attributes must be in key/value pairs and the values must be enclosed in quotes.
+									   <p class="example"><span class="highlight">Eg:</span>&lt;select&gt;&lt;option <mark class="marker">selected=&quot;selected&quot;</mark>&gt;-value-&lt;/option&gt;&lt;/select&gt;</p>
+                                    </li>
+                                    <li>
+                                    	<br />
+		                               - Every form control should have a corresponding label.
+                                       <p class="example"><span class="highlight">Eg:</span> <mark class="marker">&lt;label for="input-name"&gt;Name&lt;label/&gt; : &lt;input type="text" id="input-name" name="input-name" /&gt;</mark></p>
+                                    </li>   
+                                    <li>    
+                                    	<br />
+                                       - Follow the Content Model. Eg: UL, OL		
+                                    </li>
+                                    <li>    
+                                    	<br />
+	                                    - Use reset.css, to set the properties of html tags as required, to ensure cross browser consistency.
+									</li>		
+                                    <li> 
+                                    	<br />   
+                                       - Indent Code as required and provide  valid comments as necessary.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <!-- slides section-->
+</section>
+    <section class="wrapper">
+    	<!-- thumbnail section -->
+        <section class="thumbnailcontainer">
+            <section class="thumbnail">
+                <div>
+                    <a href="#" class="flag1">
+                        <ul>
+                            <li>
+                                <h2>DocType</h2>
+                            </li>
+                            <li>
+                                HTML Structure
+                            </li>
+                            <li>
+                                Need for DTD
+                            </li>
+                        </ul>
+                    </a>
+                </div>
+                <div>
+                     <a href="#" class="flag2">
+<ul>
+                            <li>
+                                <h2>Box Model</h2>
+                            </li>
+                            <li>
+                                Box Model
+                            </li>
+                            <li>
+                                Block vs Inline
+                            </li>
+                            <li>
+                                Margin Vs Padding
+                            </li>
+                        </ul>
+                     </a>
+                </div>
+                <div>
+                     <a href="#" class="flag3">
+<ul>
+                            <li>
+                                <h2>Positioning</h2>
+                            </li>
+                            <li>
+                                CSS Float
+                            </li>
+                            <li>
+                                CSS Position
+                            </li>
+                            <li>
+                                zIndex
+                            </li>
+                        </ul>
+                     </a>
+                </div>
+                <h2>
+                	&nbsp;
+                    <!--Basics of HTML - CSS 
+                    <br />
+                    <span class="handwriting">Santhosh</span>-->
+</h2>
+                <div>
+                     <a href="#" class="flag4">
+                        <ul>
+                            <li>
+                                <h2>CSS Specificity</h2>
+                            </li>
+                            <li>
+                                CSS Selectors
+                            </li>
+                            <li>
+                                !important
+                            </li>
+                        </ul>
+                     </a>
+                </div>
+                <div>
+                     <a href="#" class="flag5">
+<ul>
+                            <li>
+                                <h2>IE Bugs & CSS</h2>
+                            </li>
+                            <li>
+                                Common IE Bugs
+                            </li>
+                            <li>
+                                CSS
+                            </li>
+                        </ul>
+                     </a>
+                </div>
+                <div>
+                     <a href="#" class="flag6">
+<ul>
+                            <li>
+                                <h2>Best Practice</h2>
+                            </li>
+                            <li>
+                                Content Model
+                            </li>
+                            <li>
+                                Case-sensitivity
+                            </li>
+                            <li>
+                                Indentation
+                            </li>
+                        </ul>
+                     </a>
+                </div>
+            </section>
+        </section>    
+        <!-- thumbnail section -->
+    </section>
+    <footer>
+    	<!--<meter>
+        </meter>-->
+    	<ul class="ctrls">
+			<li>
+            controls:
+            </li>
+			<li>Numpad 0 - Start Presentation</li>
+            <li>Up Arrow - Nav Up</li>
+            <li>Down Arrow - Nav Down</li>
+        </ul>
+    	<ul class="sessiondetails">
+<li>
+            	Basics of HTML - CSS
+            </li>
+        </ul>
+    	<ul class="presentationdetails">
+<li>
+            	presentation by Santhosh
+            </li>
+            <li>
+            	<time datetime="2012-03-22"></time>
+            </li>
+		</ul>
+    </footer>
+</body>
+</html>

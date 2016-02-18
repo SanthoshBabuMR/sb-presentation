@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Relative and Absolute Position</title>
+<style>
+	body{
+		width: 96%;
+		margin: 0 auto;	
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 2%;
+	}
+	a img{
+		border: none;
+	}
+	.quicklook{
+		position: relative;
+		width: 175px;
+		border: 1px dashed #CCC;
+	}
+	.quicklook img{position:relative; z-index: 1000;}
+	.quicklook .quickshop{
+		position: absolute;
+		z-index: 5000;
+		display: none;
+		top: 36%;
+		left: 23%;
+	}
+	.quicklook a:hover span.quickshop{
+		display: block;
+	}
+	.quicklook a:hover span.quickshop img{
+		
+	}
+
+</style>
+</head>
+
+
+<body>
+	<h1>Relative and Absolute positioning</h1>
+    <hr />
+    <div class="quicklook">
+    	
+        <a href="#">
+        	<img src="prod.png"/>
+            <span class="quickshop">
+    	    	<img src="ql.png" style="cursor:pointer" />
+	        </span>
+        </a>
+        
+        
+    </div>
+	
+</body>
+</html>

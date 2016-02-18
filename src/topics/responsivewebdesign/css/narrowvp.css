@@ -1,0 +1,152 @@
+/*---------------------------------
+min-width: 0px and max-width: 600px
+-----------------------------------*/
+/*-----
+GENERIC
+-------*/
+body{
+	min-width: 240px;
+	max-width: 600px;
+}
+table{
+	width: 100%;
+}
+ul{
+	padding-left: 0.5em;
+}
+ul ul{
+	padding-left: 1em;
+}
+h1{
+	font-size: 1.6em;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+h2{
+	font-size: 1.4em;
+}
+h3{
+	font-size: 1.2em;
+}
+h4{
+	font-size: 1em;
+}
+#content-wrapper a:hover,
+#content-wrapper a:focus{
+	-webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   border-radius: 0px;
+}
+/*--------------
+Responsive Table
+----------------*/
+/* Force table to not be like tables anymore */
+table.rtable, .rtable caption, .rtable thead, .rtable tbody, .rtable th, .rtable td, .rtable tr {
+	display: block;
+}
+
+/* Hide table headers (but not display: none;, for accessibility) */
+.rtable thead tr {
+	position: absolute;
+	top: -9999px;
+	left: -9999px;
+}
+
+.rtable tr { border: 1px solid #40312A; border-bottom: none; }
+
+.rtable td {
+	/* Behave  like a "row" */
+	border: none;
+	border-bottom: 1px solid #40312A;
+	position: relative;
+	padding-left: 50%;
+}
+
+.rtable td:before {
+	/* Now like a table header */
+	position: absolute;
+	/* Top/left values mimic padding */
+	top: 6px;
+	left: 6px;
+	width: 45%;
+	padding-right: 10px;
+	white-space: nowrap;
+}
+
+/*---------
+PAGE-HEADER
+-----------*/
+#page-header .font-access{
+	width: 100%;
+	text-align: right;
+	text-align: right;
+	width: 120px;
+}
+#content-wrapper nav {
+    padding: 0;
+	overflow: hidden;
+   	-webkit-transition: height 0.2s ease-in;
+	-moz-transition: height 0.2s ease-in;
+	-ms-transition: height 0.2s ease-in;
+	-o-transition: height 0.2s ease-in;
+	transition: height 0.2s ease-in;
+}
+#content-wrapper nav a,
+#content-wrapper nav a:link,
+#content-wrapper nav a:visited{
+	width: 90%;
+	color: #FFFFFF;
+	padding: 3px 2%;
+	margin: 3px 1%;
+	display: none;
+	float: left;
+  	text-shadow: 0 1px 1px #000000;
+    background: #633; /* The Fallback */
+    background: rgba(0, 0, 0, 0.4);
+	-webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;
+   line-height: 2em;
+}
+#content-wrapper nav a:hover, 
+#content-wrapper nav a:focus
+#content-wrapper nav a:visited.active,
+#content-wrapper nav a.active{
+	background: #FF3333;
+}
+
+#content-wrapper nav:before{
+	content: '+ Jump To';
+	display: block;
+	background: #CCC;
+	color: #000;
+	padding: 6px 2%;
+	margin: 6px 1%;
+	width: 90.2%;
+	-webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   border-radius: 5px;	
+   cursor: pointer;
+}
+#content-wrapper nav.show{
+	height: 480px;
+}
+#content-wrapper nav.show:before{
+	content: '- Jump To';
+}
+#content-wrapper nav.show a{
+	display: block;
+}
+/*-----------
+page-specific
+-------------*/
+#rwd-architecture td{ text-align: center; }
+#screen-usage-trend tbody td { padding-left: 70%; text-align: left; }	
+#screen-usage-trend tbody td:nth-of-type(1):before { content: "Screen Width"; margin-top: -3px; font-weight: bold; }
+#screen-usage-trend tbody td:nth-of-type(2):before { content: "Width	% Used [March 2012]"; margin-top: -3px; font-weight: bold;}
+#screen-usage-trend tbody td:nth-of-type(3):before { content: "Trend in last 3 months"; margin-top: -3px; font-weight: bold; }
+#screen-usage-trend tfoot tr,
+#screen-usage-trend tfoot td { 
+    padding:0; 
+	border: 0; 
+}
+

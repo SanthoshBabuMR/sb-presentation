@@ -1,0 +1,147 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Box Model</title>
+<style>
+	body{
+		width: 900px;
+		margin: 0 auto;	
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		border: 1px solid #F33;
+		font-weight: bold;
+	}
+	.wrap{
+		border: 1px solid;
+		overflow: hidden;
+		width: 800px;
+		margin: 0 auto;
+		margin: 50px;
+	}
+	.left{
+		width: 325px;
+		height: 50px;
+		float: left;
+		background-color: #888;
+		font-weight: bold;
+	}
+	.right{
+		width: 325px;
+		height: 50px;
+		float: right;
+		background-color: #888;
+		font-weight: bold;
+		text-align: right;
+	}	
+	.bm{
+		width: 150px; 
+		float: left;
+		font-weight: bold;
+		text-align: center;
+		z-index: 100;
+		position: relative;
+	}
+	.b{
+		border: 1px solid #33C;
+	}
+	.adjustbwidth{
+		width: 148px;
+	}
+	.adjustpdwidth{
+		width: 134px;
+	}
+	.adjustmnwidth{
+		width: 134px;
+	}	
+	.bg{
+		background-color: #6CF;
+	}
+	.mn{
+		margin: 8px;
+	}
+	.pd{
+		padding: 8px;
+	}
+	.ctrl{
+		margin-left: 50px;
+	}
+	.ctrl span{
+		cursor: pointer;
+		border: 1px solid #CCC;
+	}
+</style>
+<script src="jquery-1.6.2.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+	$(document).ready(function(){
+							   
+		var ele = $('.bm');					   
+		$('.abg').click(function(){
+			ele.toggleClass('bg');						   
+		});
+		$('.ab').click(function(){
+			ele.toggleClass('b');
+		});
+		$('.apd').click(function(){
+			ele.toggleClass('pd');						   
+		});
+		$('.amn').click(function(){
+			ele.toggleClass('mn');						   
+		});
+		
+
+		$('.adbm').click(function(){
+			//ele.toggleClass('adjustbwidth');
+			if(ele.is('.b.mn.pd'))
+			{
+				ele.css('width','116px');
+			}
+			else if(ele.is('.b.pd') || ele.is('.b.mn'))
+			{
+				ele.css('width','132px');
+			}
+			else if(ele.is('.mn.pd'))
+			{
+				ele.css('width','118px');
+			}			
+			else if(ele.is('.b'))
+			{
+				ele.css('width','148px');
+			}
+			else if(ele.is('.pd') || ele.is('.mn'))
+			{
+				ele.css('width','134px');
+			}
+			else{
+				ele.css('width','150px');
+			}
+		});
+
+	});
+</script>
+</head>
+
+<body>
+html body container
+	<div class="wrap">
+        <div class="left">
+        	Float Left
+        </div>
+        <div class="bm">
+            Content
+        </div>
+        <div class="right">
+	        Float Right
+        </div>    
+	</div>
+    <div class="ctrl">
+       	<span class="abg">add bg color</span>
+	    <span class="ab">add border</span>
+    	<span class="apd">add padding</span>
+	    <span class="amn">add margin</span>
+        <span style="padding:15px; border: none;">|</span>
+        <span class="adbm">render box model</span>
+	</div>
+</body>
+</html>

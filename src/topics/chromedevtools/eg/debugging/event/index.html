@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event</title>
+  <style>
+  body {
+	font: 13px/1.5 arial;
+  }
+  h1 {
+	font: 26px/1.5 tahoma;
+  }
+  </style>
+</head>
+<body>
+<a href="../../" class="backlink">back to examples</a>
+
+<h1>Debugging Event(s)</h1>
+
+<form name="details" id="details" method="post" action="#">
+	<fieldset>
+		<legend>Save Form</legend>
+		<table>
+			<tbody>
+				<tr>
+					<td><label for="f-name">Name</label></td>
+					<td><input type="text" id="f-name" name="f-name"/></td>
+				</tr>
+				<tr>
+					<td><label for="f-residence">Residence</label></td>
+					<td><input type="text" id="f-residence" name="f-residence"/></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><a href="#" id="save">Save</a>	
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</form>
+<output id="error" style="display: none">
+</output>
+<output id="result" style="display:none">
+	<a href="#" id="back">back</a>
+	<br /><br />
+	<div id="data">
+	</div>
+</output>
+	
+<script src="../js/jquery-1.10.1.min.js"></script>
+<script src="../js/event.js"></script>
+</body>
+</html>

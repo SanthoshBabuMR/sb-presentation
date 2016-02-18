@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="case study on how-to of responsive web design" />
+<meta name="keywords" content="html5, css3, design, responsive " />
+<meta name="author" content="santhosh" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>CSS3 Features To Look Forward</title>
+<!-- InstanceEndEditable -->
+<!-- open css -->
+<link rel="stylesheet" href="../css/reset.css" />
+<link rel="stylesheet" href="../css/default.css" />
+<link rel="stylesheet" href="../css/page.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/largevp.css" />
+<link rel="stylesheet" href="../css/narrowvp.css" media="screen and (min-width: 0px) and (max-width: 600px)" />
+<link rel="stylesheet" href="../css/midvp.css" media="screen and (min-width: 601px) and (max-width: 800px)" />
+<!--[if lt IE 9]><link rel="stylesheet" href="../css/ie.css" /><![endif]-->
+<!--[if lt IE 7]><link rel="stylesheet" href="../css/ie6.css" /><![endif]-->
+<!-- InstanceBeginEditable name="doccss" -->
+<style type="text/css">
+</style>
+<!-- InstanceEndEditable -->
+<!-- close css -->
+<!-- open script -->
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../script/modernizr.js"></script>
+<script type="text/javascript" src="../script/init.js"></script>
+<!-- InstanceBeginEditable name="docscript" -->
+<script type="text/javascript">
+    $(document).ready(function(){
+    });
+</script>
+<!-- InstanceEndEditable -->
+<!-- close script -->
+</head>
+<!-- InstanceBeginEditable name="docbody" -->
+<body id="pg-ccs3-features">
+
+    <!-- open page-wrapper -->
+    <div id="page-wrapper">
+        <!-- open page-header -->
+        <header id="page-header">
+            <section class="page-head">
+                <h1>CSS3 Features To Look Forward</h1>
+            </section>
+        </header>
+        <!-- close page-header -->
+        <!-- open content-wrapper -->
+        <section id="content-wrapper">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="concept-of-rwd.html">Concepts of RWD</a>
+                <a href="rwd-ingredients.html">RWD Ingredients</a>
+                <a href="responsive-design-how-to.html">RWD - How To</a>
+                <a href="rwd-challenges.html">RWD Challenges</a>
+                <a href="css3-features-to-look-forward.html" class="active">CSS3 Features</a>
+                <a href="rwd-online-tools.html">RWD Online Tools</a>
+                <a href="is-rwd-the-way-forward.html">Is RWD the Way forward?</a>
+                <a href="further-reading.html">Further Reading</a>
+                <a href="tuts-refs.html">Tuts / Refs</a>
+            </nav>
+            <ul class="list-of-contents">
+                <li><a href="#rem_section">rem</a></li>
+                <li><a href="#box_sizing_section">box-sizing</a></li>
+                <li><a href="#flexbox_section">flexbox</a></li>
+                <li><a href="#css3_background_section">css3 background</a></li>
+            </ul>
+            <p>
+                ref:
+            </p>
+                <ul class="ref">
+                    <li>
+                        <a href="http://coding.smashingmagazine.com/2011/12/15/six-css-layout-features-to-look-forward-to/">http://coding.smashingmagazine.com/2011/12/15/six-css-layout-features-to-look-forward-to/</a>
+                    </li>
+                </ul>
+            <section id="rem_section">
+                <h2>rem</h2>
+                <article>
+                    <p>
+                        refers to font-size of the root element;
+                    </p>
+                    <p>
+                       The advantage of rem is that, it avoids the compounding issue of font-size seen with em.
+                    </p>
+                    <p>
+                        The approach would be setting a base font value to the body element, as shown below,
+                    </p>
+                    <span class="codeheading">rem : setting font-size to body tag</span>
+<code>    
+<span class="tag">body {
+    font-size: </span><span class="attrval">14px</span><span class="tag">;
+}</span>
+</code>  
+                    <p>
+                        Now, we could define the font-size for the rest of the web elements with reference to the body element rather than the elements immediate parent container.
+                    </p>
+                    <p>
+                        So, a paragraph tag with 16px, could be defined as,
+                    </p>
+                    <span class="codeheading">setting font-size using rem</span>
+<code>    
+<span class="tag">p {
+    font-size: </span><span class="attrval">1.14285 rem</span><span class="tag">;</span>/* 16px /14px */
+<span class="tag">}</span>
+</code>           
+                    <p>
+                        The clear advantage is that, we have a single point of reference for all the font-size we declare in the document, making future updates/enhancement much easier to deal with.
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://www.alistapart.com/articles/howtosizetextincss/">http://www.alistapart.com/articles/howtosizetextincss/</a></li>
+                        <li><a href="http://snook.ca/archives/html_and_css/font-size-with-rem">http://snook.ca/archives/html_and_css/font-size-with-rem</a></li>
+                        <li><a href="http://caniuse.com/#feat=rem">http://caniuse.com/#feat=rem</a></li>
+                    </ul>        
+                </article>
+            </section>
+            <section id="box_sizing_section">
+                <h2>box-sizing</h2>
+                <article>
+                    <p>
+                        With box-sizing, W3C brings IE6 box-model into standards.
+                    </p>
+                    <p>
+                        In a net shell, box-sizing, alters the way in which browser renders borders and padding of an HTML elements
+                    </p>
+                    <p>
+                        The standard W3C box-model definition ,
+                    </p>
+                    <p>
+                        Width of an element = border-left + padding-left + width defined + padding-right + border-right
+                    </p>
+                    <p>
+                        Height of an element = border-top + padding-top + height defined + padding-bottom + border- bottom
+                    </p>
+                    <p>
+                        So, if we wanted a div of width 100px, with a 1px border along its sides, then we end with a div of width 102px;
+                    </p>
+                    <p>
+                        This becomes even worse when setting width in percentages; typically a container with a width of 100% is not supposed to have any borders or paddings, as it would break the layout.
+                    </p>
+                    <p>
+                        What if we need to set an explicit width, and have borders, paddings but ensure that it is contained with the width specified? The solution is to use CSS3 box-sizing property.
+                    </p>
+                    <p>
+                        In the above case, the solution would be to set the div with a css3 &#39;box-sizing&#39; property to &#39;border-box&#39;.
+                    </p>
+                    <p>
+                        box-sizing is about switching between the W3C Box model and ie6 box model.
+                    </p>
+                    <p>
+                        box-sizing supports 2 valeus:
+                    </p>
+                    <dl>
+                        <dt>content-box:</dt>
+                        <dd>retains the traditional W3C Box Model; borders and paddings are outside the width of an HTML Element.</dd>
+                    </dl>
+                    <dl>
+                        <dt>border-box:</dt>
+                        <dd>uses IE6 box model. ; borders and paddings are contained within the width of an HTML Element.</dd>
+                    </dl>
+                    <p>
+                        box-sizing could be an excellent choice of option for responsive design where we set values with a combination of percentages and pixels
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://helephant.com/2008/10/20/css3-box-sizing-attribute/">http://helephant.com/2008/10/20/css3-box-sizing-attribute/</a></li>
+                        <li><a href="http://css-tricks.com/box-sizing/">http://css-tricks.com/box-sizing/</a></li>
+                        <li><a href="http://caniuse.com/css3-boxsizing">http://caniuse.com/css3-boxsizing</a></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="flexbox_section">
+                <h2>flexbox</h2>
+                <article>
+                    <p>
+                        W3C specification:
+                        <br />
+                        In the flexbox layout model, the children of a flexbox can be laid out in any direction, and can &#39;flex&#39; their sizes, either growing to fill unused space or shrinking to avoid overflowing the parent. Both horizontal and vertical alignment of the children can be easily manipulated.
+                    </p>
+                    <p>
+                        Value:	display: flex | inline-flex
+                    </p>
+                    <p>
+                        Nesting of these boxes (horizontal inside vertical, or vertical inside horizontal) can be used to build layouts in two dimensions.
+                    </p>
+                    <p>
+                        flex boxes helps in achieving equal-height columns by default and flex boxes could be helpful in adjusting layouts as we move from small screen to wide screen devices.
+                    </p>
+                   <dl>
+                       <dt>flexbox:</dt>
+                       <dd>An element whose computed &#39;display&#39; is either &#39;flex&#39; or &#39;inline-flex&#39; is a flexbox, and establishes a new flexbox formatting context for its contents.</dd>
+                   </dl>
+                   <dl>
+                       <dt>flexbox item:</dt>
+                       <dd>Children of a flexbox are called flexbox items</dd>
+                   </dl>
+                   <p>
+                       The list of flexbox properties,
+                   </p>
+                   <dl>
+                       <dt>flex-direction:</dt>
+                       <dd>
+                           The &#39;flex-direction&#39; property specifies how flexbox items are placed in the flexbox;<br />
+                           In other words, it specifies if the flexbox items must be laid horizontally or vertically within the flexbox.
+                           <p>
+                               Value: row | row-reverse | column | column-reverse
+                           </p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>flex-wrap:</dt>
+                       <dd>
+                           The &#39;flex-wrap&#39; property controls whether the flexbox is single-line or multi-line, and the direction of the cross-axis, which determines the direction new lines are stacked in.
+                           <p>
+                               Value: 	nowrap | wrap | wrap-reverse
+                           </p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>flex-flow:</dt>
+                       <dd>
+                           The &#39;flex-flow&#39; property is shorthand for setting the &#39;flex-direction&#39; and &#39;flex-wrap&#39; properties together.
+                           <p>
+                               Value: 	&lt;&#39;flex-direction&#39;&gt; || &lt;&#39;flex-wrap&#39;&gt;
+                           </p>
+                       </dd>                       
+                   </dl>
+                   <dl>
+                       <dt>flex-order:</dt>
+                       <dd>
+                           Flexbox items are, by default, displayed and laid out in the same order as they appear in the source document. The &#39;flex-order&#39; property may be used to change this ordering.
+                           <p>
+                               Value: &lt;number&gt;
+                           </p>
+                           <p>
+                               flexbox will lay out its content starting from the lowest flex-order value to the highest. Items with the same flex-order value are laid out in the order they appear in the source document.
+                           </p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>flex:</dt>
+                       <dd>
+                           The defining aspect of flexbox layout is the ability to make the flexbox items &#39;flex&#39;, altering their width or height to fill the available space. This is done with the &#39;flex&#39; property. A flexbox distributes free space to its items proportional to their positive flexibility, or shrinks them to prevent overflow proportional to their negative flexibility.
+                           <p>
+                               Value: 	none | [ &lt;number&gt;{1,2} || &lt;&#39;width&#39;&gt; ]
+                           </p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>flex-pack:</dt>
+                       <dd>
+                           The &#39;flex-pack&#39; property aligns flexbox items along the main axis[left to right] of the current line of the flexbox.
+                           <p>
+                               Value: 	start | end | center | justify | distribute
+                           </p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>flex-align:</dt>
+                       <dd>
+                           The &#39;flex-align&#39; property aligns flexbox items along the cross axis[top to bottom] of the current line of the flexbox.
+                           <br />
+                           &#39;flex-align&#39; sets the default alignment for all of the flexbox&#39;s items, including anonymous flexbox items. 
+                           <p>
+                               Value: 	start | end | center | baseline | stretch
+                           </p>
+                        </dd>
+                   </dl>
+                   <dl>
+                       <dt>flex-item-align:</dt>
+                       <dd>
+                           &#39;flex-item-align&#39; allows to override the default alignment for individual flexbox items, set using flex-align.
+                           <p>
+                               Value: 	auto | start | end | center | baseline | stretch 
+                           </p>
+                       </dd>
+                   </dl>
+                   <dl>
+                       <dt>flex-line-pack:</dt>
+                       <dd>
+                           The &#39;flex-line-pack&#39; property aligns a flexbox&#39;s lines within the flexbox when there is extra space in the cross-axis, similar to how &#39;flex-pack&#39; aligns individual items within the main-axis
+                           <p>
+                               Value: 	start | end | center | justify | distribute | stretch
+                           </p>
+                       </dd>
+                   </dl>
+                   <p>
+                       ref:
+                   </p>
+                   <ul class="ref">
+                       <li><a href="http://dev.w3.org/csswg/css3-flexbox/">http://dev.w3.org/csswg/css3-flexbox/</a></li>
+                       <li><a href="http://flexiejs.com/playground/">http://flexiejs.com/playground/</a></li>
+                       <li><a href="http://www.css3.info/introducing-the-flexible-box-layout-module/">http://www.css3.info/introducing-the-flexible-box-layout-module/</a></li>
+                       <li><a href="http://coding.smashingmagazine.com/2011/09/19/css3-flexible-box-layout-explained/">http://coding.smashingmagazine.com/2011/09/19/css3-flexible-box-layout-explained/</a></li>
+                       <li><a href="http://www.html5rocks.com/en/tutorials/flexbox/quick/">http://www.html5rocks.com/en/tutorials/flexbox/quick/</a></li>
+                       <li><a href="http://caniuse.com/flexbox">http://caniuse.com/flexbox</a></li>
+                   </ul>
+                </article>
+            </section>
+            <section id="css3_background_section">
+                <h2>CSS3 Background</h2>
+                <article>
+                    <h3>CSS3 Multiple background-Image</h3>
+                    <p>
+                        CSS3 allows specifying multiple background images for box elements, using nothing more than a simple comma-separated list of background
+                    </p>
+                    <span class="codeheading">CSS3 - Multiple Background</span>
+<code>    
+<span class="tag">.roundedcontainer{
+    background-image: </span><span class="attrval">url(tpleft.png), url(tpright.png), url(btleft.png), url(btright.png)</span><span class="tag">;
+    background-position: </span><span class="attrval">left top, right top, left bottom, right bottom</span><span class="tag">;
+    background-repeat: </span><span class="attrval">no-repeat, no-repeat, no-repeat, no-repeat</span><span class="tag">;
+    background-color: </span><span class="attrval">rgb(243,78,156)</span><span class="tag">;
+}
+</span>
+</code>  
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://www.css3.info/preview/multiple-backgrounds/">http://www.css3.info/preview/multiple-backgrounds/</a></li>
+                        <li><a href="http://www.standardista.com/css3/css3-background-properties/">http://www.standardista.com/css3/css3-background-properties/</a></li>
+                    </ul>
+                    <h3>CSS3 Multiple background-Size</h3>
+                    <p>
+                        Specifies the size of a background image
+                    </p>
+                    <p>
+                        background-size: length|percentage|cover|contain;
+                    </p>
+                    <dl>
+                        <dt>contain:</dt>
+                        <dd>ensures that background-image is fully rendered within the container, if the size of the container is less than the size of the background-image.</dd>
+                    </dl>
+                    <dl>
+                        <dt>cover:</dt>
+                        <dd>ensures that background-image is fully rendered within the container, if the size of the container is greater than the size of the background-image.
+                        </dd>
+                    </dl>
+                    <p>
+                       ref:
+                   </p>
+                   <ul class="ref">
+                       <li><a href="http://www.css3.info/preview/background-size/">http://www.css3.info/preview/background-size/</a></li>
+                   </ul>
+                </article>
+            </section>
+        </section>
+        <!-- close content-wrapper -->
+        <!-- open page-footer -->
+        <footer id="page-footer">
+            <section class="page-foot">
+                <img src="../images/ci.jpg" alt="CI-Interactive" />
+            </section>        
+        </footer>
+        <!-- close page-footer -->
+    </div>
+    <!-- close page-wrapper -->
+
+</body>
+<!-- InstanceEndEditable -->
+<!-- InstanceEnd --></html>

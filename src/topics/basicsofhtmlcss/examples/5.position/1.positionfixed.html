@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS Float</title>
+<style>
+	body{
+		width: 96%;
+		margin: 0 auto;	
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 2%;
+	}
+	.wrap{
+		width: 94%;
+		padding: 2%;
+		border: 1px solid;
+		margin: 0 auto;
+	}
+	.nofltr{
+		width: 46%;
+		height: 50px;
+		background: #33F;
+		margin: 1%;
+		color: #FFF;
+	}
+	.fltr{
+		width: 46%;
+		height: 50px;
+		background: #33F;
+		margin: 1%;
+		float: left;
+		color: #FFF;
+	}
+	hr{
+		border: 1px solid #000;
+		height: 1px;
+	}
+	.show{
+		display: block;
+	}
+	.clear{
+		clear: both;
+		/*_height: 0px;*/
+	}
+
+</style>
+</head>
+
+
+<body>
+	<h1>Fixed Positioning</h1>
+    <hr />
+	<div style="border: 1px solid gray; width: 800px; padding: 15px; margin:0 auto">
+    	<h2>Cloud computing</h2>
+        <img src="cloud.png" />
+    	<p><strong>Cloud computing</strong> is the delivery of <a href="http://en.wikipedia.org/wiki/Computing" title="Computing">computing</a> as a <a href="http://en.wikipedia.org/wiki/Service_(economics)" title="Service (economics)">service</a> rather than a <a href="http://en.wikipedia.org/wiki/Product_(business)" title="Product (business)">product</a>, whereby shared resources, software, and information are provided to computers and other devices as a <a href="http://en.wikipedia.org/wiki/Utility_computing" title="Utility computing">utility</a> (like the <a href="http://en.wikipedia.org/wiki/Electrical_grid" title="Electrical grid">electricity grid</a>) over a<a href="http://en.wikipedia.org/wiki/Computer_network" title="Computer network">network</a> (typically the <a href="http://en.wikipedia.org/wiki/Internet" title="Internet">Internet</a>).<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-nist-0">[1]</a></p>
+    	<p>Cloud computing provides computation, software applications, data access,data management and storage resources without requiring cloud users to know the location and other details of the computing infrastructure.</p>
+    	<p>End users access cloud based <a href="http://en.wikipedia.org/wiki/Application_software" title="Application software">applications</a> through a <a href="http://en.wikipedia.org/wiki/Web_browser" title="Web browser">web browser</a> or a light weight desktop or <a href="http://en.wikipedia.org/wiki/Mobile_app" title="Mobile app">mobile app</a>while the business <a href="http://en.wikipedia.org/wiki/Software" title="Software">software</a> and data are stored on <a href="http://en.wikipedia.org/wiki/Server_(computing)" title="Server (computing)">servers</a> at a remote location. Cloud application providers strive to give the same or better service and performance than if the software programs were installed locally on end-user computers.</p>
+   	  <p>At the foundation of cloud computing is the broader concept of infrastructure convergence (or <a href="http://en.wikipedia.org/wiki/Converged_Infrastructure" title="Converged Infrastructure">Converged Infrastructure</a>) and <a href="http://en.wikipedia.org/wiki/Shared_services" title="Shared services">shared services</a>.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-1">[2]</a> This type of data centre environment allows enterprises to get their applications up and running faster, with easier manageability and less maintenance, and enables IT to more rapidly adjust IT resources (such as servers, storage, and networking) to meet fluctuating and unpredictable business demand.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-2">[3]</a><a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-3">[4]</a></p>
+      <p>&nbsp;</p>
+      <h2><span id="Comparison">Comparison</span></h2>
+      <p>Cloud computing shares characteristics with:</p>
+      <ul>
+        <li><a href="http://en.wikipedia.org/wiki/Autonomic_computing" title="Autonomic computing">Autonomic computing</a> — Computer systems capable of <a href="http://en.wikipedia.org/wiki/Self-management_(computer_science)" title="Self-management (computer science)">self-management</a>.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-4">[5]</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/Client%E2%80%93server_model" title="Client–server model">Client–server model</a> — <em>Client–server computing</em> refers broadly to any <a href="http://en.wikipedia.org/wiki/Distributed_application" title="Distributed application">distributed application</a> that distinguishes between service providers (servers) and service requesters (clients).<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-5">[6]</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/Grid_computing" title="Grid computing">Grid computing</a> — &quot;A form of <a href="http://en.wikipedia.org/wiki/Distributed_computing" title="Distributed computing">distributed</a> and <a href="http://en.wikipedia.org/wiki/Parallel_computing" title="Parallel computing">parallel computing</a>, whereby a 'super and virtual computer' is composed of a <a href="http://en.wikipedia.org/wiki/Cluster_(computing)" title="Cluster (computing)">cluster</a> of networked, <a href="http://en.wikipedia.org/wiki/Loose_coupling" title="Loose coupling">loosely coupled</a> computers acting in concert to perform very large tasks.&quot;</li>
+        <li><a href="http://en.wikipedia.org/wiki/Mainframe_computer" title="Mainframe computer">Mainframe computer</a> — Powerful computers used mainly by large organizations for critical applications, typically bulk data processing such as <a href="http://en.wikipedia.org/wiki/Census" title="Census">census</a>, industry and consumer statistics, police and secret intelligence services, <a href="http://en.wikipedia.org/wiki/Enterprise_resource_planning" title="Enterprise resource planning">enterprise resource planning</a>, and financial <a href="http://en.wikipedia.org/wiki/Transaction_processing" title="Transaction processing">transaction processing</a>.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-6">[7]</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/Utility_computing" title="Utility computing">Utility computing</a> — The &quot;packaging of <a href="http://en.wikipedia.org/wiki/Computational_resource" title="Computational resource">computing resources</a>, such as computation and storage, as a metered service similar to a traditional public utility, such as electricity.&quot;<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-It.27s_you.27ve-7">[8]</a><a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-8">[9]</a></li>
+        <li><a href="http://en.wikipedia.org/wiki/Peer-to-peer" title="Peer-to-peer">Peer-to-peer</a> — Distributed architecture without the need for central coordination, with participants being at the same time both suppliers and consumers of resources (in contrast to the traditional client–server model).</li>
+      </ul>
+      <h3><span id="Characteristics">Characteristics</span></h3>
+      <p>Cloud computing exhibits the following key characteristics:</p>
+      <ul>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Empowerment" title="Empowerment">Empowerment</a></strong> of end-users of computing resources by putting the provisioning of those resources in their own control, as opposed to the control of a centralized IT service (for example)</li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Agility" title="Agility">Agility</a></strong> improves with users' ability to re-provision technological infrastructure resources.</li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Application_programming_interface" title="Application programming interface">Application programming interface</a></strong> (API) accessibility to software that enables machines to interact with cloud software in the same way the user interface facilitates interaction between humans and computers. Cloud computing systems typically use <a href="http://en.wikipedia.org/wiki/Representational_state_transfer" title="Representational state transfer">REST</a>-based APIs.</li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Cost" title="Cost">Cost</a></strong> is claimed to be reduced and in a public cloud delivery model <a href="http://en.wikipedia.org/wiki/Capital_expenditure" title="Capital expenditure">capital expenditure</a> is converted to <a href="http://en.wikipedia.org/wiki/Operational_expenditure" title="Operational expenditure">operational expenditure</a>.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-9">[10]</a> This is purported to lower <a href="http://en.wikipedia.org/wiki/Barriers_to_entry" title="Barriers to entry">barriers to entry</a>, as infrastructure is typically provided by a third-party and does not need to be purchased for one-time or infrequent intensive computing tasks. Pricing on a <a href="http://en.wikipedia.org/wiki/Utility_computing" title="Utility computing">utility computing</a> basis is fine-grained with usage-based options and fewer IT skills are required for implementation (in-house).<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-idc-10">[11]</a></li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Device_independence" title="Device independence">Device</a> and location independence</strong><a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-yarmis-11">[12]</a> enable users to access systems using a web browser regardless of their location or what device they are using (e.g., PC, mobile phone). As infrastructure is off-site (typically provided by a third-party) and accessed via the Internet, users can connect from anywhere.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-idc-10">[11]</a></li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Virtualization" title="Virtualization">Virtualization</a></strong> technology allows servers and storage devices to be shared and utilization be increased. Applications can be easily migrated from one physical server to another.</li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Multitenancy" title="Multitenancy">Multi-tenancy</a></strong> enables sharing of resources and costs across a large pool of users thus allowing for:
+          <ul>
+            <li><strong>Centralization</strong> of infrastructure in locations with lower costs (such as real estate, electricity, etc.)</li>
+            <li><strong>Peak-load capacity</strong> increases (users need not engineer for highest possible load-levels)</li>
+            <li><strong>Utilisation and efficiency</strong> improvements for systems that are often only 10–20% utilised.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-amazon-12">[13]</a></li>
+          </ul>
+        </li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Reliability_(computer_networking)" title="Reliability (computer networking)">Reliability</a></strong> is improved if multiple redundant sites are used, which makes well-designed cloud computing suitable for <a href="http://en.wikipedia.org/wiki/Business_continuity" title="Business continuity">business continuity</a> and <a href="http://en.wikipedia.org/wiki/Disaster_recovery" title="Disaster recovery">disaster recovery</a>.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-13">[14]</a></li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Scalability" title="Scalability">Scalability</a></strong> and Elasticity via dynamic (&quot;on-demand&quot;) <a href="http://en.wikipedia.org/wiki/Provisioning" title="Provisioning">provisioning</a> of resources on a fine-grained, self-service basis near real-time, without users having to engineer for peak loads.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-14">[15]</a><a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-15">[16]</a></li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Computer_performance" title="Computer performance">Performance</a></strong> is monitored, and consistent and loosely coupled architectures are constructed using <a href="http://en.wikipedia.org/wiki/Web_services" title="Web services">web services</a> as the system interface.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-idc-10">[11]</a></li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Computer_security" title="Computer security">Security</a></strong> could improve due to centralization of data, increased security-focused resources, etc., but concerns can persist about loss of control over certain sensitive data, and the lack of security for stored kernels.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-16">[17]</a> Security is often as good as or better than other traditional systems, in part because providers are able to devote resources to solving security issues that many customers cannot afford.<a href="http://en.wikipedia.org/wiki/Cloud_computing#cite_note-17">[18]</a> However, the complexity of security is greatly increased when data is distributed over a wider area or greater number of devices and in multi-tenant systems that are being shared by unrelated users. In addition, user access to security <a href="http://en.wikipedia.org/wiki/Audit_log" title="Audit log">audit logs</a> may be difficult or impossible. Private cloud installations are in part motivated by users' desire to retain control over the infrastructure and avoid losing control of information security.</li>
+        <li><strong><a href="http://en.wikipedia.org/wiki/Software_maintenance" title="Software maintenance">Maintenance</a></strong> of cloud computing applications is easier, because they do not need to be installed on each user's computer and can be accessed from different places.</li>
+      </ul>
+<p>&nbsp;</p>
+	</div>
+    
+    <div class="footer" style="width:100%; height: 50px; position: fixed; bottom:0px; left:0px; background:#DDDDDD; border:2px solid #000">
+    	This footer will always remain at the bottom of the page, relative to the browser window.
+    </div>
+</body>
+</html>

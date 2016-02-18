@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en"><!-- InstanceBegin template="/Templates/template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="case study on how-to of responsive web design" />
+<meta name="keywords" content="html5, css3, design, responsive " />
+<meta name="author" content="santhosh" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>RWD Challenges</title>
+<!-- InstanceEndEditable -->
+<!-- open css -->
+<link rel="stylesheet" href="../css/reset.css" />
+<link rel="stylesheet" href="../css/default.css" />
+<link rel="stylesheet" href="../css/page.css" />
+<link rel="stylesheet" href="../css/components.css" />
+<link rel="stylesheet" href="../css/largevp.css" />
+<link rel="stylesheet" href="../css/narrowvp.css" media="screen and (min-width: 0px) and (max-width: 600px)" />
+<link rel="stylesheet" href="../css/midvp.css" media="screen and (min-width: 601px) and (max-width: 800px)" />
+<!--[if lt IE 9]><link rel="stylesheet" href="../css/ie.css" /><![endif]-->
+<!--[if lt IE 7]><link rel="stylesheet" href="../css/ie6.css" /><![endif]-->
+<!-- InstanceBeginEditable name="doccss" -->
+<style type="text/css">
+</style>
+<!-- InstanceEndEditable -->
+<!-- close css -->
+<!-- open script -->
+<script type="text/javascript" src="../script/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="../script/modernizr.js"></script>
+<script type="text/javascript" src="../script/init.js"></script>
+<!-- InstanceBeginEditable name="docscript" -->
+<script type="text/javascript">
+    $(document).ready(function(){
+    });
+</script>
+<!-- InstanceEndEditable -->
+<!-- close script -->
+</head>
+<!-- InstanceBeginEditable name="docbody" -->
+<body id="pg-rwd-challenges">
+
+    <!-- open page-wrapper -->
+    <div id="page-wrapper">
+        <!-- open page-header -->
+        <header id="page-header">
+            <section class="page-head">
+                <h1>RWD Challenges</h1>
+            </section>
+        </header>
+        <!-- close page-header -->
+        <!-- open content-wrapper -->
+        <section id="content-wrapper">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="concept-of-rwd.html">Concepts of RWD</a>
+                <a href="rwd-ingredients.html">RWD Ingredients</a>
+                <a href="responsive-design-how-to.html">RWD - How To</a>
+                <a href="rwd-challenges.html" class="active">RWD Challenges</a>
+                <a href="css3-features-to-look-forward.html">CSS3 Features</a>
+                <a href="rwd-online-tools.html">RWD Online Tools</a>
+                <a href="is-rwd-the-way-forward.html">Is RWD the Way forward?</a>
+                <a href="further-reading.html">Further Reading</a>
+                <a href="tuts-refs.html">Tuts / Refs</a>
+            </nav>
+            <ul class="list-of-contents">
+                <li><a href="#optimized_html_section">Optimized HTML Files</a></li>
+                <li><a href="#fout_section">FOUT</a></li>
+                <li><a href="#http_section">HTTP request</a></li>
+                <li><a href="#img_optimization_section">Image optimization</a></li>
+                <li><a href="#fallback_section">Fallback Support</a></li>
+            </ul>
+            <p>
+                ref:
+            </p>
+            <ul class="ref">
+                <li><a href="http://www.webdesignshock.com/responsive-design-problems/">http://www.webdesignshock.com/responsive-design-problems/</a></li>
+            </ul>
+            <section id="optimized_html_section">
+                <h2>Optimized HTML Files</h2>
+                <article>
+                    <p>
+                        Responsive web design is about customizing the html markup, so that the same markup is delivered across devices that access it.
+                    </p>
+                    <p>
+                        Markup and Web Page Components working perfectly on a desktop version of a website may not be required for mobile version, which could be a video, an embedded map or an image. CSS media queries work incredibly well at hiding things, but not that well at removing them. CSS media queries wont remove any unnecessary script or html that wont be used on mobile or desktop versions. It just leaves it there: hidden. 
+                    </p>
+                    <p>
+                        CSS media queries will not remove unnecessary html nor remove javascript that will slow down mobile browsers. We are now left with increased html file size for small screen device. Increase in files size impacts load time.
+                    </p>
+                </article>
+            </section>
+            <section id="fout_section">
+                <h2>FOUT</h2>
+                <article>
+                    <p>
+                       FOUT known as flash of unstyled text is what we get while using @font-face in Firefox and Opera. As web fonts needs to be downloaded before they are used, browsers takes their own approach.
+                    </p>
+                    <p>
+                        Before the web fonts are downloaded, firefox and opera renders text in default font; once web fonts are downloaded, firefox and opera renders text using the web font, resulting in FOUT. 
+                    </p>
+                    <p>
+                        Webkit, renders text on screen, only if web fonts are downloaded; before which, it simply hides the text avoiding FOUT bug, but users will have to wait to read any content, until the fonts are downloaded.
+                    </p>
+                    <p>
+                        IE on the other hand, starts downloading the font file as soon as it encounters the @font-face declaration; however it doesn't render the page, until the web fonts are downloaded if there is a SCRIPT tag above the @font-face declaration.
+                    </p>
+                    <p>
+                        FOUT can be overcome by using WebFont Loader - a javascript library aiming to provide a number of event hooks giving you a lot of control over the loading.
+                        <br />
+                        <a href="https://developers.google.com/webfonts/docs/webfont_loader">https://developers.google.com/webfonts/docs/webfont_loader</a>
+                    </p>
+                    <p>
+                        FOUT test page: <a href="http://www.stevesouders.com/tests/font-face/fout.php">http://www.stevesouders.com/tests/font-face/fout.php</a>
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://sixrevisions.com/css/font-face-web-fonts-issues/">http://sixrevisions.com/css/font-face-web-fonts-issues/</a></li>
+                        <li><a href="http://www.fontsquirrel.com/blog/2010/11/troubleshooting-font-face-problems">http://www.fontsquirrel.com/blog/2010/11/troubleshooting-font-face-problems</a></li>
+                        <li><a href="http://paulirish.com/2009/fighting-the-font-face-fout/">http://paulirish.com/2009/fighting-the-font-face-fout/</a></li>
+                        <li><a href="http://www.html5rocks.com/en/tutorials/webfonts/quick">http://www.html5rocks.com/en/tutorials/webfonts/quick</a></li>
+                        <li><a href="https://developers.google.com/webfonts/docs/webfont_loader">https://developers.google.com/webfonts/docs/webfont_loader</a></li>
+                        <li><a href="http://www.stevesouders.com/blog/2009/10/13/font-face-and-performance/">http://www.stevesouders.com/blog/2009/10/13/font-face-and-performance/</a></li>
+                        <li><a href="http://www.solidstategroup.com/what-we-think/the-problems-with-font-face">http://www.solidstategroup.com/what-we-think/the-problems-with-font-face</a></li>
+                    </ul>
+                    <h3>gzip @ FONT-FACE</h3>
+                    <p>
+                        gzipping font-face files helps to reduce the file size to 60% of their original size.
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://www.phpied.com/gzip-your-font-face-files/">http://www.phpied.com/gzip-your-font-face-files/</a></li>
+                        <li><a href="http://salscode.com/web-resources/gzip-ttf-otf">http://salscode.com/web-resources/gzip-ttf-otf</a></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="http_section">
+                <h2>HTTP request</h2>
+                <article>
+                    <p>
+                        Mobile versions compared with desktop counterparts, would require lesser number of CSS, JavaScript, Video, Image etc; which implies lesser number of HTTP request.
+                    </p>
+                    <p>
+                        With responsive design, we link all the resources (css, js, images) in one html file. As a result, mobile versions generate more number of HTTP requests, than required; Similar is the case with desktop devices, which ends up downloading resources required for both large screen and small screen displays.
+                    </p>
+                    <p>
+                        A simple solution would be to use asynchronous resource loaders such as yepnope, labjs, headjs etc;
+                    </p>
+                    <p>
+                        Yepnope is a simple resoure loader, that can be used in combination with modernizr to load the appropriate set of CSS and JS depending on screen width and could also be helpful in loading fallback resources only for the browser required.
+                    </p>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://webification.com/12-javascript-loaders-to-speed-up-your-web-applications">http://webification.com/12-javascript-loaders-to-speed-up-your-web-applications</a></li>
+                    </ul>
+                </article>
+            </section>
+            <section id="img_optimization_section">
+                <h2>Image optimization</h2>
+                <article>
+                    <p>
+                       Image optimization focuses on
+                    </p>
+                    <ul class="disc">
+                        <li>Loading appropriate images for the corresponding devices.</li>
+                        <li>Image resizing</li>                        
+                    </ul>
+                    <p>
+                        ref:
+                    </p>
+                    <ul class="ref">
+                        <li><a href="http://24ways.org/2011/adaptive-images-for-responsive-designs-again">http://24ways.org/2011/adaptive-images-for-responsive-designs-again</a></li>
+                    </ul>
+                    <p>
+                        With fluid images, we deliver images at the maximum size they will be used at. We dont declare the height and width in html, but instead let the browser resize the images as needed while using CSS to guide their relative size.
+                    </p>
+                    <p>
+                        Using CSS media queries isnt very bad to handle images and one might think hiding background images could be a viable solution. Well, the display:none wont stop a background image to be downloaded on a mobile device. Other part to consider is that if you use CSS media query to replace the background image with a mobile version; in some cases it would actually download both images. Nonetheless, there are two cases that seem to work: setting the parent of the element with a background image to display:none, and using a min-width declaration to specify a minimum browser width for the desktop image and a max-width for the mobile image. The result of both is only the mobile image been downloaded and viewed on the mobile device.
+                    </p>
+                    <p>
+                        Image resizing is expensive process. Viewing a responsive website on a mobile device forces the CPU and memory of it while resizing images because you are downloading a large image, uncompressing it in your phones memory and then resizing it to fit a small screen.
+                    </p>
+                    <p>
+                        Few javascript based techniques have been used to make images responsive, but they seem to be limited in one way or the other
+                    </p>
+                    <h3>Current/Future approaches to deal with responsive images:</h3>
+                    <h4>Filament Group Responsive Images:</h4>
+                    <p>
+                        Delivers optimized, contextual image sizes in responsive layouts that utilize dramatically different image sizes at different resolutions. Ideally, this could enable developers to start with mobile-optimized images in their HTML and specify a larger size to be used for users with larger screen resolutions -- without requesting both image sizes, and without UA sniffing.
+                        <br />
+                        <a href="http://filamentgroup.com/lab/responsive_images_experimenting_with_context_aware_image_sizing/">http://filamentgroup.com/lab/responsive_images_experimenting_with_context_aware_image_sizing/</a>
+                    </p>
+                    <h4>DoubleTake</h4>
+                    <p>
+                        Doubletake dynamically updates the src of images based on the browser width. Start with a small, mobile-friendly image in your HTML. Doubletake will use a defined set of breakpoints to update image SRCs when necessary.
+                        <br />
+                        <a href="http://www.grahambird.co.uk/lab/doubletake/">http://www.grahambird.co.uk/lab/doubletake/</a>
+                    </p>
+                    <h4>Adaptive Images:</h4>
+                    <p>
+                        Adaptive Images detects the visitor's screen size and automatically creates, caches, and delivers device appropriate re-scaled versions of your web page's embeded HTML images.
+                        <br />
+                        <a href="http://adaptive-images.com/">http://adaptive-images.com/</a>
+                    </p>
+                    <h4>Webp:</h4>
+                    <p>
+                        WebP, developed by Google, is a new image format that provides lossless and lossy compression for images on the web. WebP lossless images are 28% smaller in size compared to PNGs. WebP lossy images are 25-34% smaller in size compared to JPEG images at equivalent SSIM index. WebP supports lossless transparency (also known as alpha channel) with just 22% additionalbytes. WebP also supports features such as animation, ICC color profile, XMP meta-data and tiling.
+                        <br />
+                        <a href="https://developers.google.com/speed/webp/">https://developers.google.com/speed/webp/</a>
+                    </p>
+                </article>
+            </section>
+            <section id="fallback_section">
+                <h2>Fallback for Older browsers</h2>
+                <article>
+                    <p>
+                        Fallback for older browsers, includes support for older mobile devices and ie6-8, which do not support CSS3 Media Queries.
+                    </p>
+                    <p>
+                        Progressive enhancement solves this problem, by establishing a basic level of user experience that all browsers will be able to provide when rendering your web site, but you also build in more advanced functionality that will automatically be available to browsers that can use it.
+                    </p>
+                    <p>
+                        respond.js plugin can be used achieve media-query effect in IE6-8;
+                        <br />
+                        <a href="http://code.google.com/p/css3-mediaqueries-js/">http://code.google.com/p/css3-mediaqueries-js/</a>
+                    </p>
+                    <p>
+                        However, a better approach would be to serve IE6-8 with a fixed layout CSS. The major trade-off to consider would be the performance. Already several hacks and plugins are being to achieve cross-browser consistency in ie6-8. Trying to emulate media queries could impact the performance and make the coding process complicated, which adds up to development time and cost.
+                    </p>
+                </article>
+            </section>
+        </section>
+        <!-- close content-wrapper -->
+        <!-- open page-footer -->
+        <footer id="page-footer">
+            <section class="page-foot">
+                <img src="../images/ci.jpg" alt="CI-Interactive" />
+            </section>        
+        </footer>
+        <!-- close page-footer -->
+    </div>
+    <!-- close page-wrapper -->
+
+</body>
+<!-- InstanceEndEditable -->
+<!-- InstanceEnd --></html>

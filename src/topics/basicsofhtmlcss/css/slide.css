@@ -1,0 +1,132 @@
+body{
+	position: relative;
+	min-height: 800px;
+}
+section.swrapper{
+	height: 650px;
+	width: 94%;
+	margin: 0 auto 50px auto;
+	padding: 20px 0px;
+	background-color: rgba(0,0,0,0.9);
+	box-shadow: 1px 1px 5px #CCC;
+	z-index: 4000;
+	position: absolute;
+	top: -752px;
+	left: 3%;
+	overflow: hidden;
+	transition: top 2.5s;
+	-moz-transition: top 2.5s; /* Firefox 4 */
+	-webkit-transition: top 2.5s; /* Safari and Chrome */
+	-o-transition: top 2.5s; /* Opera */
+}
+section.swrapper .slidecontainer{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 96%;
+	padding: 0 2%;
+	transition: top 0.5s, bottom 0.5s;
+	-moz-transition: top 0.5s, bottom 0.5s; /* Firefox 4 */
+	-webkit-transition: top 2s, bottom 0.5s; /* Safari and Chrome */
+	-o-transition: top 0.5s, bottom 0.5s; /* Opera */	
+}
+section.swrapper .slidecontainer .slides{
+	width: 100%;
+}
+section.swrapper .slidecontainer .slides .slide-me {
+	height: 560px;
+	margin: 70px 0;
+	width: 100%;
+	background-color: rgba(255,255,255,0.1);
+	border-radius: 6px;
+	font-size: 24px;
+	position: relative;
+}
+section.swrapper .slidecontainer .slides .slide-me .info{
+	padding: 30px 	10px;
+}
+
+section.swrapper.animateswrap{
+	top: 100px;
+}
+section.swrapper .slidecontainer .slides .slide-me div.left{
+	float: left;
+	width: 550px;
+}
+section.swrapper .slidecontainer .slides .slide-me div.right{
+	position: absolute;
+	background: rgba(0,0,0,0.6);
+	top: 0px;
+	right: 0px;
+	left: 550px;
+	height: 500px;
+	outline: 1px solid #000000;	
+	border: 1px dashed #666666;
+	overflow-y: auto;
+	padding: 6px;
+}
+section.swrapper .slidecontainer .slides .slide-me div.right h3{
+	color: #007CC2;
+	font-size: 26px;
+	text-decoration: underline;
+}
+section.swrapper .slidecontainer .slides .slide-me output{
+	font-size: 24px;
+}
+
+section.swrapper .slidecontainer .slides .slide-me h1.mainheading{
+	top: -150px;
+	left: 600px;
+	position: absolute;
+	color: #000
+}
+section.swrapper .slidecontainer .slides .slide-me h2.subheading{
+	position: absolute;
+	top: -55px;
+	left: 0px;
+	font-size: 24px;
+	background: rgba(188,211,9,0.5);
+	padding: 5px;
+	border-radius: 5px 5px 0 0;
+	background: rgb(255,214,94); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,214,94,1) 0%, rgba(254,191,4,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,214,94,1)), color-stop(100%,rgba(254,191,4,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#febf04',GradientType=0 ); /* IE6-9 */
+	text-shadow: 1px 2px 12px grey;
+}
+section.swrapper .slidecontainer .slides .slide-me h2.subheading a{
+	text-decoration: none;
+	outline: none;
+}
+section.swrapper .slidecontainer .slides .slide-me .up{
+	position: absolute;
+	height: 30px;
+	width: 34px;
+	border-radius: 25px;
+	position: absolute;
+	top: -25px;
+	left: 84%;
+	padding: 8px 22px 10px;
+	background-color: rgba(110,110,110,0.7);
+	cursor: pointer;
+}
+section.swrapper .slidecontainer .slides .slide-me .down{
+	position: absolute;
+	height: 30px;
+	width: 56px;
+	border-radius: 25px;
+	position: absolute;	
+	top: -25px;
+	left: 92%;	
+	padding: 8px 10px 10px;
+	background-color: rgba(110,110,110,0.7);
+	cursor: pointer;	
+}
+section.swrapper .slidecontainer .slides .slide-me .up:hover,
+section.swrapper .slidecontainer .slides .slide-me .down:hover{
+	text-decoration: underline;
+}
