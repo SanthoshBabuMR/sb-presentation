@@ -1,0 +1,52 @@
+#jqueryuiblinds .blindscontainer{
+	position: relative;
+	color: #FFFFFF;
+}
+#jqueryuiblinds .content {
+    display: block;
+    overflow: hidden;
+    background-color: #232323;
+}
+#jqueryuiblinds #button{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+	left: 0px;
+	top: 0px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+	cursor: pointer;
+}
+#jqueryuiblinds .blindscontainer a.off{ 
+    background: url(../images/icon.gif) 0px 0px; 
+}
+#jqueryuiblinds .blindscontainer a.on{ 
+	background: url(../images/icon.gif) 0px -20px; 
+}
+#jqueryuiblinds #details_closed{ 
+	position: absolute;
+	top: 0px;
+	left: 40px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 19px;
+    padding-top: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#jqueryuiblinds #details_open{
+    float: left;
+    margin-left: 40px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+	padding-right: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+#jqueryuiblinds #details_open .text{
+	font-size: 0.9em;
+	text-align: justify;
+}
+#jqueryuiblinds #details_open .text p{
+	margin: 0 0 10px 0;
+}

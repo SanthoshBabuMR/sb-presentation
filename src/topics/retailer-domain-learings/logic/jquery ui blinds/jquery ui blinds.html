@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>JQuery UI Blinds</title>
+<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<script type="text/javascript" src="../../script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../script/modernizr-2.5.3.js"></script>
+<script type="text/javascript" src="../../script/jquery-ui-1.8.18.custom.min.js"></script>
+<script type="text/javascript" src="../../script/main.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 	
+	var blindscontainer = $('.blindscontainer .content');
+	var link_id = blindscontainer.find('a#button');
+	var close_content = blindscontainer.find('div#details_closed');
+	var open_content = blindscontainer.find('div#details_open');
+
+	open_content.css('display','none');
+
+	link_id.click(function(){
+		if($(this).hasClass('off'))
+		{
+			$(this).removeClass('off').addClass('on');
+			close_content.css('visibility','hidden');
+			open_content.css('visibility','visible').show("blind", { direction: "vertical" }, 1000);
+		}
+		else{
+			$(this).removeClass('on').addClass('off');
+			open_content.css('visibility','hidden').hide("blind", { direction: "vertical" }, 1000);
+			close_content.css('visibility','visible');
+		}
+	});
+});
+</script>
+</head>
+
+<body id="jqueryuiblinds">
+<h1>Jquery UI Blinds</h1>
+    <div class="blindscontainer">
+    <!-- Blinds Container start -->
+        <div class="content">
+            <div style="height: 30px;">
+                <a id="button" class="off"></a>
+                <div id="details_closed">
+                	<!-- title -->
+                    <div>Responsive Web Design</div>
+                    <!-- title -->
+                </div>
+                <div id="details_open">
+                	<!-- content -->
+                    <div class="text">
+                        <p>
+                           Recently, an emergent discipline called “responsive architecture” has begun asking how physical spaces can respond to the presence of people passing through them. Through a combination of embedded robotics and tensile materials, architects are experimenting with art installations and wall structures that bend, flex, and expand as crowds approach them. Motion sensors can be paired with climate control systems to adjust a room’s temperature and ambient lighting as it fills with people. Companies have already produced “smart glass technology” that can automatically become opaque when a room’s occupants reach a certain density threshold, giving them an additional layer of privacy.
+                        </p>
+                        <p>
+                        	In their book Interactive Architecture, Michael Fox and Miles Kemp described this more adaptive approach as “a multiple-loop system in which one enters into a conversation; a continual and constructive information exchange.” Emphasis mine, as I think that’s a subtle yet powerful distinction: rather than creating immutable, unchanging spaces that define a particular experience, they suggest inhabitant and structure can—and should—mutually influence each other.
+						</p>
+                        <p>
+                        	This is our way forward. Rather than tailoring disconnected designs to each of an ever-increasing number of web devices, we can treat them as facets of the same experience. We can design for an optimal viewing experience, but embed standards-based technologies into our designs to make them not only more flexible, but more adaptive to the media that renders them. In short, we need to practice responsive web design. 
+                        </p>    
+                	</div>
+                	<!-- content -->
+                </div>
+            </div>
+        </div>
+    <!-- Blinds Container end -->    
+    </div>
+    <p>
+    	Click on the plus icon to see the jquery blinds effect
+    </p>
+</body>
+</html>

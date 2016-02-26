@@ -1,0 +1,32 @@
+ul#counter-chooser-dd{
+	width: 142px;
+	padding: 0px;
+	margin: 0px;
+	font-size: 14px;
+	color: #3F1600;
+	background: url('/media/images/global/choose_country_dropdown0412.gif') no-repeat top right;
+}
+ul#counter-chooser-dd li{
+	padding: 0px;
+}
+ul#counter-chooser-dd li.showmenu{
+	display: none;
+}
+ul#counter-chooser-dd li.showmenu.disp{
+	display: block;
+	border: 1px solid pink;
+	border-top: none;
+}
+ul#counter-chooser-dd li.showmenu.disp a{
+	padding: 3px;
+	display: block;
+}
+ul#counter-chooser-dd li.selectcontainer{
+	cursor: pointer;
+	border: 1px solid black;
+	padding: 3px;
+	background: url(../images/plus.png) no-repeat center right;
+}
+ul#counter-chooser-dd li.selectcontainer.clicked{
+	background: url(../images/minus.png) no-repeat center right;
+}

@@ -1,0 +1,74 @@
+body{
+	background-color: #4D4D4D;
+	font: 13px/1.5 Arial, Helvetica, sans-serif;
+	color: #9d9d9d;
+}
+.wrapper{
+	width: 750px;
+	margin:0 auto;
+}
+.imagetoggler{
+	position: relative;
+	height:146px; 
+	width:700px; 
+	overflow:hidden;
+}
+.ease{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+.ease li{ 
+float: left;
+}
+
+.imagetoggler .window1{
+	display:block;
+	position: absolute; 
+	top:93px; 
+}
+.imagetoggler .window2{
+	display:block;
+	position: absolute; 
+	top:93px;
+	left:234px; 
+}
+.imagetoggler .window3{
+	display:block;
+	position: absolute; 
+	top:93px; 
+	left:468px; 
+}
+.window1 img,
+.window2 img,
+.window3 img{
+	position: relative;
+	z-index:1; 
+}
+.window1 div{
+	display: none; 
+	top: 73px;
+	width: 232px;
+	height:140px; 
+	zindex:2; 
+	position:relative;
+	background: url(../images/lm_merch1_over.jpg) no-repeat; 
+}
+.window2 div{
+	display: none; 
+	top: 73px;
+	width: 232px;
+	height:140px; 
+	zindex:2; 
+	position:relative; 
+	background:url(../images/lm_merch2_over.jpg) no-repeat;
+}
+.window3 div{
+	display: none; 
+	top: 73px;
+	width: 232px;
+	height:140px; 
+	zindex:2; 
+	position:relative;
+	background:url(../images/lm_merch3_over.jpg) no-repeat; 
+}

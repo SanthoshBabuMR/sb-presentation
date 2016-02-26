@@ -1,0 +1,97 @@
+div.displaywidget{
+	width: 48%;
+	height: 500px;
+	min-height: 500px;
+	margin: 5px;
+	padding: 0px;
+	float: left;
+	/*font-family: 'Federo', sans-serif;*/
+	font-family: 'Voces', cursive;
+	/*background: black;*/
+	/*border-radius: 0 0 6px 6px;*/
+	border-top: none;
+}
+div.displaywidget.expand{
+	width: 96%;
+}
+div.displaywidget.expand ul.left{
+}
+div.displaywidget.expand ul.right{
+}
+div.displaywidget h4{ 
+	margin: 0;
+	padding: 0;
+	color: #007CC2;
+	background-color: rgba(120,120,120,0.3);
+	padding: 3px;
+	border-radius: 0px;
+	font-family: 'Signika Negative', sans-serif;
+	font-size: 26px;
+	border-top: 1px solid #333333;
+	cursor: pointer;
+	border-radius: 6px 6px 0 0;
+}
+div.displaywidget .contains{
+	/*height: 88%;*/
+	border-top: none;
+	border-radius: 0 0 3px 3px;	
+	height: 462px;
+	overflow-y: auto;
+	background-color: #000;
+	/*display: none;*/
+	border-radius: 0px 0px 6px 6px;
+	border:	1px dashed #666666;
+	border-top: none;
+}
+div.displaywidget .contains p{
+	margin: 0;
+	padding: 10px 0;
+}
+div.displaywidget h5{ 
+	padding: 10px;
+	margin: 0; 
+	color:#BCD309;
+}
+div.displaywidget ul{
+	padding: 15px 10px 10px 10px;
+	line-height: 32px;
+}
+div.displaywidget .example{
+	padding: 4px 0;
+	font-family: 'Ruluko', sans-serif;
+}
+
+div.displaywidget .example span.highlight{
+	font-family: 'Fredericka the Great', cursive;
+	width: 28px;
+	font-size: 20px;
+	height: 28px;
+	line-height: 28px;
+	padding: 2px;
+	display: inline-block;
+	color: #000;
+	text-shadow: 1px 2px 12px grey;
+	border-radius: 4px;
+	margin-right: 5px;
+	background: rgb(255,214,94); /* Old browsers */
+	background: -moz-linear-gradient(top,  rgba(255,214,94,1) 0%, rgba(254,191,4,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,214,94,1)), color-stop(100%,rgba(254,191,4,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* IE10+ */
+	background: linear-gradient(top,  rgba(255,214,94,1) 0%,rgba(254,191,4,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffd65e', endColorstr='#febf04',GradientType=0 ); /* IE6-9 */
+
+}
+
+mark.marker{
+	font-style: normal;
+	color: #F00;
+	background: none;
+	font-weight: normal;
+}
+div.displaywidget img{
+	border-radius: 12px;
+	border: 6px solid #333333;
+	box-shadow: 1px 1px 5px #CCCCCC;
+}

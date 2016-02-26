@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Examples - Index</title>
+<link type="text/css" rel="stylesheet"  href="css/tabs-css.css" />
+<link type="text/css" rel="stylesheet"  href="css/accordion.css" />
+<style>
+iframe{
+	border: 0px;
+	width: 100%;
+	background: #FFF;
+}
+p.exp{
+	color: #4D4D4D;
+	font-weight: bold;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+#panel1 iframe{
+	height: 300px;
+}
+#panel2 iframe{
+	height: 900px;
+}
+#panel3 iframe{
+	height: 500px;
+}
+#panel4 iframe{
+	height: 1300px;
+}
+.ui-tabs-selected a{
+	background: #036;
+	color: #FFF;
+}
+.ui-tabs-panel{
+	border-color: #036; 
+	background:#FFF;
+}
+#accordion h2.ui-state-active {
+	background: #036;
+}
+</style>
+<script type="text/javascript" src="js/jquery.js"> </script>
+<script type="text/javascript" src="js/Jquery UI/ui.core.js"></script>
+<script type="text/javascript" src="js/Jquery UI/ui.tabs.js"></script>
+<script type="text/javascript" src="js/Jquery UI/ui.accordion.js"></script>
+<script>
+$(document).ready(function(){
+
+$('#tabSet').tabs();
+
+$("#accordion").accordion({
+    header:'h2',
+    active:'.open'
+  });
+  
+});
+</script>
+</head>
+
+<body>
+ <h1>Tabs</h1>
+  <ul id="tabSet">
+    <li><a href="#panel1">Box Model</a></li>
+    <li><a href="#panel2">Block Vs Inline</a></li>
+    <li><a href="#panel3">Margin Vs Padding</a></li>
+	<li><a href="#panel4">Float</a></li>
+	<li><a href="#panel5">Position</a></li>
+	<li><a href="#panel6">zIndex</a></li>
+	<!--<li><a href="#panel7">IE Bugs</a></li>-->
+</ul>
+  <div id="panel1">
+  	<p class="exp">Box Model >> Width, Height, Padding, Border, Margin</p>
+    <iframe src="examples/1.Box Model/Box Model.html"></iframe>
+</div>
+<div id="panel2">
+	<p class="exp">Block Elements >> <br /> Occupies available width of parent<br />
+    Block Elements are stacked vertically</p>
+   	<p class="exp">Inline Elements >> <br /> Occupies available width of its content<br />
+    Inline Elements are stacked horizontally</p>
+    <iframe src="examples/2. Block vs inline/Block vs Inline.html"></iframe>
+  </div>
+  <div id="panel3">
+   <iframe src="examples/3. marginvspadding/marginvspadding.html"></iframe>
+  </div>
+  <div id="panel4">
+    <iframe src="examples/4. float/1. floatwrapstext.html" style="height:550px;"></iframe>
+    <iframe src="examples/4. float/1. floatlayout.html"  style="height:600px;"></iframe>
+    <iframe src="examples/4. float/1. floatformlayout.html"  style="height:400px;"></iframe>
+    <iframe src="examples/4. float/2.float&clear.html" style="height:720px;"></iframe>
+     <iframe src="examples/4. float/3.float&formissue.html" style="height:420px;"></iframe>
+  </div>
+  <div id="panel5">
+     <iframe src="examples/5.position/1.positionfixed.html" style="height:420px;"></iframe>
+     <iframe src="examples/5.position/2.relativeandabsolute.html" style="height:420px;"></iframe>     
+  </div>
+  <div id="panel6">
+	<iframe src="examples/6.zIndex/1.zindex.html" style="height:2900px;"></iframe>     
+  </div>
+  <!--
+  <div id="panel7">
+    <h2>Panel 7</h2>
+    Content
+  </div>
+  -->
+</body>
+</html>
+

@@ -1,0 +1,533 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ZIndex</title>
+ <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<script type="text/javascript" src="../../script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../script/modernizr-2.5.3.js"></script>
+<script type="text/javascript" src="../../script/main.js"></script>
+</head>
+
+<body>
+	
+<div class="wrapper">
+	    <h1>Understanding ZIndex</h1>
+        <div>
+        	<ul class="toc fmt" style="margin:0; padding:0;margin-bottom: 20px;">
+            	<li>Table of Contents
+                    <ul class="toc">
+                        <li><a href="#whatis">What Is</a></li>
+                        <li><a href="#uindex">Understanding Z-Index</a></li>
+                        <li><a href="#example">Example</a>
+                            <ul class="toc" style="font-size:12px;">
+                                <li><a href="#spdsc">Static Positioning and Default Stacking Context</a></li>
+                                <li><a href="#rpsc">Relative Positioning and Stacking Context</a></li>
+                                <li><a href="#rapsc">Relative/Absolute Positioning and Default Stacking Context</a></li>
+                                <li><a href="#zir">Z-Index Rules</a></li>
+                                <li><a href="#iei">IE Issue</a></li>
+                                <li><a href="#soln">Solution</a></li>
+                            </ul>
+                        </li>                        
+                        <li><a href="#references">Refrences</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <fieldset>
+        <legend><a name="whatis">What Is</a></legend>
+  <p>
+        	The z-index property specifies the stack order of an element.
+  </p>	
+        <p>
+       	In General, greater the z-index value  of a HTML Element, they are always formatted  in front of HTML Elements with lower z-index levels, in the same stacking context.</p>
+<p style="font-style: italic;"> Note: In CSS 2.1, each box has a position in three dimensions. In addition  to their horizontal and vertical positions, boxes lie along a &quot;z-axis&quot;  and are formatted one on top of the other.  Z-axis positions are  particularly relevant when boxes overlap visually - <a href="http://www.w3.org/TR/CSS21/visuren.html#z-index">http://www.w3.org/TR/CSS21/visuren.html#z-index</a></p>
+<p>
+   	 It is important to note that z-index works only with positioned elements [absolute, relative]. </p>
+     </fieldset>
+
+  <fieldset>
+  <legend><a name="uindex">Understanding z-index</a></legend>
+		<p>When we require a HTML Element to be formatted in front of other HTML Elements, we simply assume, specifying greater z-index value, would address our need.</p>
+		<p>But, often this is not the case. When a z-index is specified to a positioned element, a new stacking context is created. </p>
+        <p>For example, </p>
+  <div class="code" style="padding: 10px;">
+    <p>&lt;body&gt;</p>
+            <p>&lt;div id=&quot;Orange&quot; style=&quot;position:relative; z-index:2&quot;&gt;</p>
+<p>&lt;/div&gt;</p>
+            <p>&lt;div id=&quot;Blue&quot; style=&quot;position:relative; z-index:1&gt;</p>
+            <p>&lt;/div&gt;</p>
+    <p>&lt;/body&gt;</p>
+  </div>
+        <p>would create two stacking context for Orange and Blue respectively. As Blue has lower z-index, it is rendered behind Orange.</p>
+        <p>In other words, Orange appears closer to screen than Blue, as shown below,</p>
+        <div style="border:1px solid #000; overflow:hidden; width:450px; margin:0 auto">
+            <div style="float:left; background-color:#09F; padding:90px 5px 0 50px; font-weight: bold; height:105px; width: 100px;">
+            	<div style=" border:1px solid #000;">Blue
+<div class="code-desc" style="margin-bottom: 0px;width:95px;">
+                    <span>position: relative;<br />z-index:1;</span>
+                </div>
+                </div>
+            </div>
+            <div style="float:left; background-color:#F63; padding:90px 5px 0 50px; font-weight: bold;height:105px; width: 100px;">
+            	<div style=" border:1px solid #000;">Orange
+<div class="code-desc" style="margin-bottom: 0px; width:95px;">
+                    <span>position: relative;<br />z-index:2;</span>
+                </div>
+                </div>
+            </div>
+            <div style="float:left;background-color:#fff; padding:15px 5px 0 5px; font-weight: bold;">
+            	<div style="width:120px; border:1px solid #000; padding-bottom: 15px;">
+                	<div style="border:10px solid #000; width:50px; margin:20px 20px 0 25px ; height:40px">
+                    </div>
+                    <div style="border:12px solid #000; margin:0 55px 0 47px; border-bottom: none;">
+                    </div>
+                  <div style="border:10px solid #000; margin:0 34px 0 32px; border-bottom: none;">
+                    </div>                
+              </div>    
+              <p style="text-align: center; margin-bottom:0px;">
+                Screen/User
+                </p>
+            </div>
+            <p style="clear:both; border-top:1px solid #000; margin:0px; font-style: italic;padding: 4px;color:#333">
+            Note: The above visual display shows the order of the HTML Elements in a web page, with respect to their stacking context.<br />
+            Greater the Stacking Context, Closer to the screen             
+		  </p>
+        </div>
+        <p style="clear:both">Now, if we had a &lt;p&gt; tag in Blue which is absolutely positioned with a z-index of 500, it would still be behind Orange.This is because, &lt;p&gt; tag is in the stacking context of Blue[z-index:1] which is lower than the stacking context of Orange [z-index:2].</p>
+        <div class="code">
+	        <p>&lt;div id=&quot;Blue&quot; style=&quot;position:relative; z-index:1&gt;</p>
+    	    <p>&lt;p style=&quot;position:absolute; z-index:500&quot;&gt;</p>
+        	<p>&lt;/p&gt;</p>
+	        <p>&lt;/div&gt;</p>
+  </div>
+  
+  <p style="clear:both">So, both Blue and &lt;p&gt; render behind Orange.[refer image below]</p>
+        
+<div style="border:1px solid #000; overflow:hidden; width:520px; margin:0 auto">
+          <div style="float:left; background-color:#09F; padding:10px 5px 0 5px; font-weight: bold; height:170px; width: 200px; position:relative;">
+            	<div style=" border:1px solid #000; width:100px;">Blue
+          <div class="code-desc" style="margin-bottom: 0px;width:95px;">
+                    <span>position: relative;<br />z-index:1;</span>
+                </div>
+                </div>
+                <div style="position:absolute; top:10px; left:0px; padding: 20px 10px 0 10px; height:140px; width:70px; background: #9C3; margin:0px 0 0 110px;; border:1px solid #000;">
+                	<div style=" border:1px solid #000;">&lt;p&gt;
+                    
+                     <div class="code-desc" style="margin-bottom: 0px; width:60px;">
+                    <span>position:<br />absolute;<br /><br />z-index:<br />500;</span>
+                </div>
+                
+                </div>
+                </div>
+            </div>
+<div style="float:left; background-color:#F63; padding:75px 5px 0 60px; font-weight: bold;height:105px; width: 100px;">
+            	<div style=" border:1px solid #000;">Orange
+          <div class="code-desc" style="margin-bottom: 0px; width:95px;">
+                    <span>position: relative;<br />z-index:2;</span>
+                </div>
+                </div>
+            </div>
+            <div style="float:left;background-color:#fff; padding:15px 5px 0 5px; font-weight: bold;">
+            	<div style="width:120px; border:1px solid #000; padding-bottom: 15px;">
+                	<div style="border:10px solid #000; width:50px; margin:20px 20px 0 25px ; height:40px">
+                    </div>
+                    <div style="border:12px solid #000; margin:0 55px 0 47px; border-bottom: none;">
+                    </div>
+                  <div style="border:10px solid #000; margin:0 34px 0 32px; border-bottom: none;">
+                    </div>                
+              </div>    
+              <p style="text-align: center; margin-bottom:0px;">
+                Screen/User
+                </p>
+            </div>
+        <p style="clear:both; border-top:1px solid #000; margin:0px; font-style: italic;padding: 4px;color:#333">
+          Note: The above visual display shows the order of the HTML Elements in a web page, with respect to their stacking context.<br />
+          Greater the Stacking Context, Closer to the screen             
+		</p>
+      </div>
+        
+        <br style="clear:both" />
+        
+
+<p>In Order to make the &lt;p&gt; tag format in front of other elements, we have to either</p>
+<p> 1. Increase the z-index of value of its parent's stacking context (i.e.) Blue (or)</p>
+<p>2. Remove the stacking context of its parent i.e. Blue, and give the &lt;p&gt; tag, a higher z-index value. <span style="color:#F00">[Note: This approach doesn't work in IE6 &amp; 7]</span></p>
+<div style="overflow:hidden">
+		<div class="code" style="float:left; margin:5px 10px 5px 0px ;">
+          <p>&lt;body&gt;</p>
+          <p>&lt;div id=&quot;Orange&quot; style=&quot;position:relative; z-index:2&quot;&gt;</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div id=&quot;Blue&quot; style=&quot;position:relative; <b style="color:#F00">z-index:3</b>&quot;&gt;</p>
+          <p>&lt;p style=&quot;position:absolute; z-index:500&quot;&gt;</p>
+          <p>&lt;/p&gt;</p>
+<p>&lt;/div&gt;</p>
+          <p>&lt;/body&gt;</p>
+		</div>
+        
+<div class="code" style="float:left; margin:5px 10px;">
+          <p>&lt;body&gt;</p>
+          <p>&lt;div id=&quot;Orange&quot; style=&quot;position:relative; z-index:2&quot;&gt;</p>
+          <p>&lt;/div&gt;</p>
+          <p>&lt;div id=&quot;Blue&quot; style=&quot;<b style="color:#F00">position:relative;</b>&quot;&gt;</p>
+          <p>&lt;p style=&quot;position:absolute; z-index:500&quot;&gt;</p>
+          <p>&lt;/p&gt;</p>
+<p>&lt;/div&gt;</p>
+          <p>&lt;/body&gt;</p>
+	</div>
+    <br style="clear:both" />
+    <p>
+    The visual rendering for the above code is shown below,
+    </p>
+<div style="border:1px solid #000; overflow:hidden; width:520px; margin:0 auto">
+            <div style="float:left; background-color:#F63; padding:75px 5px 0 60px; font-weight: bold;height:105px; width: 100px;">
+            	<div style=" border:1px solid #000;">Orange
+          <div class="code-desc" style="margin-bottom: 0px; width:95px;">
+                    <span>position: relative;<br />z-index:2;</span>
+                </div>
+                </div>
+            </div>
+            <div style="float:left; background-color:#09F; padding:10px 5px 0 5px; font-weight: bold; height:170px; width: 200px; position:relative;">
+            	<div style=" border:1px solid #000; width:100px;">Blue
+          <div class="code-desc" style="margin-bottom: 0px;width:95px;">
+                    <span>position: relative;<br />
+                    z-index:3;</span>
+                </div>
+          </div>
+                <div style="position:absolute; top:10px; left:0px; padding: 20px 10px 0 10px; height:140px; width:70px; background: #9C3; margin:0px 0 0 110px;; border:1px solid #000;">
+                	<div style=" border:1px solid #000;">&lt;p&gt;
+                    
+                     <div class="code-desc" style="margin-bottom: 0px;width:60px;">
+                    <span>position:<br />absolute;<br /><br />z-index:<br />500;</span>
+                </div>
+                
+                </div>
+                </div>
+            </div>
+            <div style="float:left;background-color:#fff; padding:15px 5px 0 5px; font-weight: bold;">
+            	<div style="width:120px; border:1px solid #000; padding-bottom: 15px;">
+                	<div style="border:10px solid #000; width:50px; margin:20px 20px 0 25px ; height:40px">
+                    </div>
+                    <div style="border:12px solid #000; margin:0 55px 0 47px; border-bottom: none;">
+                    </div>
+                  <div style="border:10px solid #000; margin:0 34px 0 32px; border-bottom: none;">
+                    </div>                
+              </div>    
+              <p style="text-align: center; margin-bottom:0px;">
+                Screen/User
+                </p>
+            </div>
+            <p style="clear:both; border-top:1px solid #000; margin:0px; font-style: italic;padding: 4px;color:#333">
+          Note: The above visual display shows the order of the HTML Elements in a web page, with respect to their stacking context.<br />
+          Greater the Stacking Context, Closer to the screen             
+		</p>
+        </div>
+        
+        
+  </div>
+        
+</fieldset>
+  <fieldset style="clear:both">
+  	<legend><a name="example">Example</a></legend>
+		<p>
+        	Lets us start with two Container DIV's - <span class="tcpt">topContainer</span> and <span class="bcpt">bottomContainer</span>. The
+<span class="tcpt">topContainer</span> contains <span class="cdiv">Child DIV</span>.</p>
+		<div class="code_grp">
+        <h3><a name="spdsc">Static Positioning and Default Stacking Context</a></h3>
+		<p>
+        	All the Elements[<span class="tcpt">topContainer</span>, <span class="bcpt">bottomContainer</span> and Child-DIV] are static postioned, hence we have only the default stacking context, which is the normal flow of elements in a web page.
+    </p><div class="code">
+            <div class="topContainer">
+    	        TopContainer
+                <div class="code-desc">
+                    <span>position: static;</span>
+                </div>
+                
+				<div class="hoverOver" style="margin:-45px 0 0 150px;">
+                	<div class="code-desc">
+                    	<span>position: staic;</span>
+                	</div>
+                This is Child-DIV from TopContainer
+	  </div>
+	</div>
+            <div class="bottomContainer">
+        	    BottomContainer
+                <div class="code-desc">
+                    <span>position: static;</span>
+                </div>
+          </div>
+  </div>
+  </div>
+		<hr />
+        <div class="code_grp">
+        <h3><a name="rpsc">Relative Positioning and Stacking Context</a></h3>
+  <p><span class="tcpt">topContainer</span> and <span class="bcpt">bottomContainer</span>, are relatively positioned with z-index values of 1 and 2 respectively.</p>
+<p>This creates two stacking context, and the <span class="cdiv">Child DIV</span> has same stacking context as its parent. In this case, both the <span class="tcpt">topContainer</span> and ChildDiv appear behind <span class="bcpt">bottomContainer</span>, as <span class="bcpt">bottomContainer</span> has higher stacking context.</p>
+<div class="code">
+  <div class="topContainer" style="position:relative; z-index:1">
+    	        TopContainer
+<div class="code-desc">
+                    <span>position: relative;</span>
+                  <br />
+<span>z-index:1;</span>
+                </div>
+                
+            	<div class="hoverOver"  style="margin:-60px 0 0 150px;">
+               		<div class="code-desc">
+                        <span>position: static;</span>
+                    </div>
+                	This is Child-DIV from TopContainer
+                </div>
+          </div>
+<div class="bottomContainer" style="position:relative;z-index:2">
+            	<div class="code-desc">
+                    <span>position: relative;</span>
+                    <br />
+                    <span>z-index: 2;</span>
+                </div>
+        	    BottomContainer
+          </div>
+  </div>
+  </div>
+		<hr />
+    <div class="code_grp">
+  <h3><a name="rapsc">Relative/Absolute Positioning and Default Stacking Context</a></h3>
+  <p><span class="tcpt">topContainer</span>, <span class="bcpt">bottomContainer</span> are relatively positioned while <span class="cdiv">Child DIV</span> is absolutely positioned to overlap with <span class="bcpt">bottomContainer</span>.</p>
+  <p>In this case, as no z-index is specified, only default stacking context exist, yet <span class="cdiv">Child DIV</span> is hidden behind <span class="bcpt">bottomContainer</span>.</p>
+  <p>With Default Stacking Context, the order in which elements are coded takes precedence; The last element in the web page takes priority over rest of the elements[note that all elements here are positioned]; So, if we were to position <span class="tcpt">topContainer</span> on top of <span class="bcpt">bottomContainer</span>, then <span class="tcpt">topContainer</span> would be hidden behind <span class="bcpt">bottomContainer</span>.</p>
+  <p>The same precedence applies to Childrens of such positioned parents. If the <span class="cdiv">Child DIV</span> belonged to <span class="bcpt">bottomContainer</span> and overlapped with <span class="tcpt">topContainer</span>, it would render in front of <span class="tcpt">topContainer</span>, as shown in the figure on the right</p>
+  
+  <div style="overflow:hidden;">
+  <div class="code" style="float:left; margin: 5px 10px 5px 0">
+    <div class="topContainer" style="position:relative;">
+      TopContainer
+  <div class="code-desc">
+    <span>position: relative;</span>
+    </div>
+      
+      <div class="hoverOver"  style="position: absolute; left: 150px; top:25px;">
+        <div class="code-desc">
+          <span>position: absolute;</span>
+        </div>
+        This is Child-DIV from TopContainer
+      </div>
+    </div>
+  <div class="bottomContainer" style="position:relative;">
+    <div class="code-desc">
+      <span>position: relative;</span>
+      </div>
+    BottomContainer
+    </div>
+  </div>
+  
+  <div class="code" style="float:left; margin: 5px 10px 5px 0">
+    <div class="topContainer" style="position:relative;">
+      TopContainer
+  <div class="code-desc">
+    <span>position: relative;</span>
+    </div>
+      
+
+    </div>
+  <div class="bottomContainer" style="position:relative;">
+    
+    BottomContainer
+    <div class="code-desc">
+      <span>position: relative;</span>
+      </div>
+    <div class="hoverOver"  style="position: absolute; left: 150px; top:-30px; background-color:#E66C2C">
+        <div class="code-desc">
+          <span>position: absolute;</span>
+        </div>
+        <span style="font-weight:bold;">This is Child-DIV from bottomContainer</span>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  <hr style="clear:both" />
+   <div class="code_grp">
+   
+  <h3><a name="zir">Z-Index Rules</a></h3>
+  <p style="clear:both">
+  	When it comes to z-index, the following applies
+    <ol style="font:13px/1.25em Arial, Helvetica, sans-serif ; font-weight:bold">
+    	<li style="padding-bottom:10px;">Positioned elements [absolute/relative] take priority over static elements. <span style="font-weight:normal">[note that priority here, refers to being able to come &quot;in front of&quot;]</span></li>
+        <li style="padding-bottom:10px;">If there are multiple positioned elements, then HTML Elements at the last, take priority over the rest (i.e) if we have &quot;n&quot; elements in order, then n<sup>th</sup> element takes priority over the remaining (n-1) elements
+        <br />
+        Eg:
+        	<ul style="list-style:none; margin-left:80px;">
+            	<li style="margin-left:-50px; color:#00F">&lt;body&gt;</li>
+                <li  style="margin-left:-30px; color:#F60">&lt;div style=&quot;position:relative&quot;&gt;</li>
+                	<li >&lt;!-- code --&gt;</li>
+                <li style="margin-left:-30px;color:#F60">&lt;/div&gt;</li>
+                <li style="margin-left:-30px;color:#F60"">&lt;a style=&quot;position:relative&quot;&gt;</li>
+                <li>&lt;!-- code --&gt;</li>
+                <li style="margin-left:-30px;color:#F60">&lt;/a&gt;</li>
+                <li style="margin-left:-30px;color:#363">&lt;ul&gt;</li>
+                <li>&lt;!-- code --&gt;</li>
+                <li style="margin-left:-30px;color:#363">&lt;/ul&gt;</li>
+				<li  style="margin-left:-30px;color:#F60">&lt;p style=&quot;position:relative&quot;&gt;</li>
+                	<li>&lt;!-- code --&gt;</li>
+                <li style="margin-left:-30px;color:#F60"">&lt;/p&gt;</li>
+                <li style="margin-left:-50px; color:#00F;">&lt;/body&gt;</li>
+                <li style="list-style:none; margin-left:-80px; font-weight:normal">
+                Here, <b>&lt;p&gt;</b> element and its descendants, have greater priority over &lt;ul&gt;, &lt;a&gt; and &lt;div&gt; elements
+                <br />
+                <b>&lt;a&gt;</b> element and its descendants, have greater priority over &lt;ul&gt; and &lt;div&gt; elements
+                <br />
+                <b>&lt;div&gt;</b>element and its descendants, have greater priority only over &lt;ul&gt; element
+                <br />
+                <b>&lt;ul&gt;</b> being non-positioned, is in default stacking context. </li>
+               </ul>
+               <li style="padding-bottom:10px;">
+                If multiple elements are positioned and given z-index, then stacking context is created accordingly. The positioned element with greatest z-index takes priority and comes in front of other elements and so on.
+               </li>
+   <li style="padding-bottom:10px;">
+               If multiple elements are positioned with z-index values, then  the Child Elements that belong to highest stacking context [positioned element with highest z-index] is displayed in front of other elements.
+          <br />
+               <br />
+               Now, with in the Positioned Element, the Child elements follow 1,2 & 3 rules accordingly.
+               </li>
+   </ol>
+    </div>
+  
+  <hr />
+<div class="code_grp">
+        <h3><a name="iei">IE Issue</a></h3>
+        <p>Assuming <span class="tcpt">topContainer</span> and <span class="bcpt">bottomContainer</span> are relatively positioned, the Child-DIV in <span class="tcpt">topContainer</span> is absolutely positioned with a z-index value of 500.</p>
+  <p>Since <span class="tcpt">topContainer</span>, <span class="bcpt">bottomContainer</span> and Child-DIV of <span class="tcpt">topContainer</span> are positioned, three stacking context are created due to the z-index values.</p>
+        <p> Though<span class="cdiv"> Child DIV</span> z-index value is greater than other elements, it doesn't get displayed on top. This is because, it exists in the context of <span class="tcpt">topContainer</span>, whose z-index is lower than <span class="bcpt">bottomContainer</span>. Hence, the <span class="cdiv">Child DIV</span> or any Child from <span class="tcpt">topContainer</span>, will be hidden behind <span class="bcpt">bottomContainer</span>.</p>
+        <p>There are two ways to get the display right, and the methods are shown below.</p>
+        <div class="code">
+          <div class="topContainer" style="position:relative; z-index:1">
+                TopContainer
+  <div class="code-desc">
+                    <span>position: relative;</span>
+                  <br />
+<span>z-index:1;</span>
+</div>
+                <div class="hoverOver" style="position: absolute; z-index:500; left: 150px; top:25px;">
+                    <div class="code-desc">
+        	            <span>position: absolute;</span>
+                        <br />
+                        <span>z-index: 500; </span>
+	                </div>
+                    This is Child-DIV from TopContainer
+                </div>
+          </div>
+<div class="bottomContainer" style="position:relative;z-index:2">
+                BottomContainer
+                <div class="code-desc">
+                    <span>position: relative;</span>
+                    <br />
+                    <span>z-index: 2;</span>
+                </div>
+          </div>
+  </div>
+        </div>
+		<hr />
+        <div class="code_grp">
+        <h3><a name="soln">Solution</a></h3>
+<p>In order to get the <span class="cdiv">Child DIV</span> on top of <span class="bcpt">bottomContainer</span>, we have two methods</p>
+        <h3>Method 1:</h3>
+        <p>we increase the z-index value of its parent(<span class="tcpt">topContainer</span>). Now any stacking context created within <span class="tcpt">topContainer</span> will come in front of <span class="bcpt">bottomContainer</span> and hence, <span class="cdiv">Child DIV</span> comes in front.</p>
+         <div class="code">        
+<div class="topContainer" style="position: relative; z-index:3">
+                TopContainer
+                <div class="code-desc">
+                    <span>position: relative;</span>
+                    <br />
+                    <span>z-index:3</span>
+                </div>
+                <div class="hoverOver" style="position: absolute; z-index:500; left: 150px; top:25px;">
+    	            <div class="code-desc">
+        	            <span>position: absolute;</span>
+                        <br />
+                        <span>z-index: 500; </span>
+	                </div>
+                    This is Child-DIV from TopContainer
+                </div>
+           </div>
+<div class="bottomContainer" style="position:relative;z-index:2">
+                BottomContainer
+                <div class="code-desc">
+                    <span>position: relative;</span>
+                    <br />
+                    <span>z-index: 2;</span>
+                </div>
+           </div>
+  </div>
+  </div>
+		<hr />
+        <div class="code_grp">
+  <h3>Method 2:</h3> 
+  <span style="color:#F00; font-weight:bold;">[Note: This Method Doesn't Work in IE6 and IE7 and is the reason for inconsistent display across browsers; Follow Method 1 for Cross-Browser Consistency]</span>
+  <p>Remove the z-index value of the <span class="cdiv">Child DIV</span>'s parent element and specify <span class="cdiv">Child DIV</span> with a higher z-index value than <span class="bcpt">bottomContainer</span>. (since, <span class="cdiv">Child DIV</span> already has a greater z-index value, we don't need to change it)</p>
+  <p>Note: If you view the below code in IE6 or IE7, the <span class="cdiv">Child DIV</span> will be hidden below <span class="bcpt">bottomContainer</span>.  </p>
+  <div class="code">
+    <div class="topContainer" style="position:relative;">
+                TopContainer
+          <div class="code-desc">
+                    <span>position: relative;</span>
+            			
+</div>
+                <div class="hoverOver" style="position: absolute; z-index:500; left: 150px; top:25px;">
+                    <div class="code-desc">
+        	            <span>position: absolute;</span>
+                        <br />
+                        <span>z-index: 500; </span>
+	                </div>
+                    This is Child-DIV from TopContainer
+                </div>
+        </div>
+<div class="bottomContainer" style="position:relative;z-index:2">
+                BottomContainer
+                <div class="code-desc">
+                    <span>position: relative;</span>
+                    <br />
+                    <span>z-index: 2;</span>
+                </div>
+        </div>
+  </div>
+
+<div style="font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; color:#444; font-size:13px; font-weight: bold;">
+  <h3>
+  Why IE is Often the Culprit</h3>
+  <p>We often find firefox or other browsers, to treat z-index correctly, while IE ignores it. This is often because Method 2 is employed to get the required layout style. Follow Method 1 and the layout will render as required.</p>
+<p>
+Further, websites contains several layers of DIV's positioned absolutely or relatively, with different z-index values and sometimes, javascript is used to render layout dynamically, causing even more chaos and difficultly in pinpointing the cause of issue. Tools such as Firebug and Developer Tools could be of least useful, unless we understand how things function.</p>
+<p>It is essential to maintian, a hierarchy of Elements regarding what comes on top over the other element. Tracking the Elements and their respective z-index also helps to design for future enhancment. But more than often, no such logs are maintained and we find needing to write hacks or IE specific css to address the issue.</p>
+<p>&nbsp;</p>
+</div>
+  </div>
+  </fieldset>
+		
+  
+  <fieldset>
+  <legend><a name="references">References</a></legend>
+  <p>I would recommend the following sites, for even better understanding,<a href="http://tjkdesign.com/articles/z-index/teach_yourself_how_elements_stack.asp" class="fmt"></a></p>
+<ul>
+<li>
+  <a href="http://thatnorwegianguy.com/2007/positioning-and-z-index-in-ie/" class="fmt">http://thatnorwegianguy.com/2007/positioning-and-z-index-in-ie/</a>
+</li>
+<li>
+	  <a href="http://www.w3.org/TR/CSS21/visuren.html#z-index" class="fmt">http://www.w3.org/TR/CSS21/visuren.html#z-index</a>
+</li>
+<li>	  <a href="http://css-discuss.incutio.com/wiki/Overlapping_And_ZIndex" class="fmt">http://css-discuss.incutio.com/wiki/Overlapping_And_ZIndex</a>
+</li>
+<li>
+	  <a href="http://tjkdesign.com/articles/z-index/teach_yourself_how_elements_stack.asp" class="fmt">http://tjkdesign.com/articles/z-index/teach_yourself_how_elements_stack.asp</a>
+</li>
+</ul>
+</fieldset>
+</div>
+
+
+
+<div class="mot">
+<a href="#" style="color:#fff; font-weight:bold;">Move To Top</a>
+</div>	
+</body>
+</html>

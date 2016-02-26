@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>DropDown Menu URL</title>
+<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<script type="text/javascript" src="../../script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../script/modernizr-2.5.3.js"></script>
+<script type="text/javascript" src="../../script/main.js"></script>
+<script type="text/javascript" src="../../script/prototype.js"></script>
+
+<script type="text/javascript">
+document.observe("dom:loaded", function() {
+   
+   // Countery Chooser
+	var country_chooser_dd = $('counter-chooser-dd'),
+		select_country = country_chooser_dd.down(0),
+		set_country = country_chooser_dd.down(1),
+		map_link = set_country.childElements(),
+		url = '';
+
+	Event.observe(select_country, 'click', function(){
+		this.toggleClassName('clicked');	
+		set_country.toggleClassName('disp');
+	});
+
+	var len = map_link.length;
+
+	for(var l=0;l<len;l++)
+	{
+		Event.observe(map_link[l], "click", function(event){
+			select_country.innerHTML = this.innerHTML;
+			set_country.toggleClassName('disp');
+		})
+	}
+
+});
+</script>
+</head>
+<body>
+	<h1>DropDown Menu URL</h1>
+	
+	<ul id="counter-chooser-dd">
+					<li class="selectcontainer">Choose country</li>
+					<li class="showmenu">
+							<a href="http://www.yoursingapore.com/content/traveller/en/experience.html" target="_blank">Singapore</a>
+							<a href="http://www.incredibleindia.org/" target="_blank">India</a>
+							<a href="http://www.tourism.gov.my/" target="_blank">Malaysia</a>
+							<a href="#">None</a>
+					</li>
+	</ul>
+        <p style="margin-top: 50px;">
+        	Onchaning the Select DropDown, the corresponding URL gets opened.     
+        </p>
+</body>
+</html>

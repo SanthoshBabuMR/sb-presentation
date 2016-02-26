@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Input Background Image</title>
+<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<script type="text/javascript" src="../../script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../script/modernizr-2.5.3.js"></script>
+<script type="text/javascript" src="../../script/main.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+
+});
+</script>
+</head>
+<body id="simpletoggle">
+	<h1>IE6/7 Input Box Background Image Scroll</h1>
+	<p>
+		Enter Some Text: <br />
+        <input type="text" id="text" name="text" />
+	</p>
+    <p>
+    When entering data and viewed in IE6/7, the background image provided as sprite would scroll along with the text within the input field.
+    <br />
+    The fix would be to attach the background-image sprite to a div and specify background:none to the corresponding input tag.
+    <br />
+    The below form field would work fine across browsers.    
+	</p>
+    Enter Some Text:
+    <div class="scrollfix">
+ 	<input type="text" id="text" name="text" />
+    </div>
+</body>
+</html>

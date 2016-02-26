@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS Float</title>
+<style>
+	body{
+		width: 96%;
+		margin: 0 auto;	
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 2%;
+	}
+	.wrap{
+		width: 94%;
+		padding: 2%;
+		border: 1px solid;
+		margin: 0 auto;
+	}
+	.nofltr{
+		width: 46%;
+		height: 50px;
+		background: #33F;
+		margin: 1%;
+		color: #FFF;
+	}
+	.fltr{
+		width: 46%;
+		height: 50px;
+		background: #33F;
+		margin: 1%;
+		float: left;
+		color: #FFF;
+	}
+	hr{
+		border: 1px solid #000;
+		height: 1px;
+	}
+	.show{
+		display: block;
+	}
+	.clear{
+		clear: both;
+		/*_height: 0px;*/
+	}
+
+</style>
+</head>
+
+
+<body>
+	<h1>Float - used for creating Table-Less Web Layout</h1>
+    <hr />
+	<div style="border: 1px solid gray; width: 600px; margin:0 auto; padding: 15px">
+    	<div class="wrapper" style="width:100%;">
+        	<div class="header" style="height:60px; border:1px solid gray; margin: 5px;">
+            	Header
+            </div>
+            <div class="container"  style="height:260px; border:1px solid gray; margin: 5px; float:left; width: 80%">
+            	Main Container
+            </div>
+            <div class="sidebar" style="height:260px; border:1px solid gray; margin: 5px; float:left; width: 16%;">
+            	Sidebar
+            </div>
+            <div class="footer" style="height:60px; border:1px solid gray; margin: 5px; clear: both">
+            	Footer
+            </div>                
+        </div>
+	</div>
+</body>
+</html>

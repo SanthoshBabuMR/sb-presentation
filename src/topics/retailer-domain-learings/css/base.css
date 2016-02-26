@@ -1,0 +1,16 @@
+body{
+	margin: 0 auto;
+	padding: 0;
+	font: Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	width: 96%;
+}
+ul,ol{
+	margin: 0 0 0 20px;
+	padding: 0px;
+	list-style: none;
+}
+h1{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-decoration: underline;
+}

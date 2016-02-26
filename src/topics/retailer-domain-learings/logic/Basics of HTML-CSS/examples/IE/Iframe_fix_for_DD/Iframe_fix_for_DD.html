@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>IFrame Fix For DD</title>
+<style type="text/css">
+	body{
+	
+		margin: 0;
+		padding: 0;
+		border: 0;
+		vertical-align: baseline;
+		font-family: Arial,Helvetica,Verdana,sans-serif;
+		font-size: 12px;
+	}
+	.wrapper{
+		width: 800px;
+		margin: 10px 10px 10px 50px ;
+	}
+	.code{
+		border: 1px dotted #000;
+		height: 200px;
+		padding: 10px;
+		margin-bottom: 20px;
+	}
+	.slink{
+		position: relative;
+		width: 68px;
+		background-color: #6D6968; 
+		padding:6px 5px 5px 8px;
+		color: #FFF;
+		cursor: pointer;
+		font-weight: bold;
+	}
+	.submenu{
+		position: absolute;
+		display: none;
+		top: 25px;
+		left: 0px;
+	}
+	
+	.show{
+		display: block;
+		background-color: #000;
+		width: 100px;
+		font-weight: normal;
+	}
+	
+	ul.formatter{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		z-index: 10;
+	}
+	ul.formatter li{
+		border-bottom: 1px dotted #FFF;
+		padding: 6px 5px 5px 8px;
+		position: relative;
+		z-index:5;
+	}
+	ul.formatter li a{
+		text-decoration: none;
+		color: #FFF;
+	}
+	.aframe{
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		z-index: 0;
+	}
+	fieldset{
+		line-height: 1.5em;
+		padding: 10px;
+	}
+	legend{
+		background: #444;
+		font-size: 24px;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		padding: 3px;
+		color: #FFF;
+	}
+	.optionprovider{
+		position: absolute;
+		top: 60px;
+		left: 500px;
+		border: 1px solid #CCC;
+		padding: 5px;
+		width: 315px;
+	}
+</style>
+<script type="text/javascript" src="prototype.js"></script>
+<script type="text/javascript">
+	var af = '';
+	var turn_off = false;
+	document.observe("dom:loaded",function(){
+		$$(".slink")[0].observe("mouseover", function(){
+			show();
+		})
+		$$(".slink")[0].observe("mouseout", function(){
+			hide();
+		})
+		$$(".optionprovider input")[0].observe("click", function(){
+			if(turn_off){
+				turn_off = false;
+				$$(".optionprovider label")[0].innerHTML = "Check to remove Fix";
+			}
+			else{
+				turn_off = true;
+				$$(".optionprovider label")[0].innerHTML = "Uncheck to apply Fix";
+			}
+		})
+		
+		Prototype.Browser.IE6 = Prototype.Browser.IE && parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf("MSIE")+5)) == 6;
+		Prototype.Browser.IE7 = Prototype.Browser.IE && parseInt(navigator.userAgent.substring(navigator.userAgent.indexOf("MSIE")+5)) == 7;
+		Prototype.Browser.IE8 = Prototype.Browser.IE && !Prototype.Browser.IE6 && !Prototype.Browser.IE7;
+
+	})
+	function show()
+	{
+		$$(".submenu")[0].addClassName("show");
+		if(Prototype.Browser.IE6 && !turn_off){activateFrame();}
+	}
+	function hide()
+	{
+		$$(".submenu")[0].removeClassName("show");
+		if(Prototype.Browser.IE6 && !turn_off){deactivateFrame();}
+	}
+	function activateFrame()
+	{
+		var dim = Element.getDimensions($$('.submenu')[0]);
+  		af = new Element("iframe",{frameborder:"0"});
+		af.addClassName("aframe");
+		af.setStyle({
+	     width: dim['width']+'px',
+    	 height: dim['height']+'px'
+	   });
+		
+		$$(".submenu")[0].insert({
+			bottom: af
+		})
+	}
+	function deactivateFrame()
+	{
+		if($$(".submenu iframe")[0])
+			$$(".submenu iframe")[0].remove();
+	}
+</script>
+
+</head>
+
+<body>
+<div class="wrapper">
+	<div class="code">
+        <h1>IE6 DropDown Overlay Fix</h1>
+        <div class="slink">Show Menu
+                <div class="submenu">
+                    <ul style="background:#000" class="formatter">
+                        <li><a href="#">Open File</a></li>
+                        <li><a href="#">New File</a></li>
+                        <li><a href="#">Close File</a></li>
+                        <li><a href="#">Exit Program</a></li>
+                    </ul>
+                </div>
+        </div>
+        <p>
+            <select>
+            	<option>-Month-</option>
+                <option>January</option>
+                <option>February </option>
+                <option>March</option>
+            </select>
+            <select>
+            	<option>-Country-</option>
+                <option>New Caledonia</option>
+                <option>Senegal</option>
+                <option>Montserrat</option>
+            </select>
+        </p>
+        <div class="optionprovider">
+            <input type="checkbox" /> <label>Check to remove Fix</label>
+        </div>
+	</div>
+  <fieldset>
+    <legend style="font-size:18px; font-weight: bold;">Description</legend>
+    <p>Simple IE6 DropDown Z-Index Fix Using IFrame and Prototype.</p>
+    <p>Whenever, Menu Drop Downs, such as shown above overlaps with Select box, we find that Select box are shown on top of the Menu Drop Downs in IE.</p>
+    <p>In IE 6, SELECT box is considered to be a windowed element and the windowed control comes in front of any other HTML elements, no matter what z-index is set for  each element.</p>
+    <p>This bug can be overcome by using IFrame. The IFrame is rendered behind the Main Menu DropDown, with a z-index lower than the Main Menu. 
+    </p>
+    <p>
+    Here, IFrame is dynamically created as users hover the Main Menu and destroyed when the user leaves the Main Menu. 
+    </p>
+    <p style="font-family:Arial, Helvetica, sans-serif; font-size:12px; font-weight:bold;">
+    The difficult part is setting the width and height of the IFrame to that of the Main Menu's Dimension. Thanks to &quot;Element.getDimensions()&quot; from Prototype, we can obtain the width and height values from the Main Menu and set it to the IFrame.  </p>
+    </fieldset>
+     
+    
+    </div>
+</div>
+</body>
+</html>

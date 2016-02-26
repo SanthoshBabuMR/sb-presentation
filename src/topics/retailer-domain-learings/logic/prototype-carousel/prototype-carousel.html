@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Prototype - Carousel</title>
+<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<script type="text/javascript" src="../../script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../script/modernizr-2.5.3.js"></script>
+<script type="text/javascript" src="../../script/main.js"></script>
+
+<script type="text/javascript" src="../../script/prototype.js"></script>
+<script type="text/javascript" src="../../script/scriptaculous/scriptaculous.js"></script>
+<script type="text/javascript" src="../../script/scriptaculous/effects.js"></script>
+<script type="text/javascript" src="script/carousel.js"></script>
+<script type="text/javascript">
+document.observe("dom:loaded", function() {
+new Carousel($('example-2').down('.middle'), $('example-2').down('.inner').select('img'), $('example-2').select('a'), {
+                                duration: 0.5,
+                                effect: 'scroll',
+                                visibleSlides: 4,
+                                circular: false,
+								wheel: false
+                            });
+});
+</script>
+</head>
+
+<body>
+	<h1>Prototype - Carousel</h1>
+    <div id="simple-carousel" class="carousel">
+			<a rel="next" class="carousel-control next" href="javascript:void"></a>
+			<a rel="prev" class="carousel-control prev" href="javascript:void"></a>
+			<div class="carousel-container">
+				<div class="inner" style="width: 1586px;">
+				<!-- inner container start -->
+					<div class="wrap">
+						<img alt="" src="images/android.jpg">
+						<span></span>
+						<a href="#" class="carousel-jumper disp" style="height:auto; width: auto; padding:0px;">
+							<div>
+								Android
+							</div>
+						</a>
+					</div>
+					<div class="wrap">
+						<img alt="" src="images/volkswagen.jpg">
+						<span></span>
+						<a href="#" class="carousel-jumper disp">
+                            <div>
+                                volkswagen
+                            </div>
+							</a>
+					</div>
+					<div class="wrap">
+						<img alt="" src="images/chrome.jpg">
+						<span></span>
+						<a href="#" class="carousel-jumper disp">
+							<div>
+								Google Chrome
+							</div>
+						</a>
+					</div>
+					<div class="wrap">
+						<img alt="" src="images/toyota.jpg">
+						<span></span>
+						<a href="#" class="carousel-jumper disp">
+							<div>
+								Toyota
+							</div>	
+						</a>
+					</div>
+					<div class="wrap">
+						<img alt="" src="images/shell.jpg">
+						<span></span>
+						<a href="#" class="carousel-jumper disp">
+							<div>
+								Shell
+							</div>
+						</a>
+					</div>
+					<div class="wrap">
+						<img alt="" src="images/mozilla.jpg">
+						<span></span>
+						<a href="#" class="carousel-jumper disp">
+							<div>
+								Mozilla Firefox
+							</div>	
+						</a>
+					</div>
+					<div class="wrap">
+						<img alt="" src="images/apple.jpg">
+						<span></span>
+						<a href="#" class="carousel-jumper disp">
+							<div>
+								Apple
+							</div>
+						</a>
+					</div>
+					<div class="wrap">
+						<img alt="" src="images/nike.jpg">
+						<span></span>
+						<a href="#" class="carousel-jumper disp">
+							<div>
+								Nike
+							</div>	
+						</a>
+					</div>
+					<div class="wrap">
+						<img alt="" src="images/html5.png">
+						<span></span>
+						<a href="#" class="carousel-jumper disp">
+							<div>
+								HTML 5
+							</div>
+						</a>
+					</div>
+				<!-- inner container end -->
+				</div>
+			</div>
+		</div>
+</body>
+</html>

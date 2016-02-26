@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Detecting Touch Events</title>
+<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<script type="text/javascript" src="../../script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../script/modernizr-2.5.3.js"></script>
+<script type="text/javascript" src="../../script/main.js"></script>
+<script type="text/javascript" src="script/jquery.touchwipe.1.1.1.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+var output = $('.output');
+$("#swipecontainer").touchwipe({
+	 wipeLeft: function() { output.html('output >> left swipe') },
+     wipeRight: function() { output.html('output >> right swipe') },
+     wipeUp: function() { output.html('output >> up swipe') },
+     wipeDown: function() { output.html('output >> down swipe') },
+     min_move_x: 5,
+     min_move_y: 5,
+     preventDefaultEvents: true
+});
+});
+</script>
+</head>
+<body id="simpletoggle">
+	<h1>Detecting Touch Events [iPhone, iPad or iPod Touch]</h1>
+    <i>Check the result in an Iphone, Ipad or Ipod</i>
+    <div id="swipecontainer">
+    	Swipe Over this area
+    </div>
+    <br />
+    <div class="output">
+    	output >> 
+    </div>
+	<ul>
+  <li>Ref</li>
+	    <li><a href="http://www.netcu.de/jquery-touchwipe-iphone-ipad-library">http://www.netcu.de/jquery-touchwipe-iphone-ipad-library</a></li>
+    </ul>
+</body>
+</html>

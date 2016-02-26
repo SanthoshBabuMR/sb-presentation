@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>zIndex</title>
+<script type="text/javascript" src="../../js/jquery.js"></script>
+<style>
+	body{
+		width: 96%;
+		margin: 0 auto;	
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 12px;
+		padding: 2%;
+	}
+	.wrap{
+		width: 94%;
+		padding: 2%;
+		border: 1px solid;
+		margin: 0 auto;
+	}
+	.nofltr{
+		width: 46%;
+		height: 50px;
+		background: #33F;
+		margin: 1%;
+		color: #FFF;
+	}
+	.fltr{
+		width: 46%;
+		height: 50px;
+		background: #33F;
+		margin: 1%;
+		float: left;
+		color: #FFF;
+	}
+	hr{
+		border: 1px solid #000;
+	}
+	.show{
+		display: block;
+	}
+	.clear{
+		clear: both;
+		/*_height: 0px;*/
+	}
+	.sce1, .sce2, .sce3, .sce4{
+		padding: 20px;
+		font-weight: bold;
+	}
+	.p1{
+		width: 200px;
+		height: 150px;
+		color: #000;
+		background: #ddd;
+		border: 1px solid #000;
+		padding: 10px;
+		line-height: 170px;
+	}
+	 .p2{
+		width: 200px;
+		height: 150px;
+		color: #000;
+		background: pink;
+		margin-top: -50px;
+		margin-left: 25px;
+		border: 1px solid #000;
+		padding: 10px;
+		line-height: 170px;
+	}
+	.usg div.nav{
+			background-color:#999;
+			overflow: visible;
+			height: 28px;
+	}
+	.usg div.nav ul {
+		list-style: none;
+		padding: 0px;
+		margin: 0px;
+		height: 28px;
+		padding-left: 350px;
+	}
+	.usg div.nav ul li{
+		float: left;
+		position: relative;
+	}
+	.usg div.nav ul li a{
+		display: inline-block;
+		padding: 4px 15px;
+		margin: 2px;
+		color: #000;
+		font-weight: bold;
+		width: 60px;
+	}
+	.usg div.nav ul li a:hover{
+		color: #FFF;
+	}
+	.usg div.nav ul li div{
+		left: -999em;
+		top : 0em;
+		position: absolute;
+		z-index: 1000;
+	}
+	/*.usg div.nav ul li:hover div{
+		left: 0em;
+		top: 28px;
+		background: #CCC;
+	}*/
+	.usg div.nav ul li div.applyClass{
+		left: 0em;
+		top: 28px;
+		background: #CCC;
+	}
+	.usg div.nav ul li:hover div a{
+		color: #000;
+		text-decoration: none;
+	}
+	.usg div.nav ul li:hover div a:hover{
+		text-decoration: underline;
+	}
+	div.promo{
+		background: #000;
+		width: 60%;
+		height: 150px;
+		padding: 10px;
+		font-size: 24px;
+		color: #00F;
+		text-align: center;
+		margin: 20px auto 40px;
+		position: relative;
+		z-index: 1;
+	}
+</style>
+<script>
+$(document).ready(function(){
+	$('.usg div.nav ul li').mouseover(function(){
+		$(this).find('div').toggleClass('applyClass');								   
+	});
+	$('.usg div.nav ul li').mouseout(function(){
+		$(this).find('div').toggleClass('applyClass');								   
+	});
+});
+</script>
+</head>
+
+
+<body>
+	<h1>zIndex</h1>
+    <hr />
+    <div style="border:1px solid gray; height: 450px;">
+    <h2>Scenario 1: Non-Positioned Elements overlapping</h2>
+    	<p>when two <b>non-positioned(p1, p2)</b> elements overlap, the latter element p2 would overlap on top of p1</p>
+    	<div class="sce1">
+            <div class="p1">	
+            	Container p1 [p:static;]
+            </div>
+            <div class="p2">	
+	            Container p2 [p:static;]
+            </div>
+        </div>
+    </div>
+    <div style="border:1px solid gray; height: 450px;">
+    <h2>Scenario 2: Postioned and Non-Positioned Elements overlapping</h2>
+    	<p>when a <b>positioned element (p1)</b> overlaps a <b>non-positioned element (p2)</b>, then element p1 would come on top.</p>
+        <P>Positioned elements take priority over non-positioned elements</P>
+    	<div class="sce2">
+            <div class="p1" style="position: relative">	
+            	Container p1 [p:relative;]
+            </div>
+            <div class="p2">	
+	            Container p2  [p:static;]
+            </div>
+        </div>
+    </div>
+    <div style="border:1px solid gray; height: 450px;">
+    <h2>Scenario 3: Positioned Elements overlapping with zIndex set</h2>
+    	<p>when a two <b>positioned element (p1=500,p2=1000)</b> overlaps, then the positioned element with highest zIndex(p2) value comes on top.
+        <P>Positioned elements take priority over non-positioned elements</P>
+    	<div class="sce2">
+            <div class="p1" style="position: relative; z-index:500">	
+            	Container p1  [p:relative; z:500]
+            </div>
+            <div class="p2" style="position: relative; z-index:1000">	
+	            Container p2 [p:relative; z:1000]
+            </div>
+        </div>
+    </div>
+    <div style="border:1px solid gray; height: 450px;">
+    <h2>Scenario 4: Positioned Elements with Childrens</h2>
+    	<p>when a two <b>positioned element (p1=500,p2=1000)</b> overlaps, then the positioned element with highest zIndex(p2) value comes on top.
+        <br />
+        Therefore all the children(s) contained within the p2 comes on top of p1 and its children(s)
+        <p>Positioned elements take priority over non-positioned elements</p>
+    	<div class="sce2">
+            <div class="p1" style="position: relative; z-index:500">	
+            	Container p1  [p:relative; z:500]
+                <div style="position: absolute; width: 100px; height: 150px; background: blue;line-height: 12px; padding-top:50px;color:#FFF; font-weight: bold;top:0px; left:100px; z-index:10000; padding-left:10px;">
+                	P1 - Child [p:absolute; z:10000]
+                </div>
+            </div>
+            <div class="p2" style="position: relative; z-index:1000">	
+	            Container p2 [p:relative; z:1000]
+                <div style="position: absolute; width: 100px; height: 150px; background: purple; line-height: 12px; padding-top: 50px; color:#FFF; font-weight: bold; top:-115px; left:150px; z-index:100; padding-left:10px;">
+                	P2 - Child [p:absolute; z:100]
+                </div>
+            </div>
+        </div>
+    </div>
+<div style="border:1px solid gray; height: 650px; position:relative">
+    <h2>Scenario 5: IE Issue</h2>
+    	<p>Internet Explorer versions 6 and 7 incorrectly reset the stacking context in relation to the nearest positioned ancestor element.</p>
+    	<div class="sce2">
+        	<div style="position:relative">
+	            <div class="p1" style="position: relative; z-index:9999">	
+    	        	Container p1  [p:relative; z:9999]
+        	    </div>
+            </div>
+            <div class="p2" style="position: relative; z-index:1">	
+	            Container p2 [p:relative; z:1]
+            </div>
+            <p>
+            IE6/7 will incorrectly display Container p2 on top of Container p1.
+            <br />
+            This is because, Container p2 is with in a DIV whose position is set to relative.
+            <br />
+            As a solution to this,
+            <br/> 
+            1. we need to remove the position property from Container p2's parent DIV.
+            <br />
+            2. (Or) set a Z-Index value to Container p1's Parent such that its greater than Container p2
+            </p>
+            <p>
+            The below scenario is an example for this issue in IE6/7. 
+            <br />
+            The DropDown Menu in IE6/7 will be displayed behind the promo container div.
+            <br />
+            Use the above mentioned solution to fix it.
+            </p>
+        </div>
+        <div class="usg">
+        	<div class="nav">
+            	<ul>
+                	<li>
+                    	<a href="#">SkinCare</a>
+                        <div>
+                        	<a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                    <li>
+                    	<a href="#">Eyes</a>
+                        <div>
+                        	<a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>
+                    <li>
+                    	<a href="#">HairCare</a>
+                        <div>
+                        	<a href="#">Link 1</a>
+                            <a href="#">Link 2</a>
+                            <a href="#">Link 3</a>
+                        </div>
+                    </li>  
+                    </ul>  
+            </div>
+        </div>
+		<div class="promo">
+            	This is a promo Container
+        </div>
+
+    </div>
+	
+</body>
+</html>

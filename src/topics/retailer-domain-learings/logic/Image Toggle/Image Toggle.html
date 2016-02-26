@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Image Toggler</title>
+<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<script type="text/javascript" src="../../script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../script/modernizr-2.5.3.js"></script>
+<script type="text/javascript" src="../../script/main.js"></script>
+<script type="text/javascript" language="javascript">
+$(document).ready(function(){	
+	$(".ease a").hover(function() {
+		$(this).find("div").animate({opacity: "show", top: "-146px"}, 600);
+	}, function() {
+		$(this).find("div").animate({opacity: "toggle", top: "0px"}, 600);
+	});
+});
+</script>
+<style type="text/css">
+
+</style>
+</head>
+
+<body>
+
+	 <div class="wrapper"> 	
+     	<h2>Image Toggler using JQuery</h2>
+        <div class="imagetoggler">
+            <ul class="ease">
+                <li> 
+                    <a href="#" class="window1">
+                        <img src="images/lm_merch1_off.jpg" border="0"/>
+                        <div>
+                        </div>
+                    </a>
+                </li>
+                <li> 
+                    <a href="#" class="window2">
+                        <img src="images/lm_merch2_off.jpg" border="0"/>
+                        <div>
+                        </div>
+                    </a>
+                </li>
+                <li> 
+                    <a href="#" class="window3">
+                        <img src="images/lm_merch3_off.jpg" border="0"/>
+                        <div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+	</div>
+    
+</body>
+</html>

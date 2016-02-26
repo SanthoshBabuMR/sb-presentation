@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS Float</title>
+<style>
+	body{
+		width: 96%;
+		margin: 0 auto;	
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		font-weight: bold;
+		padding: 2%;
+	}
+	.wrap{
+		width: 94%;
+		padding: 2%;
+		border: 1px solid;
+		margin: 0 auto;
+	}
+	.nofltr{
+		width: 46%;
+		height: 50px;
+		background: #33F;
+		margin: 1%;
+		color: #FFF;
+	}
+	.fltr{
+		width: 46%;
+		height: 50px;
+		background: #33F;
+		margin: 1%;
+		float: left;
+		color: #FFF;
+	}
+	hr{
+		border: 1px solid #000;
+		height: 1px;
+	}
+	.show{
+		display: block;
+	}
+	.clear{
+		clear: both;
+		/*_height: 0px;*/
+	}
+
+</style>
+</head>
+
+
+<body>
+	<h1>Float - Introducted to wrap text around images</h1>
+    <hr />
+	<div style="border: 1px solid gray; width: 300px; padding: 15px">
+    	<h2 style="border-bottom: 1px solid #4D4D4D;">HTML5</h2>
+    	<img src="HTML5_logo.png" style="float: left" />
+        <p>HTML5 is a language for structuring and presenting content for the World Wide Web, and is a core technology of the Internet originally proposed by Opera Software.[1] It is the fifth revision of the HTML standard (created in 1990 and standardized as HTML4 as of 1997)[2] and as of March 2012 is still under development. Its core aims have been to improve the language with support for the latest multimedia while keeping it easily readable by humans and consistently understood by computers and devices (web browsers, parsers, etc.). HTML5 is intended to subsume not only HTML 4, but XHTML 1 and DOM Level 2 HTML as well.</p>
+    </div>
+</body>
+</html>

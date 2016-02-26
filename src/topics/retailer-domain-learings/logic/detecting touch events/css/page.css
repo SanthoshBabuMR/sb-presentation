@@ -1,0 +1,12 @@
+#swipecontainer{
+	border: 1px solid #666;
+	width: 200px;
+	height: 200px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	position: relative;
+	overflow: hidden;
+	line-height: 200px;
+	padding: 50px;
+	text-align: center;
+}

@@ -1,0 +1,143 @@
+body{
+
+		margin: 0;
+		padding: 0;
+		border: 0;
+		vertical-align: baseline;
+		background: #999;
+	}	
+	h1,h2,h3,h4,h5,h6{
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	}
+
+	h1{
+		color: #F60;
+		border-bottom: 2px dotted #699;
+		margin: 20px auto;
+		font-size: 32px;
+	}
+	h2{
+		font-size: 21px;
+		color: #2B1B17;
+		border-left: 4px solid #2B1B17;
+		padding-left: 5px;
+	}
+	h3{
+		font-size:16px;
+		color: #566D7E;
+	}
+	h3 a{
+		border-bottom: 1px solid #566D7E;
+	}
+	hr{
+		background-color: #D4D4D4;
+		border: 0 none;
+		color: #D4D4D4;
+		height: 1px;
+		padding: 0;
+		text-align: left;
+	}
+	.wrapper{
+		width: 960px;
+		border: 1px solid #616D7E;
+		margin: 0 auto;
+		padding: 0 10px 10px 10px;
+		background-color: #fff;
+		border-top: 15px solid #736F6E;
+		border-bottom: 15px solid #736F6E;
+		font-size: 16px;
+	}
+	.code{
+		margin: 0;
+		padding: 0;
+		border: 1px dashed #4d4d4d;
+		width: 400px;
+	}
+	.topContainer, .bottomContainer{
+		background-color: #E3E4FA;
+		margin: 5px;
+		height: 50px;
+		padding: 10px;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 1em;
+	}
+	.bottomContainer{
+		background-color: #E3E4FA;
+	}
+	.hoverOver{	
+		background-color: #B93B8F;
+		color: #FFF;
+		width: 120px;
+		padding: 5px;
+		font-weight: normal;
+		border: 2px solid #000;
+		font-size: 15px;
+	}	
+	.code-desc{
+		font:12px/1.25em Tahoma, Geneva, sans-serif; 
+		color:#EFEFEF; 
+		margin:3px 0;
+		width: 120px;
+	}
+	.code-desc span{
+		background:#333; 
+		margin:0px;
+		padding:1px;
+	}
+	ul.toc{
+		list-style: none;
+		font-size: 14px;
+		line-height: 2em;
+	}
+	ul.toc li{
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		font-weight: bold;
+		
+	}
+	.mot{
+		position: fixed;
+		bottom: 40px; 
+		right:30px; 
+		background-color:#444; 
+		padding:4px; 
+		_position: absolute;
+		_top: 6150px;
+		font: 13px Arial, Helvetica, sans-serif;
+		outline: 1px solid #000;
+		border: 1px solid #999;
+	}
+	.code_grp{
+		padding-left: 40px;
+	}
+	fieldset{
+		padding: 10px;
+		margin: 10px;
+	}
+	legend{ 
+		background: #444;
+		font-size: 24px;
+		font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+		padding: 3px;
+	}
+	legend a{
+		color: #FFF;
+	}
+	.fmt a,.fmt a:link,.fmt a:hover{
+		color: #09C;
+	}
+	.fmt a:visited:{
+		color: purple;
+	}
+	.tcpt{
+		color: #60F;
+		font-weight: bold;
+	}
+	.bcpt{
+		color: #60F;
+		font-weight: bold;
+	}
+	.cdiv{
+		color: #396;
+		font-weight: bold;
+	}

@@ -1,0 +1,15 @@
+  .container{
+	width:138px;height:119px;position:relative;float:left
+  }
+  .image{
+	z-index:0;
+  }
+  .maskArea{
+	position:absolute;z-index:1; background:#000; width:138px;height:119px;left:0;top:0;text-align:center;vertical-align:middle ;display:none;
+  }
+  .txtLink{
+	position:absolute;z-index:2; width:138px;height:119px;text-align:center; left:0;top:0; display: none; ;
+  }
+  .txtLink table tr td a{color:#fff;display:block;text-decoration:none; font-weight:600}
+  .txtHolder{width:138px;height:119px;margin:0;padding:0; cursor:pointer}
+  .txtHolder tr td{vertical-align:middle;text-align:center;height:100%}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Brands</title>
+<link rel="stylesheet" type="text/css" href="../css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<script type="text/javascript" src="../script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../script/modernizr-2.5.3.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var logicpath = $('a.logicpath');
+	for(var loop=0;loop<logicpath.length; loop++)
+	{
+	$(logicpath[loop]).attr('href','../logic'+$(logicpath[loop]).attr("href"));
+	console.log($(logicpath[loop]).attr('href'))
+	}
+	
+});
+</script>
+</head>
+<body id="brands">
+	<h1>Code Repository</h1>
+	<section class="site">
+    	<section class="site">
+    	<h1>CSS</h1>
+        <ul>
+        	<li><a href="/zIndex/ZIndex.html" class="logicpath">zIndex</a></li>
+            <li><a href="/Basics of HTML-CSS/index.html" class="logicpath">Basics of HTML - CSS</a></li>
+		</ul>
+   		 </section>
+    	<section class="site">
+    	<h1>JS</h1>
+        <ul>
+        	<li><a href="/Image Toggle/Image Toggle.html" class="logicpath">Image Toggle - JS</a></li>
+		</ul>
+   		 </section>
+         
+    	<h1>Bumble</h1>
+        <ul>
+        	<li><a href="/simple toggle/simple toggle.html" class="logicpath">Simple Toggle - JS</a></li>
+            <li><a href="/jquery ui blinds/jquery ui blinds.html" class="logicpath">Jquery UI Blinds - JS</a></li>
+            <li><a href="/Jquery Conflict Resolution/Jquery Conflict Resolution.html" class="logicpath">Jquery Conflict Resolved - JS</a></li>
+            <li><a href="/detecting touch events/detecting touch events.html" class="logicpath">Detecting Touch Events - JS</a></li>
+		</ul>
+    </section>
+    <section class="site">
+    	<h1>MAC</h1>
+        <ul>
+        	<li><a href="/prototype-carousel/prototype-carousel.html" class="logicpath">Prototype Slider - JS</a></li>
+            <li><a href="/Footer Animation/fadeIn.html" class="logicpath">Footer Animation - JS</a></li>
+		</ul>
+    </section>
+     <section class="site">
+    	<h1>AVEDA</h1>
+        <ul>
+        	<li><a href="/input background image/input background image.html" class="logicpath">IE6/7 Input Box Background Image Scroll - CSS</a></li>
+		</ul>
+    </section>
+    <section class="site">
+    	<h1>BobbiBrown</h1>
+        <ul>
+        	<li><a href="/cms content hidden/cms content hidden.html" class="logicpath">CMS Content text and images are hidden - [IE6 Specific] CSS</a></li>
+		</ul>
+    </section>
+	<section class="site">
+    	<h1>Ojon</h1>
+        <ul>
+        	<li><a href="/link using select dropdown/link using select dropdown.html" class="logicpath">Link using select DropDown</a></li>
+            <li><a href="/DropDown Menu URL/dropdown menu url.html" class="logicpath">DropDown Menu URL</a></li>
+		</ul>
+    </section>
+</body>
+</html>

@@ -1,0 +1,18 @@
+input#text{
+	background: url(../images/sprite.png) no-repeat scroll -30px -662px transparent;
+	border: none;
+	width: 115px;
+	outline: none;
+	padding-right: 10px;
+}
+.scrollfix{
+	background: url(../images/sprite.png) no-repeat scroll -30px -662px transparent; /* mandatory */
+	width: 115px; /* mandatory */
+	padding-right: 10px;
+}
+.scrollfix input#text{
+	background: none; /* mandatory */
+	width: 115px; /* mandatory */
+	border: none;
+	outline: none;	
+}

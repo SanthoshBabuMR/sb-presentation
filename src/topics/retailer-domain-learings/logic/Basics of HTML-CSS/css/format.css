@@ -1,0 +1,69 @@
+#htmlstructure,.doctype,.doctype2{
+	position: relative;
+	padding: 10px;
+	overflow: hidden;
+	/*font-family: 'Lustria', serif;*/
+}
+#htmlstructure ul.structure{
+	/*font-family: 'Pontano Sans', sans-serif;*/
+}
+#htmlstructure ul.structure li:nth-child(1),
+#htmlstructure ul.structure li:nth-child(2){
+	padding-left: 0px;
+}
+#htmlstructure ul.structure li,
+#htmlstructure ul.structure li:nth-child(4) ul li{
+	padding-left: 30px;
+}
+#htmlstructure ul.structure li:nth-child(7),
+#htmlstructure ul.structure li:nth-child(4) ul li:nth-child(3){
+	padding-left: 60px;
+}
+.info a{
+	color: #FFF; 
+	text-decoration: underline;
+}
+.blockelements .blockprop td:nth-child(1),
+.inlinelements .inlineprop td:nth-child(1),
+.inlineblockelements .inlineblockprop td:nth-child(1){
+	color: #FFFFFF;
+}
+.blockelements .blockprop tbody tr td,
+.inlinelements .inlineprop tbody tr td,
+.inlineblockelements .inlineblockprop tbody tr td{
+	text-align: center;
+	color: #BCD309;
+}
+.blockelements .blockprop tbody tr td.denied,
+.inlinelements .inlineprop tbody tr td.denied,
+.inlineblockelements .inlineblockprop tbody tr td.denied{
+	color: #CC3300;
+}
+div.accept{
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	padding: 0 5px 5px 5px;
+	margin: 5px 5px 0 5px;
+	background: #BCD309;
+}
+div.deny{
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+	padding: 0 5px 5px 5px;
+	margin: 5px 5px 0 5px;
+	background: #CC3300;
+}
+
+
+
+
+
+
+
+
+
+
+
+

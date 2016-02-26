@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<HTML>
+ <HEAD>
+  <TITLE>Footer Animation</TITLE>
+  <meta charset="utf-8" />
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <link rel="stylesheet" type="text/css" href="../../css/base.css" />
+  <link rel="stylesheet" type="text/css" href="css/page.css" />
+  <script type="text/javascript" src="../../script/jquery-1.7.2.min.js"></script>
+  <script type="text/javascript" src="../../script/modernizr-2.5.3.js"></script>
+  <script type="text/javascript" src="../../script/main.js"></script>
+  <script>
+  
+  $(document).ready(function(){
+	$('.container').hover(
+		function(){$(this).children('.maskArea').fadeTo(400,0.7);$(this).children('.txtLink').fadeIn(400)},
+		function(){$(this).children('.maskArea').fadeOut(300);$(this).children('.txtLink').fadeOut(300)}
+	)
+  })
+  </script>
+ </HEAD>
+
+ <BODY>
+ <h1>Footer Animation - FadeIn FadeOut Effect using JQUERY</h1>
+  <div class="container">
+  	<img src="images/mickeycontractor_138.jpg" width="138" height="119" alt="image" class="image" />
+	<div class="maskArea" height="265"></div>
+	<div class="txtLink" >
+		<table class="txtHolder" onClick="alert('Call Fn')">
+			<tr>
+				<td>
+					<a href="" style="">click here click here </a>
+				</td>
+			</tr>
+		</table>
+	</div>
+  </div>
+  <div class="container">
+	<img src="images/alexboxvideo_138.jpg" width="138" height="119" alt="image" class="image" />
+	<div class="maskArea" height="265"></div>
+	<div class="txtLink" >
+		<table class="txtHolder" onClick="alert('Call Fn')">
+			<tr>
+				<td>
+					<a href="" style="">click here click here click here click here click here click here click here </a>
+				</td>
+			</tr>
+		</table>
+	</div>
+  </div>
+  <div class="container">
+	<img src="images/carolinedonnelly_138.jpg" width="138" height="119" alt="image" class="image" />
+	<div class="maskArea" height="265"></div>
+	<div class="txtLink" >
+		<table class="txtHolder" onClick="alert('Call Fn')">
+			<tr>
+				<td>
+					<a href="" style="">click </a>
+				</td>
+			</tr>
+		</table>
+	</div>
+  </div>
+  <div class="container">
+	<img src="images/fashionweekss2012_138.jpg" width="138" height="119" alt="image" class="image" />
+	<div class="maskArea" height="265"></div>
+	<div class="txtLink" >
+		<table class="txtHolder" onClick="alert('Call Fn')">
+			<tr>
+				<td>
+					<a href="" style="">click here click here click here click here </a>
+				</td>
+			</tr>
+		</table>
+	</div>
+  </div>
+  <div class="container">
+	<img src="images/hitthepavement_138_1.jpg" width="138" height="119" alt="image" class="image" />
+	<div class="maskArea" height="265"></div>
+	<div class="txtLink" >
+		<table class="txtHolder" onClick="alert('Call Fn')">
+			<tr>
+				<td>
+					<a href="" style="">click here click here click </a>
+				</td>
+			</tr>
+		</table>
+	</div>
+  </div>
+  <div class="container">
+	<img src="images/membervoice_138.jpg" width="138" height="119" alt="image" class="image" />
+	<div class="maskArea" height="265"></div>
+	<div class="txtLink" >
+		<table class="txtHolder" onClick="alert('Call Fn')">
+			<tr>
+				<td>
+					<a href="" style="">click here </a>
+				</td>
+			</tr>
+		</table>
+	</div>
+  </div>
+ </BODY>
+</HTML>

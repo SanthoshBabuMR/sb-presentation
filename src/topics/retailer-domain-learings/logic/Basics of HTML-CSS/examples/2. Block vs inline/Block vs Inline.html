@@ -1,0 +1,207 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>IE6 box model with no doctype</title>
+<style>
+	body{
+		width: 100%;
+		margin: 0 auto;	
+		font-family: Arial, Helvetica, sans-serif;
+		font-size: 13px;
+		font-weight: bold;
+	}
+	.wrap{
+		overflow: hidden;
+		width: 94%;
+		margin: 0 auto;
+		border: 1px solid gray;
+		padding: 2%;
+	}
+	div.wrap div.inline,
+	div.wrap div.block,
+	div.wrap div.inlineblock{
+		border:1px solid;
+		background: none;
+	}
+	div.wrap div.block div{
+		/*background: #CCC;*/
+		border: 1px solid #CCC;
+		margin: 3px;
+		padding: 0;
+	}
+	div.wrap div.inline p span{
+		/*background: #CCC;*/
+		border: 1px solid #CCC;
+		margin: 3px;
+		padding: 0;
+	}
+	div.wrap div.inlineblock p span{
+		display: inline-block;
+		/*background: #CCC;*/
+		border: 1px solid #CCC;
+		margin: 3px;
+		padding: 0;
+	}
+	
+	
+	div.wrap div.block div,
+	div.wrap div.inline p span,
+	div.wrap div.inlineblock p span{
+	}
+	
+	ul.fgn{
+		list-style: none;
+		overflow: hidden;	
+		padding: 0;
+		margin:0;
+	}
+	ul.fgn li{
+		float: left;
+		border: 1px solid;
+	}
+	ul.fgn li a{
+		width: 70px;
+		padding: 10px;
+		margin: 2px;
+		display: block;
+	}
+	nav a{
+		padding: 10px;
+		margin: 2px;
+		display: inline-block;
+	}
+	ol{
+		list-style: none;
+		margin: 0px;
+		padding: 0px;
+	}
+	li.pts{
+		color: red;
+	}
+
+</style>
+</head>
+
+<body>
+
+	<div class="wrap">
+    	Listing Block Level Elements
+		<div class="block">
+            <div>
+                Block Level Element 1
+            </div>
+            <div>
+                Block Level Element 2
+            </div>
+            <div>
+                Block Level Element 3
+            </div>  
+            <p>
+            	<ol>
+                	<li class="pts">
+                    	Points to note
+                    </li>
+                	<li>
+		            	- Block Level Elements Occupy the avilable width of parent Container.
+                    </li>
+                    <li>
+                    	- They are stacked vertically (i.e) they always begin in a new line.
+	                </li>
+                </ol>
+            </p>
+		</div>
+        
+        <br /><br /><br />
+        Listing Inline Level Elements
+        <div class="inline">
+            <p>
+                <span>
+                     Inline Level Element 1
+                </span>
+                <span>
+                     Inline Level Element 2
+                </span>
+                <span>
+                     Inline Level Element 3
+                </span>  
+            </p>     
+            <p>
+            <ol>
+            	<li class="pts">
+                    	Points to note
+                    </li>
+            	<li>
+                    - Inline Elements Occupy the avilable width of its Content.
+                </li>
+                <li>
+                    - They are stacked horizontally.
+                </li>
+                <li>
+                	- Trying to set/change - width, height, margin-top, margin-bottom, padding-top, padding-bottom; for the above elements, will not work, as they are inline.
+                </li>
+            </ol>
+            	
+            </p>
+		</div>
+        <br /><br /><br />
+
+        Listing Inline-Block Level Elements
+        <div class="inlineblock">
+            <p>
+                <span>
+                     Inline-Block Element 1
+                </span>
+                <span>
+                     Inline-Block Element 2
+                </span>
+                <span>
+                     Inline-Block Element 3
+                </span>  
+            </p>
+            <ol>
+            	<li class="pts">
+                    	Points to note
+                    </li>
+            	<li>
+                    - Inline-Block Level Elements occupy the avilable width of its Content, however, we can set/change its width and height as required.
+                </li>
+                <li>
+                    - They are stacked horizontally.
+                </li>
+                <li>
+                	- Trying to set/change - width, height, margin-top, margin-bottom, padding-top, padding-bottom; for the above elements, will work, as they are inline-block.
+                </li>
+            </ol>   
+            <div style="margin-top: 200px">
+            Usage:
+            	Global Navigation
+                <p>
+                NAV using float
+            <ul class="fgn">
+            	<li>
+                	<a href="#">SkinCare</a>    
+                </li>      
+                <li>
+                    <a href="#">HairCare</a>
+				</li>
+                <li>
+                    <a href="#">Eyes</a>
+                </li>
+			</ul>
+            </p>
+			<p>
+            NAV using inline-block
+            <nav class="ibgn">
+                	<a href="#">SkinCare</a>      
+                    <a href="#">HairCare</a>
+                    <a href="#">Eyes</a>
+            </nav>        
+            </p>
+            
+           </div>
+		</div>
+
+	</div>
+</body>
+</html>

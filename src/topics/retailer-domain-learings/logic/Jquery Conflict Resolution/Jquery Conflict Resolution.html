@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Jquery Conflict Resolution</title>
+<link rel="stylesheet" type="text/css" href="../../css/base.css" />
+<link rel="stylesheet" type="text/css" href="css/page.css" />
+<script type="text/javascript" src="../../script/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../script/modernizr-2.5.3.js"></script>
+<script type="text/javascript" src="../../script/main.js"></script>
+<script type="text/javascript">
+jQuery(function() {
+(function($) {
+	var $document = $(document);
+	
+	
+	<!-- your code goes here -->
+	
+	$document.on("click", ".stoggle .title a.expandable", function(event) {
+			event.preventDefault();
+			var accdn = $(".stoggle .title a.expandable");
+			if($(this).hasClass("open"))
+				$(this).toggleClass("open").next(".contains").slideToggle("fast");
+			else
+			{
+				for(var i=0; i<accdn.length; i++)
+					if($(accdn[i]).hasClass("open"))
+						$(accdn[i]).toggleClass("open").next(".contains").slideToggle("fast");
+					$(this).toggleClass("open").next(".contains").slideToggle("fast");
+			}		
+	});
+	
+	<!-- your code goes here -->
+	
+}(jQuery));
+});
+</script>
+</head>
+<body id="simpletoggle">
+	<h1>Jquery Conflict Resolution</h1>
+	<!-- stoggle start -->
+	<div class="stoggle">
+    	<!-- stoggle section start -->
+        <div class="title">
+            <a href="" class="expandable">
+             <span class="plus">+</span><span class="minus">-</span>
+              HTML
+            </a>
+            <div class="contains" style="display: none;">
+              Hyper Text Markup Language is the basic language of many websites.  It controls how a page looks, where content is placed and controlled, specifies meta tags and other aspects of the web page.
+            </div>
+        </div>
+        <!-- stoggle section start -->
+        <!-- stoggle section end -->
+        <div class="title">
+            <a href="" class="expandable">
+              <span class="plus">+</span><span class="minus">-</span>
+              JavaScript
+            </a>
+            <div class="contains" style="display:none;">
+              A scripting programming language most commonly used to add interactive features to webpages.
+            </div>
+        </div>
+        <!-- stoggle section end -->
+        <!-- stoggle section end -->
+        <div class="title">
+            <a href="" class="expandable">
+              <span class="plus">+</span><span class="minus">-</span>
+              CSS
+            </a>
+            <div class="contains" style="display:none;">
+             ascading Style Sheets (CSS) is a style sheet language used to describe the presentation semantics (the look and formatting) of a document.
+            </div>
+        </div>
+        <!-- stoggle section end -->
+	</div>
+    <!-- stoggle end -->
+    <div class="info">
+    	When using jquery with other libraries, we might need up in js conflict, to resolve it, we need to insert the jquery code in the format shown below.
+    	<code>
+		<br /><br />        
+        jQuery(function() {(function($) {
+        <br />
+        var $document = $(document);
+        <br />
+        &lt;!-- your code goes here --&gt;
+        <br /><br />
+        &lt;!-- your code goes here --&gt;
+        <br />
+        }(jQuery));
+        <br />
+        });
+        <br />
+    </code>
+    </div>
+</body>
+</html>
