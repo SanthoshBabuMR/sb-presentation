@@ -1,0 +1,60 @@
+<html>
+	<head>
+        <title>
+            DropDown
+        </title>
+        <script type="text/javascript" src="script/select.js">
+        </script>
+    
+        <style type="text/css">
+        #subcontainer2{
+        display: none;	
+        }
+        </style>
+    
+        <link type="text/css" href="../css/layout.css" rel="stylesheet"  />
+
+	</head>
+
+	<body>
+
+    <div id="wrapper">
+        
+        <div id="header">
+            <ul class="nav">
+            <li><a href="../index.html">Index</a></li>
+            <li><a href="select.html" class="active">DropDown</a></li>                
+            <li><a href="#">PlaceHodler</a></li>     
+            </ul>
+        </div>
+        
+        <div id="container">
+            <h1>DropDown Example</h1>
+            
+            <div id="subcontainer1">
+                <span onClick="javascript:createDD('dropdown_one');">Create Drop Down One</span><span style="padding-left:30px;" onClick="dd_change('dropdown_two');">set value from Drop Down Two</span>
+                <br /> <br />
+                <span id='dd_area'>ONE</span>
+                <br /> <br />
+                <span id='dd_index'>Index 1</span>	
+                <br /> <hr > <br />
+                <span onClick="javascript:createDD('dropdown_two')";>Create Drop Down Two</span><span style="padding-left:30px;" onClick="dd_change('dropdown_one');">set value from Drop Down One</span>
+                <br /> <br />
+                <span id='dd_area2'>TWO</span>
+                <br /> <br />
+                <span id='dd_index2'>Index 2</span>	        
+          	</div>
+
+            <div id="subcontainer2">
+            </div>
+
+        </div>
+        
+        <div id="footer">
+    	    <a href="#footer">Footer</a>
+	    </div>
+        
+    </div>        
+</body>
+
+</html>

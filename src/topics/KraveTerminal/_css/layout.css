@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	background: #999999;
+	width:100%;
+}
+
+#wrapper{
+	background: #FFFFFF;
+	font-family: Calibri, "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 15px;
+	letter-spacing: 0.03px;
+	margin: 0 auto;
+	width: 960px;
+    box-shadow: 0 0 6px #000;
+	-moz-box-shadow: 0 0 6px #000;
+	-webkit-box-shadow: 0 0 6px #000;
+}
+
+#wrapper #header{
+	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+}
+
+#wrapper #container{
+	background: url(../_images/v-dot.jpg) repeat-y 720px;
+	margin: 20px 0 0 0;
+}
+
+#wrapper #container #ltsidebar{
+	display: none;
+	float: left;
+}
+
+#wrapper #container #maincontent{
+	float:left;
+	padding: 0 20px;
+	width: 680px;
+}
+
+#wrapper #container #rtsidebar{
+	margin-left: 10px;
+	/*margin: 37px 0 0 0;*/
+	float: right;
+	width: 226px;
+}
+
+#wrapper #footer{
+	background: #333333;
+	clear: both;
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	padding: 0 20px;
+	position: relative;	
+}
+
+.clearcontainer{
+	background: #FFFFFF; 
+	clear:both;
+	font-size:14px;
+	width:100%; 
+}

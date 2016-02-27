@@ -1,0 +1,18 @@
+.select_render
+{
+	background: url(../images/select_bg.gif) no-repeat right #FFFFFF;
+	border:1px inset #7F9DB9;
+	height:22px;
+	cursor:default;
+}
+
+
+#wrapper #container #subcontainer1{
+	width : 93%;
+ }
+
+ #wrapper #container #subcontainer2{
+	display: none;
+}
+			
+	

@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, strong, i, br, ul, ol, li, dl, p, a, form, button, textarea, fieldset, legend, label{
+    background: transparent;
+    border: none;
+    font-weight: normal;
+    font-size: 100%;
+	font-style: normal;
+	line-height: 1.6em;
+	margin: 0;
+	padding: 0;
+    text-align: left;
+	vertical-align: baseline;
+}
+
+input, select{
+	margin: 0;
+}
+
+table{
+	border-collapse: collapse;
+	margin: 0;
+    padding: 0;
+}
+
+table thead tr th, table tfoot tr th{
+	padding: 3px;
+	text-align: center;
+}
+
+table tbody tr td{
+	padding: 3px;
+	vertical-align: top;
+}
+
+ul, ol, dl{
+	margin-left: 20px;
+}
+
+li{
+	padding: 0px 10px 0px 0px;	
+}
+
+img, a img{
+	border: none;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	margin: 0;
+	padding: 10px 0px;
+}
+
+h1{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+p{
+	margin: 0;
+	padding: 10px 0px;	
+}
+
+a, a:link{
+    color: #0099FF;
+	cursor: pointer;
+	font-weight: bold;
+	padding: 0 3px;
+	text-decoration: none;
+}
+
+a:visited{
+    color: #0099FF;
+}
+
+a:hover, a:active, a:focus{
+	/*color: #54B059;
+	color:#AE7F65;*/
+	/*text-decoration: underline;*/
+	background-color: #0099FF; 
+	color : #FFFFFF;
+}
+
+hr{
+	color: #D4D4D4;
+	background-color: #D4D4D4;
+	border: 0px;
+	height: 1px;
+	
+}
+
+img{
+	border:3px solid #CCCCCC;
+	margin: 5px;
+}

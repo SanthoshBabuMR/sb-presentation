@@ -1,0 +1,7 @@
+#wrapper #container #subcontainer1{
+	width : 93%;
+}
+
+#wrapper #container #subcontainer2{
+	display: none;
+}

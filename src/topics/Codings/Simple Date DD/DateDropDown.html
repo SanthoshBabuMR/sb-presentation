@@ -1,0 +1,83 @@
+<html>
+
+    <head>
+        <title>
+        	Date DD
+        </title>
+        <link type="text/css" href="../css/layout.css" rel="stylesheet" />	
+        <link type="text/css" href="css/DateDropDown.css" rel="stylesheet"	>
+        <script type="text/javascript" src="script/DateDropDown.js">
+        </script>
+        <style type="text/css">
+			select
+			{
+				border:1px solid gray;
+			}
+        </style>
+        
+    </head>
+    
+    <body>
+    
+        <div id="wrapper">
+        
+            
+            <div id="header">
+                <ul class="nav">
+                <li><a href="../index.html">Index</a></li>
+                <li><a href="datedropdown.html" class="active">Date Drop Down</a></li>                
+                <li><a href="#">PlaceHodler</a></li>     
+                </ul>
+            </div>
+            
+            <div id="container">
+               
+                <h1>Date Drop Down</h1>
+               
+                <div id="subcontainer1">
+                
+                    <table border=1 cellspacing=5>
+                        <tr>
+                            <td>
+                           		<span onClick="set_month('','Month','Month');">Month Drop Down</span>
+                            </td>
+                            <td>
+                           		<span onClick="set_day('','Day','Day');">Day Drop Down</span>
+                            </td>
+                            <td>
+                            	<span onClick="set_year('','','','Year','Year');">Year Drop Down</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                            	<span id='mdd'></span>
+                            </td>
+                            <td>
+                            	<span id='ddd'></span>
+                            </td>	
+                            <td>
+                            	<span id='ydd'></span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div id="subcontainer2">
+                </div>
+
+            </div>
+            
+            <div id="footer">
+                <a href="#footer">Footer</a>
+            </div>
+        
+        </div>        
+    
+    
+    
+    
+    
+    
+    </body>
+
+</html>

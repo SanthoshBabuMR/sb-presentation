@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>dom</title>
+
+<link type="text/css" href="../css/layout.css" rel="stylesheet"  />
+
+<script type="text/javascript" src="script/dom obj.js">
+</script>
+<script type="text/javascript" src="script/dom obj2.js">
+</script>
+
+</head>
+
+<body>
+
+	<div id="wrapper">
+    
+    
+        <div id="header">
+        	<ul class="nav">
+            	<li><a href="../index.html">Index</a></li>
+            	<li><a href="dom obj.html" class="active">Dom</a></li>                
+            	<li><a href="#">PlaceHodler</a></li>     
+         	</ul>
+        </div>
+        
+        <div id="container">
+            <h1>Document Object Model Examples</h1>
+	    	<div id="subcontainer1">
+            
+               
+                <div id="anchor_div">
+                    <h2> Links-Section </h2>
+                    <!-- anchors detection is based upon 'name' attribute in <a> tag rather the <a> itself or href -->
+                    <a href="http://www.google.com" target="_self">Google</a> |
+                    <a href="http://www.yahoo.com" target="_blank">Yahoo</a> |
+                    <a href="http://www.gmail.com" target="_blank">Gmail</a> |
+                    <a name="simple_link">simple link1</a> |
+                    <a name="simple_link">simple link2</a> |
+                    <a name="CTS" href="http://www.cognizant.com/">COGNIZANT</a>
+                    <br />
+                        <span>
+                            <a class="clickhere" onclick="dom_obj(this,'anchor_div','current_div_anchors','1')">Click here for anchor tags in Links-Section</a>
+                        </span>
+                        <br />
+                        <span>
+                            <a class="clickhere" onclick="dom_obj(this,'anchor_div','all_anchor','1')">Click here for anchor tags in the document</a> 
+                        </span>
+                        <br />
+                        <span>
+                            <a class="clickhere" onclick="dom_obj(this,'anchor_div','all_anchor_text','1')">Click here to return the innerHTML of the first anchor in the document</a>  
+                        </span>
+                        <br />   
+                        <span>
+                            <a class="clickhere" onclick="dom_obj(this,'anchor_div','all_links','1')">Click here to return the number of links in the document</a>  
+                        </span>
+                        <br />          
+                        <a name="dummy-link1">Dummy Link1</a>
+                </div>
+                        <a name="dummy-link2">Dummy Link2</a> |
+                        <a name="dummy-link3">Dummy Link3</a>            
+                <div id="form_div">
+                    <h2>Forms-Section</h2>
+                            
+                            <form name="Details" id="details">
+                                <span class="highlightsubtitle">Details Form</span>
+                                <br />
+                                Name : <input type="text" />
+                                <br  />                    
+                                Age : <input type="text" />
+                                <br  />
+                                Desig : <input type="text" />
+                                <br  />                 
+                                <input type="button" value="Submit Details" onclick="dom_obj(this,'form_div','button_formid','1')" />   
+                                <br  />
+                                <span>Click on the button to retrieve the ID of the form it belongs to</span>
+                            </form>
+                            <form name="Contact" id="contacts">
+                                <span class="highlightsubtitle">Contact Form</span>
+                                <br />
+                                street 1 : <input type="text" />
+                                <br  />
+                                street 2 : <input type="text" />
+                                <br  />                    
+                                city : <select>
+                                            <option value="chennai">Chennai</option>
+                                            <option value="hyderabad">Hyderabad</option>
+                                            <option value="delhi">Delhi</option>
+                                            <option value="mumbai">Mumbai</option>
+                                       </select>
+                                <br  />                                
+                                country : <input type="text" />
+                                <br  />                    
+                                <input type="button" value="Submit Contacts" onclick="dom_obj(this,'form_div','button_formid','1')" />   
+                            	<br  />
+                                <span>Click on the button to retrieve the ID of the form it belongs to</span>                                                             
+                            </form>
+                            
+                            <form>
+                            <span class="highlightsubtitle">Dummy Form</span>
+                            <br />
+                            <input type="button" value="Submit" onclick="dom_obj(this,'form_div','button_formid','1')" />  
+                            <br  />
+                            <span>Click on the button to retrieve the ID of the form it belongs to</span>                                                      
+                            </form>
+                        <span>
+                            <a class="clickhere" onclick="dom_obj(this,'form_div','all_forms','1')">Click here to return number of forms in this document</a>
+                        </span>
+                </div>    
+                <div id="image_div">
+                    <h2>Image-Section</h2>
+                    <img src="images\1.jpg" id="image_camera" alt="camera" height="150" width="200" />
+                    <img src="images\2.jpg" id="image_funny" alt="Funny" height="150" width="150" />
+                    <img src="images\3.jpg" alt="confused" height="150" width="230" usemap="#footer" />
+                    <map name="footer">
+						<area id="confused_footer" shape="square" coords="0,0,50,50" alt="Confused" href="venus.html?id=venus" />
+					</map>
+                    <img src="images\4.jpg" id="image_unavailable" alt="Unavailable" height="150" width="150" />
+                    <br />
+                    <span>
+                            <a class="clickhere" onclick="dom_obj(this,'image_div','all_images','1')">Click here to return number of images in this document</a>
+                    </span>
+                    <br />
+                    <span>
+                            <a class="clickhere" onclick="dom_obj(this,'image_div','all_id_images','1')">
+                            Click here to return the id of images in this document</a>
+                            <br  />
+                    </span>
+                    <br  />
+   					<img src="images\planets.gif" id="img_planets" width="145" height="126" usemap="#planetmap" />
+					<map name="planetmap">
+						<area id="venus" shape="circle" coords="124,58,8" alt="The planet Venus" href="venus.html" />
+					</map>
+                    <br />
+	                <span>
+                            <a class="clickhere" onclick="dom_obj(this,'image_div','subanchor_images','1')">Click here to return the anchor part(#[name]) of the href attribute of an area</a>
+                    </span>					
+                    <br />        
+                    <span>
+                            <a class="clickhere" onclick="dom_obj(this,'image_div','coord_imagemap','1')">Return the coordinates of an area in an image-map</a>
+                    </span>					
+                    <br />    
+                                   
+                </div>
+           
+
+                
+            </div>
+                     
+            <div id="subcontainer2">
+
+                <div id="general_div">
+                    <h2>General-Section</h2>  
+                    <span class="spantitle">Cookie Info</span>
+                    <br />
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','cookie_info','1')">Click here to obtain Cookie Information</a>
+                    </span>
+                    <br />
+                    <span class="spantitle">Domain Info</span>
+                    <br />
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','domain_info','1')">Click here to obtain Domain Information</a>
+                    </span>
+                    <br /> 
+                    <span class="spantitle">Document Last Modified Info</span>
+                    <br />
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','lastModified_info','0')">Click here to obtain date and time the document was last modified</a>
+                    </span>
+                    <br /> 
+					<span class="spantitle">Query String Info</span>
+                    <span><a name="qs" onclick="document.URL += '?id=venus')" style="cursor: pointer;">Set QueryString</a></span>
+                    <br />                    
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','querystring_info','0')">Click here to obtain query string in URL</a>
+                    </span>
+                    <br />                    
+                    <span class="spantitle">Referrer URL Info</span>
+                    <br />
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','referrer_info','1')">Click here to return URL of the document that loaded the current document
+            </a>
+                    </span>
+                    <br />  
+                    <span class="spantitle">Title Info</span>
+                    <br />
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','title_info','1')">Click here to get title of the document</a>
+                    </span>
+                    <br />     
+                    <span class="spantitle">URL Info</span>
+                    <br />                     
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','url_info','1')">Click here to get url of the document</a>
+                    </span>
+                    <br />     
+                    <span class="spantitle">Output Stream</span>
+                    <br />                                      
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','output_stream','1')">Click here to Open an output stream, and add some text</a>
+                    </span>
+                    <br />    
+                    <span class="spantitle">Ouput Stream through New Window</span>
+                    <br />                                      
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','window_output_stream','1')">Click here to Open an output stream, and add some text in a New Window</a>
+                    </span>
+                    <br />
+                    <span class="spantitle">'this' keyword</span>
+                    <br />  
+                    <span>
+                        <a id="sample_id_test" class="clickhere" onclick="dom_obj(this,'general_div','this_keyword','1')">Click here to return the values of using 'this' keyword</a>
+                    </span>
+                    <br  />                            
+                    <span class="spantitle">Get Elements by Name</span>
+                    <br />                                      
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','name_search','0')">Click here to display number of elements with a specific name</a>
+                    </span>
+                    <br  /> 
+                    <span class="spantitle">Get Elements By TagName</span>
+                    <br />                                      
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'general_div','tagname_search','0')">Click here to display number of elements with a specific tagname</a>
+                    </span>
+                    <br  />                 
+                   
+                         
+                </div>        
+                
+                <div id="events_div">
+                    <h2> Events-Section </h2>
+                    
+                    <span>
+                        <a class="clickhere" onmousedown="dom_obj(this,'events_div','event_buttonclick','mousedown0',event)">Click to identify which mouse button was clicked</a>
+                    </span>
+                    <br  />
+                    <span>
+                        <a class="clickhere">Type any Character in the text area and the corresponding key code will be displayed</a><br />
+						<textarea id="keyevent_textarea" onkeyup="dom_obj(this,'events_div','event_keycode','mousedown0',event)"></textarea>
+                    </span>
+                    <br  />  
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'events_div','coords_cursor','0',event)">Click here to retrieve the coordinates of the cursor</a>
+                    </span>
+                    <br  />      
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'events_div','screen_coords_cursor','0',event)">Click here to retrieve the coordinates of the cursor,  relative to the screen</a>
+                    </span>
+                    <br  />
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'events_div','call_identifyelement','0',event)">Click here to identify which element was clicked</a>
+                    </span>
+                    <br  />                                                                             
+                 </div>
+                <div id="dd_div">
+                	<h2> DropDown-Section </h2>
+                    <span class="spantitle">Create DropDown</span>
+                    <br />                   
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'dd_div','week_dropdown','1',event)">Click here to create a dropdown of calender week</a>
+                    </span>
+                    <br  />
+                    <span>
+                    <span class="spantitle">Get SelectedIndex of DD</span> 
+                    <br />                   
+                        <a class="clickhere" onclick="dom_obj(this,'dd_div','week_dropdown_selectedindex','1',event)">Click here to create a dropdown and to retrieve the selected Index, InnerHTML and value of the dropdown by clicking on the dropdown</a>
+                    </span>
+                    <br  />    
+                    <span class="spantitle">Enable/Disable a DD</span>                        
+                    <br />                   
+                     <span>
+                        <a class="clickhere" onclick="dom_obj(this,'dd_div','week_dropdown_enabledisable','1',event)">Click here to create a dropdown and to use button to enable/disable the dropdown</a>
+                    </span>
+                    <br  />     
+                    <span class="spantitle">Change the text in DD</span>                        
+                    <br />                   
+                     <span>
+                        <a class="clickhere" onclick="dom_obj(this,'dd_div','week_dropdown_changetext','1',event)">Click here to Change the text of the selected option and to remove an item from the DD</a>
+                    </span>
+                    <br  />                             
+                
+                </div>
+
+                <div id="table_div">
+                    <h2> Table-Section </h2>
+                    
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'table_div','simple_table','1')">Click to create a Table</a>
+                    </span>
+                    <br  />
+                    <span>
+                        <a class="clickhere" onclick="dom_obj(this,'table_div','process_table','1')">Click to process the table</a>
+                    </span>
+                    <br  />        
+                                
+                    
+				</div>
+	
+            </div>
+         
+
+        </div>
+            
+        <div id="footer">
+        	
+            <a href="#footer">Footer</a>
+        
+        </div>
+        
+	</div>        
+</body>
+</html>

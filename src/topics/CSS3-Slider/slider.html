@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<meta name="author" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>CSS3-Slider</title>
+<!-- open css -->
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/default.css" />
+<!--[if IE 8]><link rel="stylesheet" href="css/ie.css" /><![endif]-->
+<!--[if lt IE 7]><link rel="stylesheet" href="css/ie6.css" /><![endif]-->
+<style type="text/css">
+</style>
+<!-- close css -->
+<!-- open script -->
+<script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="script/modernizr.js"></script>
+<script type="text/javascript">
+    $(document).ready(function(){
+	
+		var slidr = $('.slider')
+			slidrimg = $('.slider .scontainer'),
+			notifier = '',
+			slide_duration = 4000, /* slide_duration must always be double the value of transition-duration*/
+			counter = $(slidrimg).length,
+			lcount = 0,
+			rcount = 0,
+			tcount_int = '',
+			tcount_left = '',
+			tcount_right = '',
+			play = function(){
+					$(slidrimg[0]).addClass('active');
+					tcount_left = setInterval(moveLeft,(slide_duration));
+					var ctrls = document.createElement('div');
+					ctrls.className = 'ctrls';
+					$(slidr).append(ctrls);
+					var data = '';
+					var playpauseflag = 0;
+					data += "<div class='notify'>"
+					for(var i=0;i<counter;i++){
+						data +='<a href=\'#\'></a>';
+					}
+					data += "</div>"
+					data += "<span>Pause</span>";
+					$ctrl_obj = $('.ctrls');
+					$ctrl_obj.html(data);
+					$ctrl_obj.find('span').click(function(){
+						if(!playpauseflag){
+							playpauseflag = 1;
+							if(tcount_left != 'undefined')clearInterval(tcount_left);
+							
+							$(this).html('Play');
+						}
+						else{
+							playpauseflag = 0;
+							$(this).html('Pause');
+							tcount_left = setInterval(moveLeft,(slide_duration*0));
+						}
+					});
+					notifier = $('.ctrls .notify a');
+					$(notifier[lcount]).addClass('active');
+					},
+			moveLeft = function(){
+				lcount++;
+				clearInterval(tcount_left);
+				$(slidrimg[lcount-1]).addClass('left');
+				$(slidrimg[lcount]).addClass('active').removeClass('right');
+				$(notifier[lcount-1]).removeClass('active');
+				$(notifier[lcount]).addClass('active');
+				tcount_left = setInterval(moveLeft,(slide_duration));
+				tcount_right = setInterval(moveRight,(slide_duration*0.5));
+				if(lcount==counter){
+					lcount = 0;
+					$(slidrimg[0]).addClass('active').removeClass('right');
+					$(notifier[lcount]).addClass('active');
+					clearInterval(tcount_left);
+					tcount_left = setInterval(moveLeft,(slide_duration));
+				}
+			},
+			moveRight = function(){
+				if(rcount==counter){
+					rcount = 0;
+				}
+				clearInterval(tcount_right);
+				rcount++;
+				$(slidrimg[rcount-1]).removeClass('left').removeClass('active').addClass('right');
+			};			
+			play();
+					
+  });
+</script>
+<!-- close script -->
+</head>
+<body id="page-id">
+<!-- open body -->
+	<div class="slider">
+		<div class="scontainer">
+			<img src="images/one.png" alt="one" />
+		</div>
+		<div class="scontainer">
+			<img src="images/two.png" alt="two" />
+		</div>
+		<div class="scontainer">
+			<img src="images/three.jpg" alt="three" />
+		</div>
+		<div class="scontainer">
+			<b>DIV for holding content.</b>
+		</div>
+		<div class="scontainer">
+			<img src="images/four.jpg" alt="Four" />
+		</div>
+		<div class="scontainer">
+			<img src="images/five.png" alt="Five" />
+		</div>
+	</div>
+	
+<!-- close body -->
+</body>
+</html>

@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>
+		Js Strings
+		</title>
+		<link type="text/css" href="../css/layout.css" rel="stylesheet" />
+		<link type="text/css" href="css/basicfunction.css" rel="stylesheet" />
+		<script type="text/javascript" src="script/basicfunction.js">
+		</script>
+	</head>
+	<body>
+		<div id="wrapper">
+            <div id="header">
+                <ul class="nav">
+                    <li><a href="../index.html">Index</a></li>
+                    <li><a href="basicfunction.html" class="active">Basic Functions</a></li>                
+                    <li><a href="#">PlaceHodler</a></li>     
+                </ul>
+            </div>
+            <div id="container">
+                <h1>JS Basic Functions</h1>
+                
+                <div id="subcontainer1">
+                
+                    <!--Data:<span id="data" class="dat">Hi this8 is 12a sample text where the text567 is used for TEXT9ing</span>
+                    - <a href="javascript:void(0)" onclick="setdata();">Set Test Data</a> 
+                    - <a href="javascript:void(0);" onclick="clearr();">Clear Fields</a>
+                    <br>-->
+                    <input id="g_val" type="Text" value="Enter Value"  class="fieldcolor" onClick="(this.value=='Enter Value')? this.value='':this.style.color='black'" onFocus="(this.value=='Enter Value')? this.value='':this.style.color='black'" onBlur="if(this.value=='Enter Value'){this.value='Enter Value';this.style.color='gray'}">
+                    <span class="outpt">Output:</span><span id="g_out" class="outp"></span>
+                    <hr>
+                    1.<a href="javascript:void(0);" onClick="g_fun(1)">anchor_fun</a><input id="g_val2" type="Text" value="anchor" class="fieldcolor" onClick="(this.value=='anchor')? this.value='':this.style.color='black'" onFocus="(this.value=='anchor')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='anchor'){this.value='anchor';this.style.color='gray'}"> - Creates an anchor<br>
+                    2.<a href="javascript:void(0);" onClick="g_fun(2)">big_fun</a> - Displays a string using a big font<br>
+                    3.<a href="javascript:void(0);" onClick="g_fun(3)">bold_fun</a> -  	Displays a blinking string [Works in FF]<br>
+                    4.<a href="javascript:void(0);" onClick="g_fun(4)">blink_fun</a> - Displays a string in bold<br>
+                    5.<a href="javascript:void(0);" onClick="g_fun(5)">fixed_fun</a> - Displays a string using a fixed-pitch font<br>
+                    6.<a href="javascript:void(0);" onClick="g_fun(6)">fontcolor_fun</a><input id="g_val4" type="Text" value="fontcolor" class="fieldcolor" onClick="(this.value=='fontcolor')? this.value='':this.style.color='black'" onFocus="(this.value=='fontcolor')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='fontcolor'){this.value='fontcolor';this.style.color='gray'}"> - Displays a string using a specified color<br>
+                    7.<a href="javascript:void(0);" onClick="g_fun(7)">fontsize_fun</a><input id="g_val5" type="Text" value="fontsize" class="fieldcolor" onClick="(this.value=='fontsize')? this.value='':this.style.color='black'" onFocus="(this.value=='fontsize')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='fontsize'){this.value='fontsize';this.style.color='gray'}"> - Displays a string using a specified size<br>
+                    8.<a href="javascript:void(0);" onClick="g_fun(8)">italics_fun</a> - Displays a string in italic<br>
+                    9.<a href="javascript:void(0);" onClick="g_fun(9)">link_fun</a><input id="g_val3" type="Text" value="url" class="fieldcolor" onClick="(this.value=='url')? this.value='':this.style.color='black'" onFocus="(this.value=='url')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='url'){this.value='url';this.style.color='gray'}"> - Displays a string as a hyperlink<br>
+                    10.<a href="javascript:void(0);" onClick="g_fun(10)">small_fun</a> - Displays a string using a small font<br>
+                    11.<a href="javascript:void(0);" onClick="g_fun(11)">strike_fun</a> - Displays a string with a strikethrough<br>
+                    12.<a href="javascript:void(0);" onClick="g_fun(12)">sub_fun</a> -  Displays a string as subscript text<br>
+                    13.<a href="javascript:void(0);" onClick="g_fun(13)">sup_fun</a> - Displays a string as superscript text<br>
+                    14.<a href="javascript:void(0);" onClick="g_fun(14)">LENGTH</a> -  	Returns the length of a string<br>
+        
+                </div>
+                         
+                <div id="subcontainer2">
+                </div>
+                
+        	</div>
+            <div id="footer">
+                <a href="#footer">Footer</a>
+            </div>
+    	</div>
+	</body>
+</html>
+
+

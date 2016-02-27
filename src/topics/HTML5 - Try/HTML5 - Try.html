@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8"/>
+        <title>HTML 5 Try</title>
+        <link type="text/css" rel="stylesheet" href="base.css" />
+        <!--[if gte IE 6]>
+        <style type="text/css">
+				header{
+                	background-color: crimson;
+                }
+			</style>
+        <![endif]-->
+        <!--[if IE 6]>
+        	<style type="text/css">
+				header{
+                	background-color: #333;
+                   	padding: 1px 0;
+                }
+			</style>
+        <![endif]-->
+        <script type="text/javascript">
+			<!--
+			var html5_ele = ['header', 'footer','article','aside','audio','canvas','video','menu','command','datalist','keygen','mark','meter','output','rt','rp','ruby','source','section'];
+			for(i in html5_ele)
+				document.createElement(html5_ele[i]);
+				window.onload = function(){
+					var canv = document.getElementById('canv');
+					var ctxt = canv.getContext('2d');
+					ctxt.beginPath();
+					ctxt.moveTo(150,30);
+					ctxt.lineTo(50,30);
+					ctxt.lineTo(50,120);
+					ctxt.lineTo(150,120);
+					ctxt.stroke();
+				}
+			var mpro = 0;
+			window.onload = function()
+							{
+								setInterval('200',trackpro());
+							}
+			
+			function trackpro()
+			{
+				var prog = document.getElementById('measureprogress');
+				prog.value += ++mpro;
+				if(mpro == 100)
+					mpro = 12;
+			}
+			// -->	
+		</script>
+        <base target="_blank" />
+    </head>
+<body>
+	<section class="wrapper">
+    	<!-- site section start -->
+        <header>
+        	<!-- site header start -->
+            <h1 class="heading">HTML5 - Tags</h1>
+            <!-- site header end -->
+        </header>
+        <section class="elementlist">
+            <h3 class="heading">Elements</h3>
+            	<section class="divider">
+                    <article>
+                        <span class="tag">anchor</span> - <a href="file:///C:/Documents%20and%20Settings/Webster/My%20Documents/KraveTerminal/index.html" title="kraveterminal" charset="utf-8">KraveTerminal</a>
+                    </article>
+                    <article>
+                        <span class="tag">abbreviation</span> - <abbr title="message">msg</abbr>
+                    </article>
+                    <article>            
+                        <span class="tag outdated">acronym</span> - <abbr title="HyperText Markup Langauge">html</abbr>
+                    </article>
+                    <article>            
+                        <span class="tag">address</span> - <address style="padding-left:70px; margin-top: -15px;">Brahmin Street<br /> Velachery<br /> Chennai - 600 042</address>
+                    </article>
+                    <article>
+                        <span class="tag outdated">applet</span> - Depracated in favor of <span class="tag">Object</span> tag.
+                    </article>
+                    <article>
+                        <span class="tag">area</span> - <img src="imagemap.jpg" usemap="#photo" />
+                        <map id="photo" name="photo">
+                          <area shape="poly" coords="103,174,74,150,56,134,50,108,57,88,67,73,89,62,111,60,142,65,157,85,159,112,147,140,137,162,135,171,104,175" href="file:///G:/_Intoxicated/5130/-- 5130 Images -- Dec 24" alt="Image Collection" title="Image Collection">
+                        </map>
+                    </article>
+                    <article>
+                        <span class="tag newtag">article</span> - Defines a subset of Document's Content that forms an independent part of the document.
+                    </article>
+                    <article>
+                        <span class="tag newtag">aside</span> - Encloses Content related to the main content Eg: sidebar
+                    </article>
+                    <article>
+                        <span class="tag newtag">audio</span> - <audio src="audio.mp3" controls="controls">Unable to Play Audio</audio>
+                    </article>
+                    <article>
+                        <span class="tag">b</span> - <b>News Headlines</b>
+                    </article>
+                    <article>
+                        <span class="tag">base</span> - Used in Head Tag to specify base URL. Synonymous to anchor tag
+                    </article>
+                    <article>
+                	<span class="tag outdated">baseFont</span> - Outdated. Synonymous to Font tag
+                    </article>
+                    <article>
+                        <span class="tag">bdo</span> - <bdo dir="rtl">this text is from right to left</bdo>
+                    </article>
+                    <article>
+                        <span class="tag">big</span> - <big>Large</big>; Can be accomplished using <br />CSS font-size: larger
+                    </article>
+                    <article>
+                        <span class="tag">blockquote</span> - <Blockquote>This text is rendered using blockquote tag. User-Defined CSS is not applied to this text</Blockquote>
+                        <br />
+                        <blockquote cite="http://vi.sualize.us">Everything is possible in Faith</blockquote>
+                    </article>
+                    <article>
+                        <span class="tag">body</span> - Encloses the document's displayable content
+                    </article>
+                    <article>
+                        <span class="tag">br</span> - <br clear="all" />Forces a line break
+                    </article>
+                    <article>
+                        <span class="tag">button</span> - <button name="Submit" value="Submit" title="Click here">Click here</button><button disabled>Button Disabled</button>
+                    </article>
+                    <article>
+                        <span class="tag newtag">canvas</span> - <canvas id="canv"></canvas>
+                    </article>                      
+                    <article>
+                        <span class="tag">caption</span> - 	
+                                                            <table border="1">
+                                                                <caption>Summary</caption>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Cell 1
+                                                                            </td>
+                                                                            <td>
+                                                                                Cell 2
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>
+                                                                                Cell 3
+                                                                            </td>
+                                                                            <td>
+                                                                                Cell 4
+                                                                            </td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                            </table>
+                    </article>
+                    <article>
+                        <span class="tag outdated">center</span> - <center> I am Centered !! </center>
+                    </article>
+                    <article>
+                        <span class="tag">cite</span> - This example is taken from <cite>HTML &amp; CSS - The Complete Reference</cite> textbook.
+                    </article>
+                    <article>
+                        <span class="tag">code</span> - To increement a variable <var>x</var>, use <code>x++</code> or <code>x = x+1; </code>
+                    </article>
+                    <article>
+                        <span class="tag">col</span> -  <table border="1" width="300">
+                        									<tbody>
+                                                                <colgroup>
+                                                                    <col width="120" />
+                                                                    <col align="right" />
+                                                                </colgroup>
+                                                                <tr>
+                                                                    <td>width of 120 using col</td>
+                                                                    <td>default width</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>?</td>
+                                                                    <td>!</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>?</td>
+                                                                    <td>!</td>
+                                                                </tr>
+                                                            </tbody>
+                        								</table>
+                    </article>
+                    <article>
+                        <span class="tag">colgroup</span> - <table border="1" width="180">
+                        									<tbody>
+                                                                <colgroup>
+                                                                    <col align="right" />
+                                                                    <col align="center" />
+                                                                </colgroup>
+                                                                <tr>
+                                                                    <td>cell 0 0</td>
+                                                                    <td>cell 0 1</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>cell 1 0</td>
+                                                                    <td>cell 1 1</td>
+                                                                </tr>
+                                                            </tbody>
+                        								</table>
+                    </article>
+                    <article>
+                        <span class="tag newtag">command</span> - 
+                        											<menu label="File">
+                                                                    	<command label="Open" type="Command" />
+                                                                        <command label="close" type="Command" />
+                                                                    </menu>
+                    </article>
+                                        <article>
+                        <span class="tag newtag">datalist</span> -  
+                        										<form>
+                        											<label>Technologies: <input list="fill_list" /></label>
+                        												<datalist id="fill_list">
+                                                                    		<option>HTML</option>
+		                                                                    <option>CSS</option>
+        	                                                                <option>JavaScript</option>
+            	                                                        </datalist>
+                                                                </form>
+                    </article>
+                    <article>
+                        <span class="tag">dd</span> - 	<dl>
+                        									<dt>catalyst</dt>
+                                                            <dd>Something that causes an important event to happen</dd>
+                        								</dl>
+                    </article>
+                    <article>
+                        <span class="tag">del</span> - <del cite="https://apgov/group-exams/instruction.html" datetime="2011-12-26T05:09:30+05:30">Group 2 Exam Pattern has Changed.</del> <ins>Kindly refer new Instructions</ins>
+                    </article>
+                    <article>
+                        <span class="tag newtag">details</span> - 	<details open="true">
+                        												<dt>Help?</dt>
+                                                                        <dd>This could give you help with HTML5 but we need more implementations to prove how things will work.</dd>	
+                        											</details>
+                    </article>
+                    <article>
+                        <span class="tag">dfn</span> - <p>The <dfn>dfn</dfn> element is an element which is used to set off the defining instance of a term. Now that's a self contained example.</p>
+                    </article>
+                    <article>
+                        <span class="tag outdated">dir</span> - <dir>
+                        											<li>Header Files</li>
+                                                                    <li>Code Files</li>
+                                                                    <li>Comment Files</li>
+										                        </dir>
+                    </article>
+                     <article>
+                        <span class="tag">div</span> - encloses a generic block of content.
+                    </article>
+                    <article>
+                        <span class="tag">dl</span> - 	<dl>
+                        									<dt>
+                                                            	Cat
+                                                            </dt>
+                                                            <dt>
+                                                            	Dog
+                                                            </dt>
+                                                            <dd>
+                                                            	Domestic Animal
+                                                            </dd>
+                                                            <dt>
+                                                            	Skunk
+															</dt>
+                                                            <dt>
+                                                            	Pepe Le Pew
+                                                            </dt>
+                                                            <dd>
+                                                            	Wild Animal
+                                                            </dd>
+                        								</dl>
+                    </article>
+                    <article>
+                        <span class="tag">dt</span> - 	<dl>
+                        									<dt>
+                                                            	Vole
+                                                            </dt>
+                                                            <dd>
+                                                            	Small Creature related to the weasel
+                                                            </dd>
+                                                            <dt>
+                                                            	Weasel
+                                                            </dt>
+                                                            <dd>
+                                                            	Small Creature related to the vole
+                                                            </dd>
+														</dl>
+                    </article>
+                    <article>
+                        <span class="tag">em</span> - <em>Italic Text</em>
+                    </article>
+                    <article>
+                        <span class="tag">embed</span> - Nonstandard tag; Embeds multimedia element.
+                        									<embed src="testmovie.mov" height="150" width="150">
+                                                            	<noembed>
+                                                                	Embed tag not supported by your browser.
+                                                                </noembed>                                                                
+                                                            </embed>
+                    </article>
+                    <article>
+                        <span class="tag">fieldset</span> - Form Field Grouping
+                        									<fieldset>
+                                                            	<legend>User Login</legend>
+                                                                <form method="post" action="#">
+                                                                	<label>user id: <input type="text" /></label>
+                                                                    <br /><br />
+                                                                    <label>password: <input type="password" /></label>
+                                                                    <br /><br />
+                                                                    <input type="submit" />
+                                                                </form>
+                                                            </fieldset>
+                    </article>
+                    <article>
+                        <span class="tag newtag">figure</span> - 	<figure>
+												                        <dt>Cup</dt>
+                        												<dd>
+                                                                        	<img src="cup.jpg" alt="coffee cup" />
+	                                                                        <p>A Coffee Cup</p>
+                                                                        </dd>
+                        											</figure>
+                    </article>
+                </section>
+                <section class="divider">
+                	<article>
+                        <span class="tag outdated">font</span> - specifies font face, size and color
+                    </article>
+                    <article>
+                        <span class="tag newtag">footer</span> - specifies a section footer or document footer
+                    </article>
+                    <article>
+                        <span class="tag">form</span> - <form action="#" method="post" enctype="application/x-www-form-urlencoded" target="_new" novalidate="false">
+                        <label>Name: <input type="text" /></label>
+                        </form>
+                    </article>
+                    <article>
+                        <span class="tag outdated">frame</span> - used within Frameset
+                    </article>
+                    <article>
+                        <span class="tag outdated">frameset</span> - enables multiple html pages to be viewed in a single window.
+                    </article>
+                    <article>
+                        <span class="tag">h1 to h6</span> - <h6>h6</h6>
+                        									<h2>h2</h2>
+                                                            <h4>h4</h4>
+                    </article>
+                    <article>
+                        <span class="tag">head</span> - contains meta data, style and script elements
+                    </article>
+                    <article>
+                        <span class="tag newtag">header</span> - Document Outlining
+                    </article>
+                    <article>
+                        <span class="tag newtag">hgroup</span> - grouping of heading elements (h1 to h6)
+                        										<hgroup>
+                                                                	<h2>Main Heading</h2>
+                                                                    <h3>Sub Heading</h3>
+                                                                </hgroup>
+                    </article>
+                    <article>
+                        <span class="tag">hr</span> - Horizontal<hr />Rule
+                    </article>
+                    <article>
+                        <span class="tag">html</span> - HTML Doc
+                    </article>
+                    <article>
+                        <span class="tag">i</span> - <i>Italy</i>
+                    </article>
+                    <article>
+                        <span class="tag">iframe</span> - <iframe frameborder="0" src="ifrm.html" height="45" width="200" seamless sandbox="allow-scripts"></iframe>
+                    </article>
+                     <article>
+                        <span class="tag">img</span> - <img src="fan.jpg" height="150" width="250" title="you are fantastic" align="image"/>
+                    </article>
+                     <article>
+                        <span class="tag">input</span> - 	<form method="post" action="#" enctype="application/x-www-form-urlencoded">
+                        										<input type="text" placeholder="Enter Data" required title="Enter Name" />
+                                                                <br />
+                                                                <input type="text" placeholder="Enter any 3 capital alphabets" title="Enter any 3 capital alphabets" pattern="[A-Z]{3}" required>
+                                                                <br />
+                                                                <input type="range" max="20" min="1" step="5" />
+                                                                <br />
+                                                                <input type="color" title="pick a color" />
+                                                                <br />
+                                                                <input type="datetime" />
+                                                                <br />
+                                                                <input type="month" />
+                                                                <br />
+                                                                <input type="week" />
+                                                                <br />
+                                                                <input type="url" required title="provide url" />
+                                                                <br />
+                                                                <input type="time" required title="enter time" />
+                                                                <br />
+                                                                <input list="datafill" required title="select a value" />
+                                                                <br />
+                                                                <datalist id="datafill">
+                                                                	<option>One</option>
+                                                                    <option>Two</option>
+                                                                    <option>Three</option>
+                                                                </datalist>
+                                                                <input type="submit">
+                        									</form>
+                    </article>
+                     <article>
+                        <span class="tag">ins</span> - Face MAKEUP Kit Now,  <del>Rs. 25,000</del> <ins cite="http://www.el.com" datetime="01-01-2011T12:00+05:30">Off: 15%</ins>
+                    </article>
+                    <article>
+                        <span class="tag outdated">isindex</span> - Index Prompt
+                    </article>
+                    <article>
+                        <span class="tag">kbd</span> - <form><input type="text" onBlur="document.getElementById('kbdinput').innerHTML = this.value" placeholder="Enter Data" /></form> kbd: <kbd id="kbdinput"></kbd>
+                    </article>
+                    <article>
+                        <span class="tag newtag">keygen</span> - <keygen challenge="123456789" keytype="RSA" /><input type="submit" value="Generate" />
+                    </article>
+                    <article>
+                        <span class="tag">label</span> - <form><label>Mobile Model<input type="text" /></label></form>
+                    </article>
+                    <article>
+                        <span class="tag outdated">layer</span> - Netscape Specific
+                    </article>
+                    <article>
+                        <span class="tag">legend</span> - 	<fieldset>
+                        										<legend>
+                                                                	Title
+                                                                </legend>
+                                                                Data
+                        									</fieldset>
+                    </article>
+                    <article>
+                        <span class="tag">li</span> - <ul>
+                        								<li>How to Train a Dragon</li>
+                                                        <li>Kung Fu Panda</li>
+                                                        <li>Cars</li>
+                                                      </ul>
+                    </article>
+                    <article>
+                        <span class="tag">link</span> - links external documents, such a stylesheet, favicon and also used for prefetching resources, by using rel attribute
+                    </article>
+                    <article>
+                        <span class="tag outdated">listing</span> - indicates code listing
+                    </article>
+                    <article>
+                        <span class="tag">map</span> - 	<img src="cup.jpg" usemap="#mapcup" />
+                        								<map id="mapcup" name="mapcup">
+                                                        	<area shape="rect" coords="0,0,100,100" alt="image" title="mapcoffee" href="#" />
+                                                        </map>
+                    </article>
+                    <article>
+                        <span class="tag newtag">mark</span> - This is <mark>marked</mark> text.
+                    </article>
+                    <article>
+                        <span class="tag outdated">marquee</span> - 
+                        											<marquee behavior="alternate" direction="down" scrollamount="1">
+                        													Floating Text
+                        											</marquee>
+                    </article>
+                    <article>
+                        <span class="tag" contextmenu='showmenu'>menu</span> - displays menubar or context menu
+                        								<menu type="context" id="showmenu">
+                        									<command type="command" label="open" />
+                                                            <command type="command" label="close" />
+                        								</menu>
+                    </article>
+                    <article>
+                        <span class="tag">meta</span> - specifies info about the HTML doc; meta tag relating to charset should always come ahead of title, if title contains special characters.
+                    </article>
+                    <article>
+                        <span class="tag newtag">meter</span> - <meter max=10 min=1 low=3 high=7 optium=6 value=9.5 title="He's doing great">6</meter>
+                    </article>
+                    <article>
+                        <span class="tag outdated">multicol</span> - Netscape specific
+                    </article>
+                    <article>
+                        <span class="tag newtag">nav</span> - 	<nav class="header_nav">
+                        									<ul style="list-style: none;">
+                                                            	<li style="display: inline;"><a href="#">Home</a></li>
+                                                                <li style="display: inline;"><a href="#">Garden</a></li>
+                                                                <li style="display: inline;"><a href="#">Business</a></li>
+                                                                <li style="display: inline;"><a href="#">Friends</a></li>
+                                                                <li style="display: inline;"><a href="#">Movies</a></li>
+                                                            </ul>
+                        								</nav>
+                    </article>
+                    <article>
+                        <span class="tag outdated">nobr</span> - <nobr contenteditable="true">This proprietary element renders enclosed text without line <wbr>breaks. Break Points for where text may wrap <wbr>can be inserted using the wbr element or related workarounds.</nobr>
+                    </article>
+                    <article>
+                        <span class="tag">noembed</span> - Nonstandard tag and not supported by all browsers.
+                    </article>
+                    <article>
+                        <span class="tag outdated">noframes</span> - provides alternate content for browsers that doesn't support frames tag
+                    </article>
+                    <article>
+                        <span class="tag">noscript</span> - provides alternative message for scripts that doesn't support script tag.
+                    </article>
+                    <article>
+                        <span class="tag">object</span> - 	<object codebase="" classid="" class="" data="" type="" height="50" width="100">
+                        										<param name="" value="" />
+                        									</object>
+                    </article>
+                    <article>
+                        <span class="tag">ol</span> - 	<ol start="5" type="1">
+                        									<li>Chennai</li>
+                                                            <li>Hyderabad</li>
+                                                            <li>Mumbai</li>
+                                                            <li value="15">Delhi</li>
+                                                            <li>Coimbatore</li>
+                        								</ol>
+                                                        <ol reversed>
+                                                        	<li>One</li>
+                                                            <li>Two</li>
+                                                            <li>Three</li>
+                                                            <li>Four</li>
+                                                            <li>Five</li>
+														</ol>
+                    </article>
+                    <article>
+                        <span class="tag">optgroup</span> - <select>
+                        										<option>-Select-</option>	
+                        										<optgroup label="Numeric">
+                                                                	<option>1</option>
+                                                                    <option>2</option>
+                                                                    <option>3</option>
+                                                                </optgroup>
+                                                                <optgroup label="Alphabet">
+                                                                	<option>A</option>
+                                                                    <option>B</option>
+                                                                    <option>C</option>
+                                                                </optgroup>
+                        									</select>
+                       
+                    </article>
+                    <article>
+                        <span class="tag">option</span> - 	<select>
+                        										<option value="Australia" label="Australia">Australia</option>
+                                                                <option value="West Indies" label="West Indies">West Indies</option>
+                                                                <option value="India" label="India" selected>India</option>
+                                                                <option value="England" label="England">England</option>
+                        									</select>
+                                                            <select disabled>
+                        										<option value="Australia" label="Australia">Australia</option>
+                                                                <option value="West Indies" label="West Indies">West Indies</option>
+                                                                <option value="India" label="India" selected>India</option>
+                                                                <option value="England" label="England">England</option>
+                        									</select>
+                        
+                    </article>
+                    <article>
+                        <span class="tag newtag">output</span> - <form id="process" name="process">
+                        											<label for="inputval">Enter a Numeric Character</label><input type="text" id="inputval" placeholder="enter a number" onblur="document.getElementById('outputvalue').innerHTML = (this.value * this.value)" />
+                                                                 </form>
+                        										square of input: <output id="outputvalue" from="process" for="inputval"></output>
+                        
+                    </article>
+                </section>
+                <section class="divider">
+                	<article>
+                        <span class="tag">p</span> - <p> Defines a paragraph </p>
+                    </article>
+                    <article>
+                        <span class="tag">param</span> - used to provide name/value data to object/applet.
+                        								<br />
+                        								<!--<object codebase="" codetype="" data="" type="" height="50" width="100">
+                                                        	<param name="" value="" valuetype="" value="" />
+                                                        </object>-->
+                    </article>
+                    <article>
+                        <span class="tag outdated">plaintext</span> - Deprecated - There is no way to turn plain text ff once it is on. It renders even Tags as is.
+                    </article>
+                    <article>
+                        <span class="tag">pre</span> - 	<pre>
+Indicates enclosed 
+text                is 
+preformatted. Preserves		spaces,	
+	 returns, tab
+ and other formatting characters.
+                       	 								</pre>
+                    </article>
+                    <article>
+                        <span class="tag newtag">progress</span> - <progress max="100" value=0 id="measureprogress"></progess>
+                    </article>
+                    <article>
+                        <span class="tag">q</span> - <q cite="http://vi.sualize.us">We are going to make it happen</q>
+                    </article>
+                    <article>
+                        <span class="tag newtag">rp</span> - 	ruby parenthesis
+                        										<br />
+                                                                <ruby>
+                                                                	Base Text
+	                                                                <rp>(</rp>
+                                                                    	<rt>ruby Text</rt>
+                                                                    <rp>)</rp>
+                                                        		</ruby>
+                                                        
+                    </article>
+                    <article>
+                        <span class="tag newtag">rt</span> - 	ruby text
+								                        <br />
+                                                        <ruby>
+                                                            The Kanji for Japanese language with the romanji above it or within parens for non ruby aware browers.
+                                                            <rp>(</rp>
+                                                                <rt>ruby Text or annotation</rt>
+                                                            <rp>)</rp>
+                                                        </ruby>
+                    </article>
+                    <article>
+                        <span class="tag newtag">ruby</span> - ruby annotation
+                        								<br />
+                                                        <ruby>
+                                                            Base Text
+                                                            <rp>(</rp>
+                                                                <rt>ruby Text</rt>
+                                                            <rp>)</rp>
+                                                        </ruby>
+                    </article>
+                	<article>
+                        <span class="tag outdated">s</span> - <s>strike through</s>
+                    </article>
+                    <article>
+                        <span class="tag">samp</span> - sample text
+                        								<br />
+                                                        <p>Use the following salutation in all email messages to the boss: 
+                                                        	<samp>
+                                                            	Please excuse the interruption, ohh exalted manager.
+                                                            </samp>
+                                                        </p>
+                                                        	
+                    </article>
+                     <article>
+                        <span class="tag">script</span> - 	HTML5 async attribute helps script to be loaded in parallel.
+                        											<br />
+																	<script type="text/javascript" async>
+																		console.log("This is from the console");
+																	</script>
+                    </article>
+                    <article>
+                        <span class="tag newtag">section</span> - Layout Element; Defines a generic section of a document
+                    </article>
+                    <article>
+                        <span class="tag">select</span> -	<select multiple="multiple" size="3">
+                        										<option>red</option>
+                                                                <option>blue</option>
+                                                                <option>green</option>
+                                                                <option>cyan</option>
+                                                                <option>crimson</option>
+                        									</select>
+                    </article>
+                    <article>
+                        <span class="tag">small</span> - 	
+									                        <br />		
+                        									<small>renders text relatively small to the document</small>
+                        									<br />		
+                        									<span style="font-size:	x-small">can be acheived through css, font-size: x-small</span>
+                    </article>
+                    <article>
+                        <span class="tag">source</span> - 	Used for providing source url to audio or video elements
+                        									<br />
+                                                            <audio>
+                                                            	<source src="audio.mp3" type="audio/mp3">
+                                                                <source src="audiofallformp4.mp4" type="audio/mp4"/>
+                                                            </audio>
+                    </article>
+                    <article>
+                        <span class="tag outdated">spacer</span> - Netscape specific for adding space to layout
+                    </article>
+                    <article>
+                        <span class="tag">span</span> - <span>This is an Inline Element for grouping contents</span>
+                    </article>
+                 	<article>
+                        <span class="tag">strike</span> - <strike>strike through - same as s tag</strike>
+                    </article>
+                    <article>
+                        <span class="tag">strong</span> - 	Specifies Emphasis.
+                        									<br />
+                        									<strong>Critical Issue</strong>, but can be resolved.
+                    </article>
+                    <article>
+                        <span class="tag">style</span> -	HTML5 adds scope attribute to limit the scope of the style applied to html elements.							
+                        									<br />
+                        									<noscript>
+																<style type="text/css" scoped="scoped">	
+                                                                    article{
+                                                                        background-color: #FF0000;
+                                                                    }
+                                                                </style>	
+                                                                    <article>
+                                                                        This is an article, but only this article tag contains background-color.
+                                                                    </article>
+															</noscript>															
+                        										
+                        								
+                    </article>
+                    <article>
+                        <span class="tag">sub</span> - 	<br />
+                        								<sub>subscripted text</sub> Normal Text
+                        								<br />
+                                                        <span style="vertical-align:bottom; font-size: smaller">can be achieved through valign:bottom and font-size: smaller</span>Normal Text
+                    </article>
+                    <article>
+                        <span class="tag">sup</span> - 	<br />
+                        								<sup>superscripted text</sup>Normal text
+                        								<br />
+                                                        <span style="vertical-align:top; font-size: smaller">can be achieved through valign:top and font-size: smaller</span>Normal Text
+                    </article>
+                    <article>
+                        <span class="tag">table</span> - <table border="1" frame="void" rules="groups" summary="Color Details">
+                        									<caption>Color Values</caption>
+                        									<tfoot>
+                                                            	<tr>
+                                                                	<td abbr="4-colr">
+                                                                    	4 Colors
+                                                                    </td>
+                                                                    <td>
+                                                                    	4 Values
+                                                                    </td>
+                                                                </tr>
+                                                            </tfoot>
+                                                            <tbody>
+                                                            	<tr>
+                                                                	<td>
+                                                                    	red
+                                                                    </td>
+                                                                    <td>
+                                                                    	0
+                                                                    </td>
+                                                                </tr>
+                                                                    <td>
+                                                                    	blue
+                                                                    </td>
+                                                                    <td>
+                                                                    	1
+                                                                    </td>
+                                                                </tr>    
+                                                                    <td>
+                                                                    	green
+                                                                    </td>
+                                                                    <td>
+                                                                    	2
+                                                                    </td>
+                                                                </tr>    
+                                                                    <td>
+                                                                    	cyan
+                                                                    </td>
+                                                                    <td>
+                                                                    	3
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                        									<thead>
+                                                            	<tr>
+                                                                	<th>
+                                                                    	Color
+                                                                    </th>
+                                                                    <th>
+                                                                    	Value
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+														</table>	 
+                                                            
+                    </article>
+                    <article>
+                        <span class="tag">tbody</span> - table body group
+                    </article>
+                    <article>
+                        <span class="tag">td</span> - table data cell
+                    								    <table>
+                                                        	<tbody>
+                                                            	<tr>
+                                                                	<td>
+                                                                    	This table is not set with nowrap, hence text entered will be wrapped
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                        								<table>
+                                                        	<tbody>
+                                                            	<tr>
+                                                                	<td nowrap>
+                                                                    	This table is set with nowrap, hence text entered will not be wrapped
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                    </article>
+                    <article>
+                        <span class="tag">textarea</span> -	<form>	
+                        										<textarea cols="30" pattern="{0-9}[20]" rows="4" maxlength="20" placeholder="you can enter a max of 20 numeric characters"></textarea>
+                                                                <br />	
+                                                                <input type="submit" />
+                                                            </form>
+                    </article>
+                    <article>
+                        <span class="tag">tfoot</span> - table footer group
+                    </article>
+                    <article>
+                        <span class="tag">th</span> - table header cell
+                    </article>
+                    <article>
+                        <span class="tag">thead</span> - table header group
+                    </article>
+                    <article>
+                        <span class="tag">time</span> - <time datatime="2012-08-10T11:20+05:30" pubdate>10th August 2012</time>
+                    </article>
+                    <article>
+                        <span class="tag">title</span> - provides document title; most browsers doesn't display the page correctly, if title tag is not closed.
+                    </article>
+                    <article>
+                        <span class="tag">tr</span> - table row
+                    </article>
+                    <article>
+                        <span class="tag outdated">tt</span> - 	teletype text; 
+                        										<br />
+                                                                <tt>renders text in monospaced font;</tt>
+                    </article>
+                    <article>
+                        <span class="tag outdated">u</span> - <u>underline</u>
+                    </article>
+                    <article>
+                        <span class="tag">ul</span> - 	<br />
+                        								<ul style="list-style:disc">
+                                                        	<li>Disc</li>
+                                                            <li>Square</li>
+                                                            <li>Circle</li>
+                                                        </ul>	
+                    </article>
+                    <article>
+                        <span class="tag">var</span> - 	used to semantically enclose a variable.
+                        								<br />
+                                                        To increement <var>x</var>, we can use either <code>x = x + 1 </code>
+                                                        or <code>x++</code>
+                    </article>
+                    <article>
+                        <span class="tag newtag">video</span> - container for placing video.
+                        								<video src="video.webm" loop autobuffer type="video/webm" controls width=300 poster="fan.jpg">
+                                                        	fallback content or alternative video sources
+                                                        </video>
+                    </article>
+                     <div style="height: 200px;">
+                    </div>
+                    <article>
+                        <span class="tag outdated">wbr</span> - inserts <wbr>word break, <wbr>used along <wbr>with nobr tag
+                    </article>
+                    <article>
+                        <span class="tag outdated">xml</span> - IE Specific; Inserts xml data into HTML Documents
+                        										<br />
+                                                                <xml src='book.xml'>		
+                                                                </xml>
+                    </article>
+                    <article>
+                        <span class="tag outdated">xmp</span> - encloses example provides in html document and renders in monospace font.
+                        										<br />
+    <xmp>
+    This is a large block of text used as an example,.
+    				Note that returns
+    
+    as 	well 	as     S P A C E S are preserved
+    </xmp>
+                    </article>
+                </section>            
+        </section>
+        <footer>
+        </footer>
+        <!-- site section end -->
+	</section>    
+</body>
+</html>

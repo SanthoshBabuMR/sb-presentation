@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	padding: 0;
+	margin: 0 auto;
+	text-align: center;
+	background: #999;
+}
+
+#wrapper{
+	text-align: center;
+	margin: 0 auto;
+	text-align: center;
+	background: #FFF;
+	width: 940px;
+}
+
+#wrapper #header{
+	padding: 15px 0 0 0; 
+	padding-bottom: 2px;
+	border-bottom: 1px solid #252525;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+#wrapper #container {
+	padding: 0 10px 0 30px;
+	margin: 0;
+	overflow: auto;
+}
+
+#wrapper  #footer{
+	clear: both;
+	margin-top: 30px;
+	border-bottom: 30px solid #252525;
+	height: auto;
+}
+
+#wrapper  #container #subcontainer1, #wrapper #container #subcontainer2{
+	padding: 10px;
+	border: 1px solid #999;
+	width : 44%;
+	text-align: left;
+	background: #CCC;
+	margin: 0 10px 0 10px;
+	float: left;
+}
+
+#wrapper #container #subcontainer1 div, #wrapper #container #subcontainer2 div{
+	border:1px solid blue;
+	background: #FFF;
+	margin: 5px 0 5px 0 ;
+	padding: 5px;
+	text-align: left;	
+}
+
+
+#wrapper #container h1{
+	text-align: left;
+	padding: 0 0 0 0px;
+	margin: 10px 0 0 0px;
+	font-size: 24px;
+}
+
+h2{
+	background: #999;	
+}
+
+a, a:link, a:visited{
+	color:#33F;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover{
+	color:#F00;	
+}
+
+a.clickhere, a.clickhere:link, a.clickhere:visited{
+	color: #999;
+	cursor: pointer;
+}
+
+a.clickhere:hover{
+	color: #960;
+	cursor: pointer;
+}
+
+.processOutput{
+	/*width: 80px;*/
+	padding-left: 4px;
+	color: #C39;
+	background: #FFF;
+	font-weight: bold;
+	border: none;
+}
+
+.highlightsubtitle{
+	font-weight: bold;	
+}
+
+.outputhighlighter{
+	font-style: italic;
+}
+
+.spantitle{
+	font-weight: bold;
+	color: #000;
+}
+
+#header ul.nav{
+	list-style: none;
+	background: #23807D; /*#F90643;*/
+	margin:0;
+	padding: 5px 10px 0 10px ;
+	text-align: left;
+	border-top: 5px solid #252525/*#333333*/;	
+}
+
+#header ul.nav li{
+	display: inline;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: x-large;
+}
+
+#header ul.nav li a, #header ul.nav li a.link, #header ul.nav li a.visited{
+	text-decoration: none;
+	color:#000000;
+	padding: 5px 10px 5px 10px;	
+}
+
+#header ul.nav li a:hover{
+	text-decoration: none;
+	padding: 5px 10px 2px 10px;	
+	background: #FFFFFF;
+	
+}
+
+header ul.nav li a.active{
+	background: #ffffff;
+}

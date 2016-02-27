@@ -1,0 +1,100 @@
+<html>
+    <head>
+        <title>
+	        DropDown Morph
+        </title>
+        <link type="text/css" href="../css/layout.css" rel="stylesheet" />	
+        <link type="text/css" href="css/dropdownmorph.css" rel="stylesheet"	>
+        <script type="Text/javascript" src="script/dropdownmorph.js">
+        </script>
+    </head>
+    <body>
+    
+    
+    <div id="wrapper">
+    
+    
+        <div id="header">
+            <ul class="nav">
+            <li><a href="../index.html">Index</a></li>
+            <li><a href="dd_morph.html" class="active">DropDown Morph</a></li>                
+            <li><a href="#">PlaceHodler</a></li>     
+            </ul>
+        </div>
+        
+        <div id="container">
+            <h1>Drop Down Morph
+            </h1>
+            <div id="subcontainer1">
+                <select id="mon">
+                <option value='janasdfsafdadsfsadf'>janasdfsafdadsfsadf
+                <option value='feb'>feb
+                <option value='mar'>mar
+                <option value='apr'>apr
+                <option value='may'>may
+                <option value='jun'>jun
+                </select>
+                <input type="text" id="render_mon" style="display:none" value="jan" class="select_render" readonly>
+                
+                <select id="day">
+                <option value='1'>1
+                <option value='tue'>tue
+                <option value='wed'  selected>wed
+                <option value='thu'>thu
+                <option value='fri'>fri
+                </select>
+                <input type="text" id="render_day" style="display:none" value="wed" class="select_render" readonly>
+                
+                
+                <select id="year">
+                <option value='a'>a
+                <option value='2001'>2001
+                <option value='2002'>2002
+                <option value='2003'>2003
+                <option value='2004'>2004
+                </select>
+                <input type="text" id="render_year" style="display:none" value="2000" class="select_render" readonly>
+                
+                <a href="javascript:void(0)" onClick="render()">Render</a>
+                <a href="javascript:void(0)" onClick="unrender()">Clear</a>
+                <br>
+                <input type="Text" id="INPUT1">
+                <input type="Text" id="INPUT2">
+                <input type="Text" id="INPUT3">
+                
+                <select id="other1">
+                <option value='a'>a
+                <option value='b'>b
+                <option value='c'>c
+                </select>
+                <input type="text" id="render_other1" style="display:none" value="alpha" class="select_render" readonly>
+                
+                <select id="other2">
+                <option value='one'>one
+                <option value='two'>two
+                <option value='three'>three
+                </select>
+                <input type="text" id="render_other2" style="display:none" value="numeric" class="select_render" readonly>
+                
+                <select id="other3">
+                <option value='jackie'>jackie
+                <option value='tintin'>tintin
+                <option value='goku'>goku
+                </select>
+                <input type="text" id="render_other3" style="display:none" value="characters" class="select_render" readonly>
+            </div>
+            
+            <div id="subcontainer2">
+            </div>
+        
+        
+        </div>
+        
+        <div id="footer">
+            <a href="#footer">Footer</a>
+        </div>
+    
+    </div>        
+    
+    </body>
+</html>

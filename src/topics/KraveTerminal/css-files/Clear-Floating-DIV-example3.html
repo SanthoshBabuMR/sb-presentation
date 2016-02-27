@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Clear Floating Div - Example3 | CSS | KraveUpon</title>
+<style type="text/css">
+			.examplemainCol{
+				background: #CCCCCC;
+				border: 10px solid #00F;
+				margin: 0 auto;
+				overflow: auto; /*clears the float effect*/
+				width: 580px;   /*required for IE*/
+			}
+			.examplemainCol .floatLeft{
+				background:#FFFFCC;
+				float: left;
+				margin: 0;
+				padding: 10px;
+				width: 260px;
+			}
+			.examplemainCol .floatRight{
+				background:#FFCCFF;
+				float: right;
+				margin: 0;				
+				padding: 10px;
+				width: 260px;
+			}
+			.examplemainCol p{
+				padding: 12px 0;
+				margin: 0;
+			}
+		</style>
+</head>
+
+<body>
+        <div class="examplemainCol">
+            <p>Parent Div</p>
+            <div class="floatLeft">
+                <p>Float Left Child Div</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            </div>
+            <div class="floatRight">
+                <p>Float Right Child Div</p>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent aliquam,  justo convallis luctus rutrum, erat nulla fermentum diam, at nonummy quam  ante ac quam.</p>
+            </div>
+        </div>
+</body>
+</html>

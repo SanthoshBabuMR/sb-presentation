@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    	<!-- TemplateBeginEditable name="doctitle" -->
+        <meta name="Description" content="Learner's Guide" />
+        <meta name="Rating" content="General" />
+   		<meta name="Keywords" content="" />
+        <meta http-equiv="Content-Language" content="en" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" type="image/x-icon" href="../_images/favicon.ico" />
+        <title>About | KraveUpon</title>
+        <!-- TemplateEndEditable -->
+		<!-- TemplateBeginEditable name="headRegion" -->
+		<!-- css section begin -->
+        <link type="text/css" rel="stylesheet" href="../_css/reset.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="../_css/layout.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="../_css/component.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="../_css/global.css" media="all" />
+        <!--[if IE 6]>
+		<link type="text/css" rel="stylesheet" href="../_css/ie6.css" media="all" />
+		<![endif]-->
+        <!--[if gt IE 6]>
+		<link type="text/css" rel="stylesheet" href="../_css/ie.css" media="all" />
+		<![endif]-->
+        <!-- css section end -->
+		<!-- script section begin -->
+        <script type="text/javascript" src="../_database/json_db.js"></script>
+        <script type="text/javascript" src="../_script/json.js"></script>
+        <script type="text/javascript" src="../_script/jquery-1.6.2.js"></script>
+        <script type="text/javascript" src="../_script/jquery-effects.js"></script>
+        <script type="text/javascript" src="../_script/djs.js"></script>
+        <script type="text/javascript" src="../_script/layout.js"></script>
+        <script type="text/javascript" src="../_script/common.js"></script>
+        <script type="text/javascript">
+			_setGlobalParam('about','about','upi_');
+		</script>
+        <!-- script section end -->
+        <!-- TemplateEndEditable -->      
+	</head>
+	<body>
+    	<!-- TemplateBeginEditable name="bodyRegion" -->
+		<!-- TemplateEndEditable -->
+	   	<script type="text/javascript">_bodySectionTop();</script>
+        <div id="wrapper">
+        <!-- wrapper section begin -->
+            <div id="header">
+            <!-- header section begin -->
+            	<!-- TemplateBeginEditable name="headerRegion" -->
+                <script type="text/javascript">_headerSection();</script>
+				<!-- TemplateEndEditable -->
+            <!-- header section end -->
+            </div>
+            <div id="container">
+            <!-- container section begin -->
+                <div id="ltsidebar">
+                <!-- ltsidebar section begin -->
+	                <script type="text/javascript">_ltsidebarSectionTop();</script>
+    	            <!-- TemplateBeginEditable name="ltsidebarRegion" -->
+					<!-- TemplateEndEditable -->
+                    <script type="text/javascript">_ltsidebarSectionBottom();</script>
+                <!-- ltsidebar section end -->
+                </div>
+                <div id="maincontent">
+                <!-- maincontent section begin -->
+	                <script type="text/javascript">_maincontentSectionTop();</script>
+					<!-- TemplateBeginEditable name="mainContentRegion" -->
+					Content Goes Here
+					<!-- TemplateEndEditable -->
+                    <script type="text/javascript">_maincontentSectionBottom();</script>                    
+	                <!-- maincontent section end -->
+                </div>
+                <div id="rtsidebar">
+                <!-- rtsidebar section begin -->
+					<script type="text/javascript">_rtsidebarSectionTop();</script>
+                    <!-- TemplateBeginEditable name="rtsidebarRegion" -->
+                    Right Side Bar
+					<!-- TemplateEndEditable -->                    
+                    <script type="text/javascript">_rtsidebarSectionBottom();</script>
+                <!-- rtsidebar section end -->
+                </div>
+                <div class="clearcontainer">&nbsp;</div> <!-- IE Fix -->
+            <!-- container section end -->
+            </div>    
+            <div id="footer">
+            <!-- footer section begin -->
+				<!-- TemplateBeginEditable name="footerRegion" -->
+                <script type="text/javascript">_footerSection();</script>
+                <!-- TemplateEndEditable -->
+            <!-- footer section end -->
+            </div>
+        <!-- wrapper section end -->    
+        </div>
+		<script type="text/javascript">_bodySectionBottom();</script>
+        <script type="text/javascript">_loadComplete();</script>
+        <!-- TemplateBeginEditable name="bodyend" -->
+		<!-- TemplateEndEditable -->
+	</body>
+</html>

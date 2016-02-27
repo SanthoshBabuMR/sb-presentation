@@ -1,0 +1,280 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/parentTwo - CSS.dwt" codeOutsideHTMLIsLocked="false" -->
+    <head>
+    	<!-- InstanceBeginEditable name="doctitle" -->
+        <meta name="Description" content="Clear Floating DIV." />
+        <meta name="Rating" content="General" />
+   		<meta name="Keywords" content="kraveupon, css, float, div, clear float" />
+        <meta http-equiv="Content-Language" content="en" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="shortcut icon" type="image/x-icon" href="../_images/favicon.ico" />
+        <title>Clear Floating DIV | CSS | KraveUpon</title>
+        <!-- InstanceEndEditable -->
+		<!-- InstanceBeginEditable name="headRegion" -->
+		<!-- css section begin -->
+        <link type="text/css" rel="stylesheet" href="../_css/reset.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="../_css/layout.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="../_css/component.css" media="all" />
+        <link type="text/css" rel="stylesheet" href="../_css/global.css" media="all" />
+        <!--[if IE 6]>
+		<link type="text/css" rel="stylesheet" href="../_css/ie6.css" media="all" />
+		<![endif]-->
+        <!--[if gt IE 6]>
+		<link type="text/css" rel="stylesheet" href="../_css/ie.css" media="all" />
+		<![endif]-->
+        <style type="text/css">
+			.examplemainCol{
+				background: #CCCCCC;
+				border: 10px solid #00F;
+				margin: 0 auto;
+				width: 580px;
+				overflow: auto;
+			}
+			.examplemainCol .floatLeft{
+				background:#FFFFCC;
+				float: left;
+				margin: 0;
+				padding: 10px;
+				width: 260px;
+			}
+			.examplemainCol .floatRight{
+				background:#FFCCFF;
+				float: right;
+				margin: 0;				
+				padding: 10px;
+				width: 260px;
+			}
+			.examplemainCol p{
+				padding:12px 0;
+				margin: 0;
+			}
+		</style>
+        <!-- css section end -->
+		<!-- script section begin -->
+        <script type="text/javascript" src="../_database/json_db.js"></script>
+        <script type="text/javascript" src="../_script/json.js"></script>
+        <script type="text/javascript" src="../_script/jquery-1.6.2.js"></script>
+        <script type="text/javascript" src="../_script/jquery-effects.js"></script>
+        <script type="text/javascript" src="../_script/djs.js"></script>
+        <script type="text/javascript" src="../_script/layout.js"></script>
+        <script type="text/javascript" src="../_script/common.js"></script>
+        <script type="text/javascript">
+			_setGlobalParam('parentTwo','childOne','upi_014');
+		</script>
+        <!-- script section end -->
+        <!-- InstanceEndEditable -->      
+	</head>
+	<body>
+    	<!-- InstanceBeginEditable name="bodyRegion" -->
+		<!-- InstanceEndEditable -->
+	   	<script type="text/javascript">_bodySectionTop();</script>
+        <div id="wrapper">
+        <!-- wrapper section begin -->
+            <div id="header">
+            <!-- header section begin -->
+            	<!-- InstanceBeginEditable name="headerRegion" -->
+                <script type="text/javascript">_headerSection();</script>
+				<!-- InstanceEndEditable -->
+            <!-- header section end -->
+            </div>
+            <div id="container">
+            <!-- container section begin -->
+                <div id="ltsidebar">
+                <!-- ltsidebar section begin -->
+	                <script type="text/javascript">_ltsidebarSectionTop();</script>
+    	            <!-- InstanceBeginEditable name="ltsidebarRegion" -->
+					<!-- InstanceEndEditable -->
+                    <script type="text/javascript">_ltsidebarSectionBottom();</script>
+                <!-- ltsidebar section end -->
+                </div>
+                <div id="maincontent">
+                <!-- maincontent section begin -->
+	                <script type="text/javascript">_maincontentSectionTop();</script>
+					<!-- InstanceBeginEditable name="mainContentRegion" -->
+					<h1 id="page-heading">Clear Floating DIV</h1>
+					<div class="examplemainCol">
+        				<p>Parent Div</p>
+                            <div class="floatLeft">
+                                <p>Float Left Child Div</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                            </div>
+                    <div class="floatRight">
+                    	<p>Float Right Child Div</p>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Praesent aliquam,  justo convallis luctus rutrum, erat nulla fermentum diam, at nonummy quam  ante ac quam.</p>
+                    </div>
+        </div>
+					<p>
+                        When HTML Elements are floated within a Block Element, such as DIV, then the Parent  Element, will not CONTAIN the floated Elements or in other words, the height of the parent DIV will be the height of non floating CHILD elements . It is necessary to clear the floating elements within the Parent Element, to avoid any incorrect rendering.</p>
+					<p>Often, developers stumble upon this issue, when the Parent Element's background-color or background-image doesn't extend the height of its Child elements. Even more annoying is the fact that, this bug seems to appear in FireFox, Chrome etc, while IE tends to render this type of layout as it should.        </p>
+					<p>The reason is, in Interent Explorer, the Child Elements [floating Child or non-floating Child]forces the height of the Parent Element to extend to its height. Thereby, IE gives the wrong impression of rendering properly, while in reality it doesn't.</p>
+					<p> There are Three Approaches to solving this Issue </p>
+<h2 class="gist">Method 1:</h2>
+                    <p class="txtindentpara">Use <span class="bdtxt">&lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;</span>, after the Floating elements within the Parent Element.
+                    </p>
+                    <ul class="tree">
+                        	<li class="branch-info">
+                            	<span class="example">Example:</span><a class="example-code" href="Clear-Floating-DIV-example1.html" target="_blank">Get code for this example</a>
+                      </li>
+                    
+                        	<li class="txtind1">
+								&lt;div class=&quot;parent_element&quot;&gt;
+</li>
+                            <li class="txtind2">
+								&lt;div class=&quot;float_left_child&quot;&gt;
+                            </li>
+                            <li class="txtind2">
+                            	&lt;div&gt;
+                            </li>
+                            <li class="txtind2">
+								&lt;div class=&quot;float_right_child&quot;&gt;
+</li>
+                            <li class="txtind2">
+                            	&lt;div&gt;
+                            </li>  
+                            <li class="txtind2">
+                            	<span class="bdtxt">&lt;div style=&quot;clear:both&quot;&gt;&lt;/div&gt;</span>
+                            </li>     
+                            <li class="txtind1">
+								&lt;div&gt;
+                            </li>                     
+                    </ul>
+                    <p>Sometimes, additional vertical space appears in IE, due to the use of above markup. This is because, div takes the  height of a line of text. Use <span class="bdtxt">&quot;height:1px&quot;</span> and <span class="bdtxt">&quot;overflow:hidden</span>&quot; to avoid any unwanted gap or vertical space.</p>
+                    <p>Since the above markup is only for presentational purpose, and it is always a better practice to have presentaional markup in CSS, we can further simplify it, by defining the required attribute in a class, and applying it to the div.
+            </p>
+                    	<ul class="tree">
+                       	  <li class="branch-info">
+                            	<span class="example">Example:</span><a class="example-code" href="Clear-Floating-DIV-example1.1.html" target="_blank">Get code for this example</a>
+                          </li>
+                        
+                        	<li class="txtind1">
+                            	&lt;style type=&quot;text/css&quot;&gt;
+                            </li>
+                        	<li class="txtind2">
+                            	.clrflt{
+                            </li>
+                            <li class="txtind3">
+                            	<span class="bdtxt">clear: both;</span>
+                            </li>
+                             <li class="txtind3">
+                            	<span class="bdtxt">height: 1px;</span>
+                            </li>
+                             <li class="txtind3">
+                            	<span class="bdtxt">overflow: hidden;</span>
+                            </li>
+                            <li class="txtind2">
+                            	}
+                            </li>
+	                        <li class="txtind1">
+                            	<span class="bdtxt">&lt;div class=&quot;clrflt&quot;&gt;&lt;/div&gt;</span>
+                            </li>
+						</ul>
+                    <p>
+                    	This is the most commonly used approach and the most ideal for cross browser compatability. However, few designers would prefer not to have markup unless it is semantic; for them, the next method could be handy.</p>
+                    <hr />
+                    <h2 class="gist">Method 2:</h2>
+                    <p class="txtindentpara">Specify <span class="bdtxt">height</span> attribute to Parent Element.</p>
+                    	<ul class="tree">
+                        	<li class="branch-info">
+                            	<span class="example">Example:</span><a class="example-code" href="Clear-Floating-DIV-example2.html" target="_blank">Get code for this example</a>
+                          </li>
+                        	<li class="txtind1">
+                            	&lt;style type=&quot;text/css&quot;&gt;
+                            </li>
+                        	<li class="txtind2">
+                            	.parent_element{
+                            </li>
+                            <li class="txtind3">
+                            	<span class="bdtxt">height: 200px;</span>
+                            </li>
+                            <li class="txtind3">
+                            	 <i>other styles ..</i>
+                            </li>
+                            <li class="txtind2">
+                            	}
+                            </li>
+	                        <li class="txtind1">
+                            	&lt;/style&gt;
+                            </li>
+                            <li class="tree-list-even">
+                            </li>
+						</ul>
+					
+					<p>
+                   	This is a CSS based approach. By specifying the height attribute, we don't actually clear the floating Child elements, but rather, the visual rendering of the page is made to appear correctly. However, as height of the parent Element is explicitly being provided, it is most applicable to static pages. </p>
+					<p>If content is dynamic, then it might increase or decrease the actual height of parent Element against the provided height, causing inappropriate rendering. So, we need to constantly check and set the height of the parent DIV to match the height of its enclosing CHILD elements</p>
+<p>
+       	  When developing XHTML pages, where semantic content and standards is given more importance, this could be a preferred approach.
+      </p>
+                    <hr />
+                    <h2 class="gist">Method 3:</h2>
+                    <p class="txtindentpara">Specify <span class="bdtxt">overflow</span> and <span class="bdtxt">width</span> attributes to the parent Element.</p>
+
+                    	<ul class="tree">
+                        	<li class="branch-info">
+                            	<span class="example">Example:</span><a class="example-code" href="Clear-Floating-DIV-example3.html" target="_blank">Get code for this example</a></
+                          </li>
+                        	<li class="txtind1">
+                            	&lt;style type=&quot;text/css&quot;&gt;
+                            </li>
+                        	<li class="txtind2">
+                            	.parent_element{
+                            </li>
+                            <li class="txtind3">
+                            	<span class="bdtxt">overflow: auto/hidden;</span>
+                            </li>
+                            <li class="txtind3">
+                            	<span class="bdtxt">width: px/em;</span>
+                            </li> 
+                            <li class="txtind3">
+                            	 <i>other styles ..</i>
+                            </li>
+                            <li class="txtind2">
+                            	}
+                            </li>
+	                        <li class="txtind1">
+                            	&lt;/style&gt;
+                            </li>
+						</ul>
+                    <p>
+                   	This approach makes use of CSS &quot;overflow&quot; and &quot;width&quot; attributes, instead of the &quot;height&quot;. The overflow attribute of the parent Element, actually causes the parent Element to wrap its floated children. Moreover, as we don't mention height attribute, it is applicable to dynamic pages and height of the parent Element is adjusted automatically, in accordance with the CHILD elements height. </p>
+                    <p>Note that it is best preferred to give <span class="bdtxt">overflow</span> value as <span class="bdtxt">&quot;hidden&quot;</span>, as this value this rendered correctly across different browsers. The width attribute is required for IE, without which, this rendering can't be obtained.
+                    </p>
+                  
+                    <p>
+                    	Each approach has its advantages/disadvantages. The choice of which approach to use, depends on cross browser compatability, the type of content rendered, standards of the page being developed and ofcourse, the user's choice.
+                    </p>
+                    <div class="backtotop">
+                    	<a href="#back-to-top" id="back-to-top">Back to Top</a>
+                    </div>
+
+					<!-- InstanceEndEditable -->
+                    <script type="text/javascript">_maincontentSectionBottom();</script>                    
+	                <!-- maincontent section end -->
+                </div>
+                <div id="rtsidebar">
+                <!-- rtsidebar section begin -->
+					<script type="text/javascript">_rtsidebarSectionTop();</script>
+                    <!-- InstanceBeginEditable name="rtsidebarRegion" -->
+                    Right Side Bar
+					<!-- InstanceEndEditable -->                    
+                    <script type="text/javascript">_rtsidebarSectionBottom();</script>
+                <!-- rtsidebar section end -->
+                </div>
+                <div class="clearcontainer">&nbsp;</div> <!-- IE Fix -->
+            <!-- container section end -->
+            </div>    
+            <div id="footer">
+            <!-- footer section begin -->
+				<!-- InstanceBeginEditable name="footerRegion" -->
+                <script type="text/javascript">_footerSection();</script>
+                <!-- InstanceEndEditable -->
+            <!-- footer section end -->
+            </div>
+        <!-- wrapper section end -->    
+        </div>
+		<script type="text/javascript">_bodySectionBottom();</script>
+        <script type="text/javascript">_loadComplete();</script>
+        <!-- InstanceBeginEditable name="bodyend" -->
+		<!-- InstanceEndEditable -->
+	</body>
+<!-- InstanceEnd --></html>

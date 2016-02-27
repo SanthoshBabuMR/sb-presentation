@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+#container #imgGridSection{
+	margin: 0;
+	padding: 5px 10px 5px 10px;
+	text-align: left;
+}
+
+#container  #imgGridSection .imgset{
+	border: 1px solid gray;
+	margin:4px;
+}
+
+#container #imgnxtprelink{
+	margin: 0;
+	padding: 5px 0px 5px 0px;
+}
+
+#container #imgnxtprelink .imgpre{
+	float:left;
+	padding: 5px 5px 5px 15px;
+}
+
+#container #imgnxtprelink .imgpre a{
+	margin: 0 3px 0 3px;
+	padding: 0 3px 0 3px;
+}
+
+#container #imgnxtprelink .imgnext{
+	float:right;
+	padding: 5px 0px 5px 5px;
+}
+
+#container #imgnxtprelink .imgnext a{
+	margin: 0 3px 0 3px;
+	padding: 0 3px 0 3px;
+}
+
+
+#wrapper #container #subcontainer1{
+	width : 93%;
+}
+
+#wrapper #container #subcontainer2{
+	display: none;
+}
+
+		
+
+
+

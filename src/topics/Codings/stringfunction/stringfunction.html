@@ -1,0 +1,104 @@
+<html>
+    <head>
+        <title>
+            Js Strings
+        </title>
+        <link type="text/css" href="../css/layout.css" rel="stylesheet" />
+        <link rel="stylesheet" href="css/stringfunction.css" type="text/css">		
+        <script type="text/javascript" src="script/stringfunction.js">
+        </script>
+    </head>
+    <body>
+        <div id="wrapper">
+        
+        <div id="header">
+            <ul class="nav">
+            <li><a href="../index.html">Index</a></li>
+            <li><a href="stringfunction.html" class="active">String Function</a></li>                
+            <li><a href="#">PlaceHodler</a></li>     
+            </ul>
+        </div>
+        
+        <div id="container">
+    	
+            <h1>String Function</h1>
+	    
+            <div id="subcontainer1">
+                Data:<span id="data" class="dat">Hi this8 is 12a sample text where the text567 is used for TEXT9ing</span>
+                - <a href="javascript:void(0)" onClick="setdata();">Set Test Data</a> 
+                - <a href="javascript:void(0);" onClick="clearr();">Clear Fields</a>
+                <br>
+                <input id="g_val" type="Text" value="Enter Value"  class="fieldcolor" onClick="(this.value=='Enter Value')? this.value='':this.style.color='black'" onFocus="(this.value=='Enter Value')? this.value='':this.style.color='black'" onBlur="if(this.value=='Enter Value'){this.value='Enter Value';this.style.color='gray'}">
+                
+                <span class="outpt">Output:</span><span id="g_out" class="outp"></span>
+                <hr>
+                1.<a href="javascript:void(0);" onClick="g_fun(1)">indexof_fun</a> - Returns the position of the first found occurrence of a specified value in a string
+                <br>
+                2.<a href="javascript:void(0);" onClick="g_fun(2)">charat_fun</a> - Returns the character at the specified index
+                <br>
+                3.<a href="javascript:void(0);" onClick="g_fun(3)">charcodeat_fun</a> - Returns the Unicode of the character at the specified index
+                <br>
+                4.<a href="javascript:void(0);" onClick="g_fun(4)">fromcharcode_fun</a> - Converts Unicode values to characters
+                <br>
+                5.<a href="javascript:void(0);" onClick="g_fun(5)">concat_fun</a> - Joins two or more strings, and returns a copy of the joined strings
+                <br />
+                <input id="g_val2" type="Text" value="concat2" class="fieldcolor" onClick="(this.value=='concat2')? this.value='':this.style.color='black'" onFocus="(this.value=='concat2')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='concat2'){this.value='concat2';this.style.color='gray'}">
+                &nbsp;&nbsp;
+                <input id="g_val3" type="Text" value="concat3"  class="fieldcolor" onClick="(this.value=='concat3')? this.value='':this.style.color='black'" onFocus="(this.value=='concat3')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='concat3'){this.value='concat3';this.style.color='gray'}">
+                &nbsp;&nbsp;
+                <input id="g_val4" type="Text" value="concat4" class="fieldcolor" onClick="(this.value=='concat4')? this.value='':this.style.color='black'" onFocus="(this.value=='concat4')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='concat4'){this.value='concat4';this.style.color='gray'}">
+                <br>
+                6.<a href="javascript:void(0);" onClick="g_fun(6)">lastindexof_fun</a> - Returns the position of the last found occurrence of a specified value in a string
+                <br>
+                7.<a href="javascript:void(0);" onClick="g_fun(7)">match_fun</a> - Searches for a match between a regular expression and a string, and returns the matches
+                <br>
+                8.<a href="javascript:void(0);" onClick="g_fun(8)">normal replace_fun</a>; <br>
+                9.<a href="javascript:void(0);" onClick="g_fun(9)">global replace_fun</a>; <br>
+                10.<a href="javascript:void(0);" onClick="g_fun(10)">case insensitive replace_fun</a> <br>
+                11.<a href="javascript:void(0);" onClick="g_fun(11)">global and case insensitive replace_fun</a>	<br /><input id="g_val5" type="Text" value="replace" class="fieldcolor" onClick="(this.value=='replace')? this.value='':this.style.color='black'" onFocus="(this.value=='replace')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='replace'){this.value='replace';this.style.color='gray'}">
+                <br>- Searches for a match between a substring (or regular expression) and a string, and replaces the matched substring with a new substring
+                <br>
+                12.<a href="javascript:void(0);" onClick="g_fun(12)">search_fun</a>
+                <br>
+                13.<a href="javascript:void(0);" onClick="g_fun(13)">case insensitive search_fun</a>	- Searches for a match between a regular expression and a string, and returns the position of the match
+                <br>
+                14.<a href="javascript:void(0);" onClick="g_fun(14)">slice_fun</a>	- Extracts a part of a string and returns a new string
+                
+                <input id="g_val6" type="Text" value="end" class="fieldcolor" onClick="(this.value=='end')? this.value='':this.style.color='black'" onFocus="(this.value=='end')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='end'){this.value='end';this.style.color='gray'}">
+                <br>
+                15.<a href="javascript:void(0);" onClick="g_fun(15)">split_fun</a>	- Splits a string into an array of substrings
+                
+                <input id="g_val7" type="Text" value="limit" class="fieldcolor" onClick="(this.value=='limit')? this.value='':this.style.color='black'" onFocus="(this.value=='limit')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='limit'){this.value='limit';this.style.color='gray'}">
+                <br>
+                16.<a href="javascript:void(0);" onClick="g_fun(16)">substring_fun</a>	- Extracts the characters from a string, between two specified indices
+                
+                <input id="g_val8" type="Text" value="to" class="fieldcolor" onClick="(this.value=='to')? this.value='':this.style.color='black'" onFocus="(this.value=='to')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='to'){this.value='to';this.style.color='gray'}">
+                <br>
+                17.<a href="javascript:void(0);" onClick="g_fun(17)">substr_fun</a>	- Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+                
+                <input id="g_val9" type="Text" value="length" class="fieldcolor" onClick="(this.value=='length')? this.value='':this.style.color='black'" onFocus="(this.value=='length')? this.value='':this.style.color='black'" onBlur="if(this.value=='' || this.value=='length'){this.value='length';this.style.color='gray'}">
+                <br>
+                18.<a href="javascript:void(0);" onClick="g_fun(18)">tolowercase_fun</a>	- Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+                <br>
+                19.<a href="javascript:void(0);" onClick="g_fun(19)">touppercase_fun</a>	- Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+                <br>
+                <!--20.<a href="javascript:void(0);" onclick="g_fun(20)">valueof_fun</a>	- Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+                <br>-->
+        </div>
+        
+            <div id="subcontainer2">
+            </div>
+        
+        
+        </div>
+        
+        <div id="footer">
+	        <a href="#footer">Footer</a>
+        </div>
+        
+        </div>        
+    
+    </body>
+</html>
+
+

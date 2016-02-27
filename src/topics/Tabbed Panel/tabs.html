@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Tabbed Panel</title>
+<!-- open css -->
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/default.css" />
+<style type="text/css">
+</style>
+<!-- close css -->
+<!-- open script -->
+<script type="text/javascript" src="script/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="script/modernizr.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('body').removeClass('noscript').addClass('script'); // checks if script is enabled
+		var tabs = {
+			tab_panel: $('.tab-panel'),
+			init: function(){
+				this.activateTabs();
+			},
+			activateTabs: function(){
+				var tab_heading = this.tab_panel.find('ul.tab-heading li'),
+					tab_content = this.tab_panel.find('section.tab-content > ul'),
+					hash = '';
+					tab_heading.click(function(event){
+						event.preventDefault();
+						$(this).siblings().removeClass('active').end().addClass('active');
+						hash = $(this).find('a').attr('href');
+						tab_content.css('display','none');
+						tab_content.filter(hash).fadeIn(300);						
+					});
+			}			
+		}
+		tabs.init(); // initialize the tab panel
+		
+	});
+</script>
+<!-- close script -->
+</head>
+<body id="tabs" class="noscript">
+<!-- open body -->
+	
+    <!-- open tab-panel -->
+	<div class="tab-panel">
+    	<!-- open tab-heading -->
+    	<ul class="tab-heading">
+        	<li class="active">
+            	<a href="#comments">Comments</a>
+            </li>
+            <li>
+            	<a href="#categories">Categories</a>
+            </li>
+            <li>
+            	<a href="#archives">Archives</a>
+            </li>            
+        </ul>
+        <!-- close tab-heading -->
+        <!-- open tab-content -->
+        <section class="tab-content">
+        	<!-- open comments -->
+            <ul id="comments">
+                <li>
+                	<p>
+	                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</p>
+                </li>
+                <li>
+                	<p>
+                    	Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+					</p>
+				</li>
+            </ul>
+            <!-- close comments -->
+            <!-- open categories -->
+            <h4>
+            	Categories
+            </h4>
+            <ul id="categories">
+                <li>
+                    <a href="#">Metro</a>
+                </li>
+                <li>
+                	<a href="#">Arts</a>
+				</li>
+                <li>
+                	<a href="#">Business</a>
+				</li>
+                <li>
+                	<a href="#">Lifestyle</a>
+				</li>
+                <li>
+                	<a href="#">Magazine</a>
+				</li>
+            </ul>
+            <!-- close categories -->
+            <!-- open archives -->
+            <h4>
+            	Archives
+            </h4>
+            <ul id="archives">
+				<li>
+                    <a href="#">Nov</a>
+                </li>
+                <li>
+                	<a href="#">Dec</a>
+				</li>
+                <li>
+                	<a href="#">Jan</a>
+				</li>
+                <li>
+                	<a href="#">Feb</a>
+				</li>
+            </ul>
+            <!-- close archives -->
+        </section>    
+        <!-- close tab-content -->
+    </div>
+    <!-- close tab-panel -->
+    
+<!-- close body -->
+</body>
+</html>

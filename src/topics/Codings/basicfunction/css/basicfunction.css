@@ -1,0 +1,33 @@
+input{
+	padding-left:14px;
+}
+
+.outp{
+
+}
+.outpt{
+	font-weight:bold;
+	color:red;
+}
+.dat
+{
+	color:black;
+	padding-left:15px;
+	font-weight:bold;
+}
+.fieldcolor
+{
+	color:gray;
+	font-family:arial;
+}
+
+#wrapper #container #subcontainer1{
+	width : 93%;
+}
+
+#wrapper #container #subcontainer2{
+	display: none;
+}
+
+			
+			

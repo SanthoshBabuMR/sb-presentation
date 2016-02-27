@@ -1,0 +1,9 @@
+@charset "utf-8";
+/* CSS Document */
+#wrapper #container #maincontent{
+	padding-right: 0px;
+}
+
+.tag-deprecated, new-in-html5, .tags-not-supported{
+	/*float: none;*/
+}
